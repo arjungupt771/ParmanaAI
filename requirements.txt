@@ -1,0 +1,31 @@
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# LLM
+groq
+
+# Retrieval and embeddings
+chromadb
+sentence-transformers
+numpy
+scikit-learn
+
+# Evaluation
+requests
+matplotlib
+pandas
+
+# Frontend
+streamlit
+
+# Testing
+pytest
+pytest-cov
+httpx
+
+transformers
+torch

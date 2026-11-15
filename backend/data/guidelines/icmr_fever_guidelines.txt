@@ -1,0 +1,20 @@
+Fever is defined as a regulated rise in core body temperature above the normal daily variation, usually ≥ 38°C (100.4°F), and is considered a clinical sign of underlying infection or inflammatory process, not a disease by itself.
+
+Evaluation of fever should be systematic and context-specific, with early identification of life-threatening conditions such as sepsis, malaria, dengue, typhoid, pneumonia, tuberculosis, and COVID-19, which are epidemiologically relevant in India.
+
+Initial assessment must focus on duration of fever, associated symptoms, localizing signs, travel history, seasonal outbreaks, and comorbidities, along with identification of danger signs (altered sensorium, breathlessness, hypotension, bleeding, seizures).
+
+Management of fever prioritizes supportive care, including adequate hydration, rest, and antipyretics (paracetamol preferred) for symptom relief. Fever reduction is aimed at comfort, not normalization of body temperature.
+
+Antibiotics should not be used empirically for all fevers and must be prescribed only when a bacterial cause is clinically suspected or confirmed, in line with antimicrobial stewardship principles promoted by ICMR.
+
+Investigations are guided by clinical presentation and duration:
+
+Acute undifferentiated fever → rule out malaria, dengue, COVID-19
+
+Fever >7 days → evaluate for typhoid, TB, bacterial infections, autoimmune causes
+
+Special populations (infants, elderly, pregnant women, immunocompromised patients) require earlier referral and lower thresholds for investigation and hospitalization.
+
+📌 ICMR core principle:
+👉 Fever should be managed by identifying and treating the cause, avoiding irrational antibiotic use, and aligning care with India-specific disease patterns.

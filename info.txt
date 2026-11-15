@@ -1,0 +1,640 @@
+python backend/evaluation/run_baseline.py
+
+
+Running baseline for query: Does diabetes increase cardiovascular risk? 
+Generated Answer: Diabetes is a metabolic disorder 
+                characterized by chronic hyperglycemia
+                and is associated with an increased
+                risk of complications, including
+                cardiovascular disease.
+Extracted Claims: ['Diabetes is a metabolic disorder
+                characterized by chronic hyperglycemia
+                and is associated with an increased
+                risk of complications, including
+                cardiovascular disease'] 
+Verified Claims: [{'claim': 'Diabetes is a metabolic
+                disorder characterized by chronic 
+                hyperglycemia and is associated with an 
+                increased risk of complications, 
+                including cardiovascular disease', 
+                'verdict': 'NO_EVIDENCE_PROVIDED', 
+                'confidence': 0.2, 'method': 'deterministic', 
+                'explanation': 'No external evidence available for 
+                verification'}] Baseline Hallucination Score: 0.3
+
+
+
+
+Let’s break it down clearly and technically.
+
+🔥 High-Level Difference
+Baseline Runner	                  Parmana AI
+Generates answer blindly	      Generates answer with evidence
+No evidence retrieval	          Retrieves guidelines / abstracts
+No grounding enforcement	       Evidence-gated generation
+Verification after the fact	       Verification integrated in pipeline
+High hallucination risk	         Low hallucination risk
+Reactive	                       Proactive + reactive
+🧠 What Baseline Runner Actually Is
+
+Baseline = “Vanilla LLM behavior”
+
+It does:
+
+Question → LLM → Answer
+
+Then later:
+
+Answer → Verifier → Score
+
+Key characteristics:
+
+❌ No guideline retrieval
+
+❌ No PubMed abstract retrieval
+
+❌ No mode classification
+
+❌ No refusal gating
+
+❌ No strict factual mode
+
+❌ No evidence injection
+
+It just answers.
+
+Even if correct, it is:
+
+“Correct but ungrounded.”
+
+That’s why your baseline got:
+
+Hallucination score: 0.3
+Verdict: NO_EVIDENCE_PROVIDED
+
+Because correctness ≠ groundedness.
+
+🧠 What Parmana AI Is Doing
+
+Parmana AI = Evidence-Aware Medical QA Framework
+
+Pipeline:
+
+Question
+   ↓
+Mode Classifier (FACTUAL / INFERENTIAL)
+   ↓
+Retriever (WHO / ICMR / PubMed abstracts)
+   ↓
+Evidence-Gated Generation
+   ↓
+Claim Extraction
+   ↓
+Deterministic Verification
+   ↓
+Hallucination Score
+
+Major differences:
+
+1️⃣ Proactive Evidence Use
+
+Baseline: no retrieval
+Parmana: retrieves trusted sources first
+
+2️⃣ Safe Refusal Mechanism
+
+Baseline: always answers
+Parmana: refuses if no verified evidence
+
+This is a major medical safety upgrade.
+
+3️⃣ Claim-Level Grounding
+
+Baseline:
+
+Makes statement
+
+Later marked ungrounded
+
+Parmana:
+
+Statement is directly tied to guideline text
+
+Verified immediately
+
+4️⃣ Hallucination Behavior
+
+Your actual numbers show this clearly:
+
+Metric	Baseline	Parmana
+Hallucination score	0.30	0.014
+Evidence grounding	0%	90%+
+Unsupported claims	Present	0
+
+That’s not a small difference.
+That’s architectural.
+
+🎯 Conceptual Difference (Very Important)
+
+Baseline asks:
+
+“Can the LLM answer?”
+
+Parmana asks:
+
+“Should the LLM answer?”
+
+That shift is what makes this a safety-aware system, not just a chatbot.
+
+🧪 Technical Difference in Code Behavior
+Baseline
+answer = generator.generate(query)
+claims = extract_claims(answer)
+verified = verify_claim(claim, evidence_list=[])
+
+Evidence list is empty.
+
+Parmana AI
+external_context = retrieve_guideline_evidence(query)
+answer = generator.generate(prompt_with_evidence)
+claims = extract_claims(answer)
+verified = verify_claim(claim, evidence_list=external_context)
+
+Evidence is injected before generation.
+
+🏥 Medical AI Perspective
+
+Baseline:
+
+Looks intelligent
+
+Not clinically safe
+
+Parmana:
+
+Slower
+
+More conservative
+
+Clinically responsible
+
+In real-world healthcare, Parmana’s behavior is preferred.
+
+🧠 Why This Difference Matters Academically
+
+Because your contribution is not:
+
+“Better answers.”
+
+It is:
+
+“Grounded answers with measurable hallucination reduction.”
+
+That’s a research-level difference.
+
+🔥 One-Line Summary You Can Use
+
+Baseline measures hallucination; Parmana prevents it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🧠 Parmana AI — How the System Works (Elaborate Explanation)
+
+Parmana AI is a hallucination-aware medical question answering and evaluation framework.
+Its core philosophy is simple but powerful:
+
+An answer is only as good as the evidence that supports it.
+
+Instead of focusing on fluency, Parmana AI focuses on grounded correctness.
+
+1️⃣ Input Stage — User Question
+
+The pipeline starts with a raw natural-language question, e.g.:
+
+“What are the symptoms of fever?”
+
+“Does diabetes increase cardiovascular risk?”
+
+At this point, the system makes no assumptions and does not generate an answer immediately.
+
+2️⃣ Mode Classification — FACTUAL vs INFERENTIAL
+
+The first decision Parmana AI makes is:
+
+What kind of reasoning does this question require?
+
+🔹 FACTUAL Mode
+
+Triggered when the question asks for:
+
+definitions
+
+symptoms
+
+treatments
+
+dosages
+
+side effects
+
+Example:
+
+“Symptoms of fever”
+
+These require authoritative, guideline-level evidence.
+
+🔹 INFERENTIAL Mode
+
+Triggered when the question asks about:
+
+associations
+
+risks
+
+effects
+
+evidence from studies
+
+Example:
+
+“Does diabetes increase cardiovascular risk?”
+
+These require research evidence, not definitive claims.
+
+📌 This separation is critical.
+Most hallucinations happen when systems mix these two modes.
+
+3️⃣ Evidence Retrieval — Before Generation (Key Design Choice)
+
+Unlike standard LLM pipelines, Parmana AI retrieves evidence before generating an answer.
+
+🔹 FACTUAL Mode → Trusted Guidelines
+
+WHO guidelines
+
+ICMR guidelines
+
+Curated authoritative sources
+
+If no guideline evidence exists, the system refuses to answer safely.
+
+This is intentional and medically correct.
+
+🔹 INFERENTIAL Mode → Research Abstracts
+
+PubMed-style abstracts
+
+Association-level evidence
+
+Non-causal, cautious sources
+
+If no relevant research evidence exists, the system again refuses safely.
+
+📌 PubMedQA is NOT used here
+It is reserved strictly for offline evaluation, not live answering.
+
+4️⃣ Evidence-Gated Answer Generation
+
+Only after evidence is available, the system proceeds to generation.
+
+🔹 How Generation Works
+
+The retrieved evidence is embedded directly into the prompt
+
+The generator is instructed to:
+
+use only the provided evidence
+
+avoid adding external knowledge
+
+use cautious language for inferential answers
+
+If an LLM (Groq) is available → it is used
+If not → a deterministic evidence-based fallback is used
+
+📌 This ensures:
+
+reproducibility
+
+safety
+
+no hallucinated facts
+
+5️⃣ Claim Extraction — Sentence-Level Decomposition
+
+The generated answer is not treated as a single block.
+
+Instead, Parmana AI:
+
+splits the answer into individual factual claims
+
+ignores very short or vague fragments
+
+applies stricter filtering in inferential mode
+
+Example answer:
+
+“Fever causes chills and sweating.”
+
+Becomes:
+
+Claim 1: Fever causes chills
+
+Claim 2: Fever causes sweating
+
+This enables fine-grained verification.
+
+6️⃣ Deterministic Claim Verification (No LLM Self-Judging)
+
+Each extracted claim is verified independently against the retrieved evidence.
+
+🔹 Verification Method
+
+Lexical overlap
+
+Evidence presence
+
+Conservative thresholds
+
+No LLM critic involved
+
+Each claim receives a verdict:
+
+SUPPORTED
+
+PARTIALLY_SUPPORTED
+
+INSUFFICIENT_EVIDENCE
+
+NO_EVIDENCE_PROVIDED
+
+📌 This makes verification:
+
+transparent
+
+auditable
+
+reproducible
+
+Unlike LLM-based critics, the system does not judge itself.
+
+7️⃣ Hallucination Scoring — Claim-Level, Not Answer-Level
+
+Instead of saying “this answer is hallucinated”, Parmana AI computes a hallucination score based on:
+
+number of claims
+
+type of verdict per claim
+
+severity of unsupported assertions
+
+🔹 Interpretation
+
+0.0 → fully grounded
+
+>0.2 → high hallucination risk
+
+This allows:
+
+nuanced analysis
+
+partial correctness recognition
+
+fair penalization
+
+8️⃣ Relevance Scoring — Did the Answer Address the Question?
+
+In parallel, the system computes a relevance score:
+
+Measures semantic overlap between question and answer
+
+Penalizes off-topic or evasive responses
+
+Returns a value between 0 and 1
+
+This prevents systems from scoring well by:
+
+being safe but irrelevant
+
+refusing unnecessarily
+
+9️⃣ Safe Refusal as a First-Class Outcome
+
+If no evidence exists, Parmana AI does not hallucinate.
+
+Instead, it returns:
+
+a safe refusal
+
+zero hallucination score
+
+clear system status
+
+📌 This is treated as success, not failure.
+
+In medical AI, knowing when not to answer is a strength.
+
+🔁 Summary Flow (End-to-End)
+User Question
+   ↓
+Mode Classification (FACTUAL / INFERENTIAL)
+   ↓
+Evidence Retrieval (Guidelines / Abstracts)
+   ↓
+Evidence-Gated Generation
+   ↓
+Claim Extraction
+   ↓
+Deterministic Verification
+   ↓
+Hallucination Score + Relevance Score
+🧠 Why Parmana AI Is Different
+
+Most systems ask:
+
+“Can the model answer this?”
+
+Parmana AI asks:
+
+“Should the model answer this — and can it prove why?”
+
+That single shift is what makes the system:
+
+medically safer
+
+scientifically stronger
+
+evaluation-ready
+
+research-novel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔍 How Parmana AI Differs From Present-Day Systems
+1️⃣ Answering Philosophy
+Aspect	Present-Day Systems	Parmana AI
+When to answer	Always tries	Only if evidence exists
+Safety handling	Implicit	Explicit refusal
+Confidence control	Prompt-based	Pipeline-enforced
+Hallucination detection	None / implicit	Explicit, measurable
+
+📌 Key insight:
+Most systems assume answering is always good.
+Parmana assumes refusing can be correct.
+
+2️⃣ Evidence Usage
+Present-Day RAG
+
+Evidence retrieved
+
+LLM may or may not use it
+
+No enforcement
+
+No post-hoc validation
+
+Parmana AI
+
+Evidence retrieved before generation
+
+Evidence injected into prompt
+
+Claims verified after generation
+
+Unsupported claims penalized
+
+This makes Parmana bidirectionally grounded.
+
+3️⃣ Verification (This Is Your Biggest Edge)
+Feature	Present-Day Systems	Parmana AI
+Claim extraction	❌ No	✅ Yes
+Claim-level verdict	❌ No	✅ Yes
+Deterministic verification	❌ No	✅ Yes
+Self-judging LLM	Often yes	❌ Never
+
+Most systems trust the LLM.
+Parmana verifies the LLM.
+
+4️⃣ Evaluation Capability
+Present-Day Systems
+
+Evaluated qualitatively
+
+“Looks correct”
+
+No numeric hallucination score
+
+Parmana AI
+
+Claim-level hallucination score
+
+Grounding rate
+
+Supported vs partial vs unsupported
+
+Benchmark-based evaluation (PubMedQA)
+
+This turns QA into a measurable scientific task.
+
+5️⃣ Safe Failure Behavior
+
+This is critical in medical context.
+
+Scenario	Present-Day System	Parmana AI
+No evidence found	Hallucinates / hedges	Refuses
+Rare disease	Speculates	Refuses
+Ambiguous evidence	Overconfident	Partial support
+
+Faculty LOVE this comparison.
+
+🧪 How to Present the Comparison (Use This Table)
+
+You can literally put this in your report:
+
+Dimension	Present-Day Medical QA	Parmana AI
+Evidence gating	❌ No	✅ Yes
+Claim-level analysis	❌ No	✅ Yes
+Hallucination metric	❌ No	✅ Yes
+Safe refusal	❌ Rare	✅ Explicit
+Determinism	❌ No	✅ Yes
+Benchmark usage	❌ Misused	✅ Evaluation-only
+🧠 How to Explain This Verbally (Faculty / Viva)
+
+Say this:
+
+“Most present-day medical QA systems rely on retrieval-augmented generation, but they do not verify individual claims or measure hallucination explicitly. Parmana AI differs by enforcing evidence gating before generation, performing claim-level verification after generation, and treating safe refusal as a correct outcome. This allows hallucination to be measured and controlled rather than assumed away.”
+
+That answer alone shows research maturity.
+
+📊 Optional Experimental Comparison (If You Want Extra Marks)
+
+You already did:
+
+Baseline LLM vs Parmana AI
+
+You can label baseline as:
+
+“Representative present-day unverified LLM-based QA system”
+
+That is academically acceptable.
+
+🏁 Final Verdict
+
+Your faculty’s suggestion is very valid, and the good news is:
+
+👉 You already satisfy it conceptually and experimentally.
+
+You are not competing on:
+
+fluency
+
+length
+
+style
+
+You are competing on:
+
+safety
+
+verifiability
+
+evaluation rigor
+
+That’s a stronger position.

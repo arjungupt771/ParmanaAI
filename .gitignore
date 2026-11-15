@@ -1,0 +1,62 @@
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Generated model and vector artifacts
+backend/data/vector_store/
+models/
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Evaluation outputs
+backend/evaluation/results.json
+backend/evaluation/oracle_context_results.json
+backend/evaluation/retrieval_results.json
+backend/evaluation/retrieval_results_v2.json
+backend/evaluation/rag_results.json
+backend/evaluation/no_evidence_results.json
+backend/evaluation/*_metrics.json
+backend/evaluation/reports/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# Large evaluation datasets
+backend/evaluation/ori_pqaa.json
+backend/evaluation/ori_pqau.json
