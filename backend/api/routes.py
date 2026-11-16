@@ -12,7 +12,16 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-orchestrator = Orchestrator()
+class _LazyOrchestrator:
+    def __init__(self):
+        self._instance = None
+
+    def __getattr__(self, name):
+        if self._instance is None:
+            self._instance = Orchestrator()
+        return getattr(self._instance, name)
+
+orchestrator = _LazyOrchestrator()
 
 
 # ============================================================
@@ -49,6 +58,10 @@ class QueryResponse(BaseModel):
         default_factory=list
     )
 
+    evidence: list[dict[str, Any]] = Field(
+        default_factory=list
+    )
+
     hallucination_score: float = Field(
         ge=0.0,
         le=1.0
@@ -58,6 +71,8 @@ class QueryResponse(BaseModel):
         ge=0.0,
         le=1.0
     )
+
+    model_config = {"extra": "allow"}
 
 
 # ============================================================

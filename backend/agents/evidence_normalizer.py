@@ -10,18 +10,50 @@ It preserves available metadata without inventing missing details.
 """
 
 import hashlib
-from typing import Any
+import math
+from typing import Any, Tuple
 
 
 NORMALIZER_VERSION = "1.0"
 
 
 def _clean_text(value: Any) -> str:
-    """Convert valid text to a normalized string."""
+    """Convert valid text to a normalized string, stripping control/null chars."""
     if not isinstance(value, str):
         return ""
 
-    return " ".join(value.split())
+    # Strip null bytes and non-printable characters
+    cleaned = value.replace("\x00", " ")
+    return " ".join(cleaned.split())
+
+
+def _clean_score(score: Any) -> float | None:
+    """Sanitize and validate numerical confidence/similarity scores."""
+    if score is None:
+        return None
+    try:
+        val = float(score)
+        if math.isnan(val) or math.isinf(val):
+            return None
+        # Clamp to [0.0, 1.0] if near or within range
+        return max(0.0, min(1.0, round(val, 4)))
+    except (ValueError, TypeError):
+        return None
+
+
+def validate_evidence_record(evidence: Any) -> Tuple[bool, str]:
+    """
+    Validate that an evidence record satisfies minimal required schema.
+    Returns (is_valid, reason).
+    """
+    if not isinstance(evidence, dict):
+        return False, "Evidence record must be a dictionary."
+
+    text = _clean_text(evidence.get("text"))
+    if not text:
+        return False, "Evidence record is missing valid non-empty text."
+
+    return True, "Valid evidence record."
 
 
 def _stable_hash(value: str) -> str:
@@ -137,8 +169,8 @@ def normalize_evidence(
             "text": text,
             "source_type": str(source_type),
             "topic": str(topic),
-            "match_type": evidence.get("match_type", "unknown"),
-            "score": evidence.get("score"),
+            "match_type": str(evidence.get("match_type", "unknown")),
+            "score": _clean_score(evidence.get("score")),
             "provenance": normalized_provenance,
             "normalizer_version": NORMALIZER_VERSION,
         }

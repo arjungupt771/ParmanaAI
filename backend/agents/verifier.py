@@ -52,6 +52,15 @@ def empty_result(claim: str) -> Dict:
         "source_assessments": [],
         "clinical_truth_established": False,
         "medical_contradiction_established": False,
+        "primary_evidence_id": None,
+        "evidence_assessments": [],
+        "conflict_details": {
+            "has_conflict": False,
+            "conflict_type": "none",
+            "within_document_conflict_count": 0,
+            "cross_document_conflict": False,
+            "conflicting_documents": [],
+        },
     }
 
     return {
@@ -93,7 +102,14 @@ def empty_result(claim: str) -> Dict:
             "contradiction": 0.0,
             "neutral": 1.0
         },
-        "verification_method_used": "none"
+        "verification_method_used": "none",
+        "conflict_details": {
+            "has_conflict": False,
+            "conflict_type": "none",
+            "within_document_conflict_count": 0,
+            "cross_document_conflict": False,
+            "conflicting_documents": [],
+        }
     }
 
 
@@ -272,6 +288,7 @@ def assess_numerical_across_candidates(claim, candidates):
 
         source_assessments.append({
             "candidate_index": index,
+            "evidence_id": evidence.get("evidence_id"),
             "document_id": document_id,
             "chunk_id": (
                 evidence.get("chunk_id")
@@ -284,6 +301,39 @@ def assess_numerical_across_candidates(claim, candidates):
         })
 
     return aggregate_numerical_assessments(source_assessments)
+
+
+def select_primary_candidate(candidates: List[Dict]) -> Dict:
+    """
+    Select primary evidence using the final accepted verification signals.
+
+    Ensures that a candidate whose contradiction verdict was downgraded
+    by relevance guards does not override legitimate supported, contradicted,
+    or sufficiently relevant evidence.
+    """
+    def selection_key(item: Dict) -> tuple:
+        verdict = item.get("verdict")
+        scores = item.get("scores") or {}
+        guard_passed = item.get("contradiction_guard_passed", True)
+
+        entailment = scores.get("entailment", 0.0)
+        contradiction = scores.get("contradiction", 0.0)
+        neutral = scores.get("neutral", 0.0)
+
+        # Tier 2: Valid accepted decisive verdicts
+        if verdict == "SUPPORTED":
+            return (2, entailment)
+        if verdict == "CONTRADICTED" and guard_passed:
+            return (2, contradiction)
+
+        # Tier 1: Neutral / Insufficient evidence where guard was not violated
+        if guard_passed:
+            return (1, neutral)
+
+        # Tier 0: Downgraded candidate (failed contradiction relevance guard)
+        return (0, neutral)
+
+    return max(candidates, key=selection_key)
 
 
 def deterministic_verify_claim(
@@ -349,14 +399,9 @@ def deterministic_verify_claim(
 
     # Keep the strongest NLI signal for the legacy verdict while the
     # numerical assessment considers every relevant candidate.
+    # Uses the final accepted verification signals.
 
-    best = max(
-        candidates,
-        key=lambda item: max(
-            item["scores"]["entailment"],
-            item["scores"]["contradiction"]
-        )
-    )
+    best = select_primary_candidate(candidates)
 
     evidence = best["evidence"]
     scores = best["scores"]
@@ -370,6 +415,47 @@ def deterministic_verify_claim(
         nli_verdict=verdict,
         numerical_assessment=numerical_assessment,
     )
+
+    evidence_assessments = []
+    for candidate in candidates:
+        candidate_evidence = candidate["evidence"]
+        candidate_provenance = (
+            candidate_evidence.get("provenance") or {}
+        )
+        if not isinstance(candidate_provenance, dict):
+            candidate_provenance = {}
+        candidate_scores = candidate["scores"]
+        evidence_assessments.append({
+            "candidate_index": candidate["index"],
+            "evidence_id": candidate_evidence.get("evidence_id"),
+            "document_id": (
+                candidate_evidence.get("document_id")
+                or candidate_provenance.get("document_id")
+            ),
+            "chunk_id": (
+                candidate_evidence.get("chunk_id")
+                or candidate_provenance.get("chunk_id")
+            ),
+            "source_type": candidate_evidence.get(
+                "source_type",
+                "unknown",
+            ),
+            "citation_match": candidate_evidence.get(
+                "match_type",
+                "unknown",
+            ),
+            "score": candidate_evidence.get("score"),
+            "citation": candidate_evidence.get("text", "")[:500],
+            "nli_verdict": candidate["verdict"],
+            "nli_scores": {
+                "entailment": candidate_scores["entailment"],
+                "contradiction": candidate_scores["contradiction"],
+                "neutral": candidate_scores["neutral"],
+            },
+            "contradiction_guard_passed": candidate.get(
+                "contradiction_guard_passed",
+            ),
+        })
 
     if verdict == "SUPPORTED":
         confidence = scores["entailment"]
@@ -429,6 +515,15 @@ def deterministic_verify_claim(
             "match_type",
             "unknown"
         ),
+        "primary_evidence_id": evidence.get("evidence_id"),
+        "evidence_assessments": evidence_assessments,
+        "conflict_details": numerical_assessment.get("conflict_details", {
+            "has_conflict": False,
+            "conflict_type": "none",
+            "within_document_conflict_count": 0,
+            "cross_document_conflict": False,
+            "conflicting_documents": [],
+        }),
         "supporting_sources": sum(
             1 for candidate in candidates
             if candidate["verdict"] == "SUPPORTED"

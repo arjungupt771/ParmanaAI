@@ -22,6 +22,9 @@ def _get_document_id(item: Dict[str, Any]):
     return (
         item.get("document_id")
         or provenance.get("document_id")
+        or item.get("chunk_id")
+        or provenance.get("chunk_id")
+        or item.get("id")
     )
 
 
@@ -240,6 +243,25 @@ def aggregate_numerical_assessments(
 
     all_groups = document_results + unattributed_results
 
+    has_conflict = verdict == CONFLICTING_EVIDENCE or within_document_conflicts > 0
+    conflict_type = (
+        "cross_document" if verdict == CONFLICTING_EVIDENCE
+        else ("within_document" if within_document_conflicts > 0 else "none")
+    )
+    conflicting_docs = [
+        item["document_id"]
+        for item in document_results
+        if item["verdict"] in (NUMERICALLY_CONSISTENT, NUMERICAL_DISCREPANCY, INCONCLUSIVE)
+    ] if has_conflict else []
+
+    conflict_details = {
+        "has_conflict": has_conflict,
+        "conflict_type": conflict_type,
+        "within_document_conflict_count": within_document_conflicts,
+        "cross_document_conflict": verdict == CONFLICTING_EVIDENCE,
+        "conflicting_documents": conflicting_docs,
+    }
+
     return {
         "verdict": verdict,
         "reason": reason,
@@ -247,30 +269,32 @@ def aggregate_numerical_assessments(
         "unique_document_count": len(documents),
         "source_group_count": len(all_groups),
         "consistent_source_count": sum(
-            item["verdict"] == NUMERICALLY_CONSISTENT
-            for item in all_groups
+            (item.get("assessment") or {}).get("verdict") == NUMERICALLY_CONSISTENT
+            for item in source_assessments
         ),
         "discrepant_source_count": sum(
-            item["verdict"] == NUMERICAL_DISCREPANCY
-            for item in all_groups
+            (item.get("assessment") or {}).get("verdict") == NUMERICAL_DISCREPANCY
+            for item in source_assessments
         ),
         "context_mismatch_count": sum(
-            item["verdict"] == CONTEXT_MISMATCH
-            for item in all_groups
+            (item.get("assessment") or {}).get("verdict") == CONTEXT_MISMATCH
+            for item in source_assessments
         ),
         "inconclusive_source_count": sum(
-            item["verdict"] == INCONCLUSIVE
-            for item in all_groups
+            (item.get("assessment") or {}).get("verdict") == INCONCLUSIVE
+            for item in source_assessments
         ),
         "no_numerical_evidence_count": sum(
-            item["verdict"] == NO_NUMERICAL_EVIDENCE
-            for item in all_groups
+            (item.get("assessment") or {}).get("verdict") == NO_NUMERICAL_EVIDENCE
+            for item in source_assessments
         ),
         "unattributed_assessment_count": len(unattributed),
         "within_document_conflict_count": (
             within_document_conflicts
         ),
+        "conflict_details": conflict_details,
         "document_results": document_results,
+        "document_assessments": document_results,
         "source_assessments": source_assessments,
         "clinical_truth_established": False,
         "medical_contradiction_established": False,

@@ -155,3 +155,78 @@ def test_does_not_mutate_original_evidence():
     normalize_evidence(evidence)
 
     assert evidence[0] == original
+
+
+def test_malformed_and_incomplete_records_handling():
+    from backend.agents.evidence_normalizer import validate_evidence_record
+
+    # Non-dict
+    is_valid, reason = validate_evidence_record("not a dict")
+    assert not is_valid
+    assert "dictionary" in reason
+
+    # Empty text
+    is_valid, reason = validate_evidence_record({"text": "   "})
+    assert not is_valid
+
+    # Valid
+    is_valid, _ = validate_evidence_record({"text": "Valid passage text."})
+    assert is_valid
+
+    # Score sanitization
+    malformed = [
+        {"text": "Sample 1", "score": "0.85"},
+        {"text": "Sample 2", "score": float("nan")},
+        {"text": "Sample 3", "score": "invalid_score"},
+        {"text": "Sample 4", "score": 1.5},
+        {"text": "Sample 5", "score": -0.5},
+        {"text": "Sample 6 with null \x00 bytes"},
+    ]
+    normalized = normalize_evidence(malformed)
+    assert len(normalized) == 6
+    assert normalized[0]["score"] == 0.85
+    assert normalized[1]["score"] is None
+    assert normalized[2]["score"] is None
+    assert normalized[3]["score"] == 1.0  # Clamped
+    assert normalized[4]["score"] == 0.0  # Clamped
+    assert "\x00" not in normalized[5]["text"]
+
+
+def test_normalization_consistency_chromadb_vs_external():
+    chroma_ev = [{
+        "text": "Hypertension is defined as blood pressure >= 140/90 mmHg.",
+        "source_type": "guideline",
+        "topic": "hypertension",
+        "document_id": "aha_guidelines.txt",
+        "chunk_id": "chunk-101",
+        "match_type": "semantic",
+        "score": 0.88,
+    }]
+
+    external_ev = [{
+        "text": "Patient has confirmed history of essential hypertension.",
+        "source_type": "external_context_unverified",
+        "match_type": "unverified",
+        "score": None,
+        "provenance": {
+            "origin": "external_context",
+            "verified": False,
+        }
+    }]
+
+    chroma_norm = normalize_evidence(chroma_ev, origin="chroma_vector_store")[0]
+    external_norm = normalize_evidence(external_ev, origin="external_context")[0]
+
+    # Shared required schema keys
+    required_keys = {
+        "evidence_id", "document_id", "chunk_id", "text",
+        "source_type", "topic", "match_type", "score",
+        "provenance", "normalizer_version"
+    }
+    assert required_keys.issubset(chroma_norm.keys())
+    assert required_keys.issubset(external_norm.keys())
+
+    assert chroma_norm["provenance"]["origin"] == "chroma_vector_store"
+    assert external_norm["provenance"]["origin"] == "external_context"
+    assert external_norm["provenance"]["verified"] is False
+

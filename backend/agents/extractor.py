@@ -49,6 +49,42 @@ CAUSAL_PATTERNS = [
     r"\bprevents?\b",
 ]
 
+NEGATION_PATTERNS = [
+    r"\bdoes not\b",
+    r"\bdo not\b",
+    r"\bdid not\b",
+    r"\bis not\b",
+    r"\bare not\b",
+    r"\bwas not\b",
+    r"\bwere not\b",
+    r"\bcannot\b",
+    r"\bno evidence\b",
+    r"\bfailed to\b",
+    r"\bwithout\b",
+    r"\bneither\b",
+    r"\bnor\b",
+    r"\bno significant\b",
+    r"\bnot associated\b",
+]
+
+COMPARATIVE_PATTERNS = [
+    r"\bmore effective than\b",
+    r"\bless effective than\b",
+    r"\bhigher than\b",
+    r"\blower than\b",
+    r"\bgreater than\b",
+    r"\breduced compared to\b",
+    r"\bincreased compared to\b",
+    r"\bsuperior to\b",
+    r"\binferior to\b",
+    r"\bcompared with\b",
+    r"\bcompared to\b",
+    r"\bmore likely\b",
+    r"\bless likely\b",
+    r"\bversus\b",
+    r"\bvs\.?\b",
+]
+
 NUMERICAL_PATTERN = re.compile(
     r"""
     \b\d+(?:\.\d+)?\s*%
@@ -301,10 +337,10 @@ def split_compound_claim(sentence: str) -> list[str]:
 
     for part in semicolon_parts:
 
-        # Only split "and/but" when both sides appear
+        # Only split conjunctions when both sides appear
         # to contain independently stated subjects.
         conjunction_parts = re.split(
-            r",?\s+\b(and|but)\b\s+",
+            r",?\s+\b(and|but|while|whereas|although)\b\s+",
             part,
             flags=re.IGNORECASE
         )
@@ -371,6 +407,25 @@ def classify_claim(text: str) -> dict[str, Any]:
         for pattern in CAUSAL_PATTERNS
     )
 
+    is_negation = any(
+        re.search(pattern, lowered)
+        for pattern in NEGATION_PATTERNS
+    )
+
+    is_comparative = any(
+        re.search(pattern, lowered)
+        for pattern in COMPARATIVE_PATTERNS
+    )
+
+    if is_causal:
+        relationship_type = "causal"
+    elif is_comparative:
+        relationship_type = "comparative"
+    elif is_inferential:
+        relationship_type = "correlational"
+    else:
+        relationship_type = "factual"
+
     numerical_matches = NUMERICAL_PATTERN.findall(text)
 
     numerical_mentions = extract_numerical_mentions(text)
@@ -382,6 +437,9 @@ def classify_claim(text: str) -> dict[str, Any]:
         "is_inferential": is_inferential,
         "is_definitive": is_definitive,
         "contains_causal_language": is_causal,
+        "contains_negation": is_negation,
+        "contains_comparative_language": is_comparative,
+        "relationship_type": relationship_type,
         "contains_numerical_information": bool(
             numerical_matches
         ),

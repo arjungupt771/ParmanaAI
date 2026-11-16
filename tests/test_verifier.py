@@ -47,6 +47,87 @@ def test_verify_claim_supported(monkeypatch):
     assert result["verification_components"] == ["nli", "numerical"]
 
 
+def test_verify_claim_returns_evidence_assessments(monkeypatch):
+    def mock_nli(premise, hypothesis):
+        if "primary" in premise:
+            return {
+                "entailment": 0.94,
+                "contradiction": 0.02,
+                "neutral": 0.04,
+            }
+
+        return {
+            "entailment": 0.83,
+            "contradiction": 0.02,
+            "neutral": 0.15,
+        }
+
+    monkeypatch.setattr(verifier, "predict_nli", mock_nli)
+
+    result = verifier.verify_claim(
+        "Smoking increases lung cancer risk.",
+        [
+            {
+                "text": "The primary passage supports the claim.",
+                "evidence_id": "evidence-primary",
+                "source_type": "peer_reviewed",
+                "match_type": "semantic",
+                "score": 0.91,
+                "provenance": {
+                    "document_id": "document-primary",
+                    "chunk_id": "chunk-primary",
+                },
+            },
+            {
+                "text": "Another passage supports the claim.",
+                "evidence_id": "evidence-secondary",
+                "document_id": "document-secondary",
+                "chunk_id": "chunk-secondary",
+                "provenance": "invalid",
+            },
+        ],
+    )
+
+    assert result["primary_evidence_id"] == "evidence-primary"
+    assert len(result["evidence_assessments"]) == 2
+    assert result["evidence_assessments"] == [
+        {
+            "candidate_index": 0,
+            "evidence_id": "evidence-primary",
+            "document_id": "document-primary",
+            "chunk_id": "chunk-primary",
+            "source_type": "peer_reviewed",
+            "citation_match": "semantic",
+            "score": 0.91,
+            "citation": "The primary passage supports the claim.",
+            "nli_verdict": "SUPPORTED",
+            "nli_scores": {
+                "entailment": 0.94,
+                "contradiction": 0.02,
+                "neutral": 0.04,
+            },
+            "contradiction_guard_passed": True,
+        },
+        {
+            "candidate_index": 1,
+            "evidence_id": "evidence-secondary",
+            "document_id": "document-secondary",
+            "chunk_id": "chunk-secondary",
+            "source_type": "unknown",
+            "citation_match": "unknown",
+            "score": None,
+            "citation": "Another passage supports the claim.",
+            "nli_verdict": "SUPPORTED",
+            "nli_scores": {
+                "entailment": 0.83,
+                "contradiction": 0.02,
+                "neutral": 0.15,
+            },
+            "contradiction_guard_passed": True,
+        },
+    ]
+
+
 def test_numerical_discrepancy_conflicts_with_supported_nli(monkeypatch):
 
     def mock_nli(premise, hypothesis):
@@ -281,3 +362,50 @@ def test_hallucination_score_falls_back_to_legacy_verdict():
     ])
 
     assert score == 0.0
+
+
+def test_primary_evidence_selection_ignores_downgraded_contradiction(monkeypatch):
+    """
+    Ensure primary evidence is selected using accepted verification signals,
+    not raw downgraded contradiction scores.
+    """
+    claim = "Metformin lowers blood glucose levels."
+
+    def mock_nli(premise, hypothesis):
+        if "agricultural" in premise:
+            # Irrelevant passage that DeBERTa misclassifies as contradiction
+            return {
+                "entailment": 0.01,
+                "contradiction": 0.98,
+                "neutral": 0.01
+            }
+        # Legitimate supporting passage
+        return {
+            "entailment": 0.85,
+            "contradiction": 0.02,
+            "neutral": 0.13
+        }
+
+    monkeypatch.setattr(verifier, "predict_nli", mock_nli)
+
+    evidence_list = [
+        {
+            "text": "The study examined agricultural soil and crop productivity in wheat fields.",
+            "evidence_id": "ev-soil-irrelevant",
+            "document_id": "doc-soil",
+            "chunk_id": "chunk-1",
+        },
+        {
+            "text": "Metformin therapy significantly lowers blood glucose levels in diabetic patients.",
+            "evidence_id": "ev-metformin-supported",
+            "document_id": "doc-metformin",
+            "chunk_id": "chunk-1",
+        }
+    ]
+
+    result = verifier.verify_claim(claim, evidence_list)
+
+    assert result["verdict"] == "SUPPORTED"
+    assert result["primary_evidence_id"] == "ev-metformin-supported"
+    assert result["supporting_sources"] == 1
+

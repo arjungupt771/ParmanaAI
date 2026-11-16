@@ -4,7 +4,6 @@ reused by both retrieval (semantic_retriever.py) and verification
 (verifier.py) so the ~90MB model is only ever loaded once per process.
 """
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
@@ -14,6 +13,7 @@ _model = None
 def get_model():
     global _model
     if _model is None:
+        from sentence_transformers import SentenceTransformer
         _model = SentenceTransformer(EMBEDDING_MODEL)
     return _model
 

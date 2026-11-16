@@ -189,3 +189,60 @@ def test_relevant_contradiction_is_preserved():
         )
 
     assert result["verdict"] == "CONTRADICTED"
+
+
+def test_compound_claim_splits_whereas_and_while():
+    sentence = "Metformin lowers blood glucose, whereas insulin therapy stimulates cellular uptake."
+    claims = split_compound_claim(sentence)
+    assert len(claims) == 2
+    assert claims[0] == "Metformin lowers blood glucose"
+    assert claims[1] == "insulin therapy stimulates cellular uptake."
+
+
+def test_claim_classification_detects_negation_and_comparative():
+    negation_claim = "Aspirin does not reduce mortality in healthy young adults."
+    neg_meta = classify_claim(negation_claim)
+    assert neg_meta["contains_negation"] is True
+
+    comp_claim = "Lisinopril is more effective than Atenolol in reducing systolic blood pressure."
+    comp_meta = classify_claim(comp_claim)
+    assert comp_meta["contains_comparative_language"] is True
+    assert comp_meta["relationship_type"] == "comparative"
+
+
+def test_atomicity_evaluation_benchmark():
+    """
+    Manually annotated dataset evaluating claim extraction atomicity.
+    """
+    benchmark_dataset = [
+        {
+            "input": "Hypertension increases stroke risk, and diabetes accelerates cardiovascular damage.",
+            "expected_claims": [
+                "Hypertension increases stroke risk",
+                "diabetes accelerates cardiovascular damage"
+            ],
+            "expected_atomicity": [True, True]
+        },
+        {
+            "input": "Dr. Smith noted that patient blood pressure was 120/80 mmHg.",
+            "expected_claims": [
+                "Dr. Smith noted that patient blood pressure was 120/80 mmHg."
+            ],
+            "expected_atomicity": [False]
+        },
+        {
+            "input": "Exercise lowers resting heart rate; however, excessive strain can cause arrhythmias.",
+            "expected_claims": [
+                "Exercise lowers resting heart rate",
+                "excessive strain can cause arrhythmias"
+            ],
+            "expected_atomicity": [True, True]
+        }
+    ]
+
+    for item in benchmark_dataset:
+        records = extract_claim_records(item["input"])
+        claim_texts = [r["claim_text"] for r in records]
+        assert len(claim_texts) == len(item["expected_claims"])
+        for expected in item["expected_claims"]:
+            assert any(expected.lower() in ct.lower() for ct in claim_texts)

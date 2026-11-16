@@ -22,8 +22,14 @@ from typing import Any
 
 ANALYTE_ALIASES = {
     "fasting blood glucose": "glucose",
+    "fasting plasma glucose": "glucose",
+    "random blood glucose": "glucose",
+    "random blood sugar": "glucose",
     "blood glucose": "glucose",
     "blood sugar": "glucose",
+    "fbg": "glucose",
+    "fpg": "glucose",
+    "rbs": "glucose",
     "glucose": "glucose",
 
     "glycated hemoglobin": "hba1c",
@@ -33,26 +39,39 @@ ANALYTE_ALIASES = {
 
     "systolic blood pressure": "systolic_blood_pressure",
     "diastolic blood pressure": "diastolic_blood_pressure",
+    "sbp": "systolic_blood_pressure",
+    "dbp": "diastolic_blood_pressure",
     "blood pressure": "blood_pressure",
     "bp": "blood_pressure",
 
     "heart rate": "heart_rate",
     "pulse rate": "heart_rate",
+    "pulse": "heart_rate",
 
     "body temperature": "body_temperature",
     "temperature": "body_temperature",
 
     "oxygen saturation": "oxygen_saturation",
     "spo2": "oxygen_saturation",
+    "sao2": "oxygen_saturation",
 
     "serum creatinine": "creatinine",
     "creatinine": "creatinine",
 
     "total cholesterol": "total_cholesterol",
+    "ldl cholesterol": "ldl",
+    "ldl-c": "ldl",
+    "ldl": "ldl",
+    "hdl cholesterol": "hdl",
+    "hdl-c": "hdl",
+    "hdl": "hdl",
+    "triglycerides": "triglycerides",
     "cholesterol": "cholesterol",
 
     "hemoglobin": "hemoglobin",
     "haemoglobin": "hemoglobin",
+    "hgb": "hemoglobin",
+    "hb": "hemoglobin",
 
     "platelet count": "platelet_count",
     "platelets": "platelet_count",
@@ -297,6 +316,11 @@ def extract_clinical_context(text: str) -> dict[str, Any]:
         normalized_text,
         CONDITION_ALIASES,
     )
+
+    # Ensure fasting analyte mentions consistently register the fasting condition
+    if any(k in normalized_text for k in ("fasting blood glucose", "fasting plasma glucose", "fbg", "fpg")):
+        if "fasting" not in conditions:
+            conditions.append("fasting")
 
     routes = _find_aliases(
         normalized_text,

@@ -1,0 +1,80 @@
+{
+    "answer":  "Diabetes is a metabolic disorder characterized by chronic hyperglycemia and is associated with an increased risk of complications, including cardiovascular disease.",
+    "claims":  [
+                   {
+                       "claim":  "Diabetes is a metabolic disorder characterized by chronic hyperglycemia and is associated with an increased risk of complications, including cardiovascular disease.",
+                       "claim_text":  "Diabetes is a metabolic disorder characterized by chronic hyperglycemia and is associated with an increased risk of complications, including cardiovascular disease.",
+                       "verdict":  "INSUFFICIENT_EVIDENCE",
+                       "nli_verdict":  "INSUFFICIENT_EVIDENCE",
+                       "combined_verdict":  "INSUFFICIENT_EVIDENCE",
+                       "numerical_assessment":  {
+                                                    "verdict":  "NO_NUMERICAL_EVIDENCE",
+                                                    "reason":  "The claim contains no extractable numerical information.",
+                                                    "source_assessment_count":  0,
+                                                    "unique_document_count":  0,
+                                                    "consistent_source_count":  0,
+                                                    "discrepant_source_count":  0,
+                                                    "context_mismatch_count":  0,
+                                                    "inconclusive_source_count":  0,
+                                                    "no_numerical_evidence_count":  0,
+                                                    "source_assessments":  [
+
+                                                                           ],
+                                                    "clinical_truth_established":  false,
+                                                    "medical_contradiction_established":  false
+                                                },
+                       "verification_signals":  {
+                                                    "nli":  {
+                                                                "verdict":  "INSUFFICIENT_EVIDENCE",
+                                                                "scores":  {
+                                                                               "entailment":  0.5789979100227356,
+                                                                               "contradiction":  0.00007341393211390823,
+                                                                               "neutral":  0.4209286570549011
+                                                                           }
+                                                            },
+                                                    "numerical":  {
+                                                                      "verdict":  "NO_NUMERICAL_EVIDENCE",
+                                                                      "reason":  "The claim contains no extractable numerical information.",
+                                                                      "source_assessment_count":  0,
+                                                                      "unique_document_count":  0
+                                                                  }
+                                                },
+                       "verification_components":  [
+                                                       "nli",
+                                                       "numerical"
+                                                   ],
+                       "confidence":  0.421,
+                       "method":  "deberta-nli",
+                       "supporting_source":  "peer_reviewed",
+                       "source_type":  "peer_reviewed",
+                       "citation":  "Evidence suggests increased cardiovascular risk in diabetic patients.",
+                       "citation_match":  "semantic",
+                       "supporting_sources":  0,
+                       "total_sources":  2,
+                       "claim_type":  "medical",
+                       "explanation":  "NLI classification: INSUFFICIENT_EVIDENCE. Entailment=0.5790, Contradiction=0.0001, Neutral=0.4209. ",
+                       "nli_scores":  {
+                                          "contradiction":  0.0001,
+                                          "entailment":  0.579,
+                                          "neutral":  0.4209
+                                      },
+                       "verification_method_used":  "nli",
+                       "claim_id":  "CLM-0001",
+                       "extraction_type":  "inferential",
+                       "is_inferential":  true,
+                       "is_definitive":  true,
+                       "contains_causal_language":  false,
+                       "contains_numerical_information":  false,
+                       "numerical_values":  [
+
+                                            ],
+                       "numerical_mentions":  [
+
+                                              ],
+                       "original_sentence":  "Diabetes is a metabolic disorder characterized by chronic hyperglycemia and is associated with an increased risk of complications, including cardiovascular disease.",
+                       "atomic":  false
+                   }
+               ],
+    "hallucination_score":  0.75,
+    "relevance_score":  0.273
+}

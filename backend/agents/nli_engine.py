@@ -19,12 +19,6 @@ import logging
 import os
 from typing import Any
 
-import torch
-from transformers import (
-    AutoTokenizer,
-    AutoModelForSequenceClassification
-)
-
 logger = logging.getLogger(__name__)
 
 MODEL_NAME = os.getenv(
@@ -42,6 +36,7 @@ _device = None
 
 
 def get_device():
+    import torch
     if torch.cuda.is_available():
         return torch.device("cuda")
 
@@ -57,6 +52,9 @@ def load_model():
 
     if _model is not None:
         return _model, _tokenizer, _device
+
+    import torch
+    from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
     logger.info("Loading NLI model: %s", MODEL_NAME)
 
@@ -139,6 +137,7 @@ def predict_nli(
         raise ValueError("Hypothesis cannot be empty")
 
     model, tokenizer, device = load_model()
+    import torch
 
     inputs = tokenizer(
         premise,
@@ -200,6 +199,7 @@ def predict_batch(
         ]
 
     model, tokenizer, device = load_model()
+    import torch
 
     valid_hypotheses = [
         hypotheses[i] for i in valid_indices
