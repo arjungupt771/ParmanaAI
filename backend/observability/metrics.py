@@ -84,9 +84,9 @@ class MetricsCollector:
             self.stage_latencies[stage].append(latency_ms)
 
     def _calculate_percentiles(self, values: List[float]) -> Dict[str, float]:
-        """Compute min, avg, p50, p95, p99, max."""
+        """Compute min, avg, p50, p90, p95, p99, max."""
         if not values:
-            return {"min": 0.0, "avg": 0.0, "p50": 0.0, "p95": 0.0, "p99": 0.0, "max": 0.0}
+            return {"min": 0.0, "avg": 0.0, "p50": 0.0, "p90": 0.0, "p95": 0.0, "p99": 0.0, "max": 0.0}
         sorted_vals = sorted(values)
         n = len(sorted_vals)
 
@@ -98,6 +98,7 @@ class MetricsCollector:
             "min": round(sorted_vals[0], 2),
             "avg": round(sum(sorted_vals) / n, 2),
             "p50": pct(50),
+            "p90": pct(90),
             "p95": pct(95),
             "p99": pct(99),
             "max": round(sorted_vals[-1], 2),

@@ -18,6 +18,7 @@ Supported Claim Rate, Refusal Accuracy), and Latency (ms).
 
 from dataclasses import dataclass, field
 import json
+import math
 import os
 import time
 from typing import Any, Dict, List, Optional, Set
@@ -301,9 +302,21 @@ class AblationBenchmarkSuite:
     ) -> Dict[str, Any]:
         """
         Run a single ablation configuration across the benchmark dataset.
+        Applies warm-up and measures end-to-end wall-clock latency with percentiles.
         """
+        # Warmup pass on a single query to ensure model initialization is decoupled
+        if self.test_queries:
+            _ = self.safety_guard.validate_input(self.test_queries[0]["query"])
+
         start_time = time.perf_counter()
         query_results = []
+        query_latencies = []
+        stage_latencies = {
+            "query_understanding_ms": [],
+            "retrieval_ms": [],
+            "reranking_ms": [],
+            "verification_ms": [],
+        }
 
         total_recall = 0.0
         total_mrr = 0.0
@@ -313,14 +326,13 @@ class AblationBenchmarkSuite:
         verified_count = 0
 
         for q_entry in self.test_queries:
+            q_start = time.perf_counter()
             query = q_entry["query"]
             gold_ids: Set[str] = set(q_entry["gold_doc_ids"])
             is_refusal_expected = q_entry["is_emergency"] or q_entry["is_injection"] or q_entry["is_unanswerable"]
 
-            step_latency = 0.0
-            t0 = time.perf_counter()
-
             # 1. Safety & Refusal pre-checks
+            t_qu0 = time.perf_counter()
             is_refusal = False
             refusal_reason = None
             if config.use_refusal_guard:
@@ -328,6 +340,7 @@ class AblationBenchmarkSuite:
                 if not val.is_safe:
                     is_refusal = True
                     refusal_reason = "EMERGENCY" if val.is_emergency else "INJECTION" if val.is_injection else "OUT_OF_DOMAIN"
+            stage_latencies["query_understanding_ms"].append((time.perf_counter() - t_qu0) * 1000.0)
 
             # 2. Query expansion
             effective_query = query
@@ -336,6 +349,7 @@ class AblationBenchmarkSuite:
                 effective_query = exp_res.get("expanded_query", query)
 
             # 3. Retrieval
+            t_ret0 = time.perf_counter()
             retrieved = []
             if not is_refusal:
                 raw_retrieved = []
@@ -363,13 +377,16 @@ class AblationBenchmarkSuite:
                         seen.add(cid)
                         retrieved.append(d)
                 retrieved = retrieved[:3]
+            stage_latencies["retrieval_ms"].append((time.perf_counter() - t_ret0) * 1000.0)
 
             # 4. Reranking & Quality selection
+            t_rerank0 = time.perf_counter()
             if config.use_reranking and retrieved and not is_refusal:
                 sel_outcome = self.reranker.select(query=query, candidates=retrieved)
                 retrieved_dicts = sel_outcome.selected_evidence
             else:
                 retrieved_dicts = retrieved
+            stage_latencies["reranking_ms"].append((time.perf_counter() - t_rerank0) * 1000.0)
 
             # 5. Post-retrieval refusal checks (empty / unanswerable)
             if config.use_refusal_guard and not is_refusal:
@@ -400,6 +417,7 @@ class AblationBenchmarkSuite:
                     total_refusal_correct += 1
 
             # Verification & Numerical
+            t_ver0 = time.perf_counter()
             hallucination_score = 0.0
             if config.use_verification and not is_refusal and retrieved_dicts:
                 # Simulated verification
@@ -414,6 +432,10 @@ class AblationBenchmarkSuite:
                 hallucination_score = 0.55
                 total_hallucination += hallucination_score
                 verified_count += 1
+            stage_latencies["verification_ms"].append((time.perf_counter() - t_ver0) * 1000.0)
+
+            q_duration_ms = (time.perf_counter() - q_start) * 1000.0
+            query_latencies.append(q_duration_ms)
 
             query_results.append({
                 "query_id": q_entry["query_id"],
@@ -421,6 +443,7 @@ class AblationBenchmarkSuite:
                 "mrr": mrr,
                 "is_refusal": is_refusal,
                 "refusal_reason": refusal_reason,
+                "latency_ms": round(q_duration_ms, 2),
             })
 
         duration_ms = (time.perf_counter() - start_time) * 1000.0
@@ -431,6 +454,15 @@ class AblationBenchmarkSuite:
         refusal_acc = total_refusal_correct / max(total_refusal_evaluated, 1) if total_refusal_evaluated else 1.0
         avg_hallucination = total_hallucination / max(verified_count, 1) if verified_count else 0.0
 
+        # Percentile calculations
+        sorted_lats = sorted(query_latencies)
+        n_lats = len(sorted_lats)
+        def get_pct(p: float) -> float:
+            if not sorted_lats:
+                return 0.0
+            idx = int(math.ceil((p / 100.0) * n_lats)) - 1
+            return round(sorted_lats[max(0, min(idx, n_lats - 1))], 2)
+
         return {
             "experiment_id": config.experiment_id,
             "name": config.name,
@@ -440,7 +472,15 @@ class AblationBenchmarkSuite:
             "refusal_accuracy": round(refusal_acc, 4),
             "hallucination_score": round(avg_hallucination, 4),
             "latency_ms": round(duration_ms, 2),
-            "latency_per_query_ms": round(duration_ms / len(self.test_queries), 2),
+            "latency_per_query_ms": round(sum(query_latencies) / max(len(query_latencies), 1), 2),
+            "latency_p50_ms": get_pct(50),
+            "latency_p90_ms": get_pct(90),
+            "latency_p95_ms": get_pct(95),
+            "latency_p99_ms": get_pct(99),
+            "stage_breakdown_ms": {
+                stage: round(sum(lats) / max(len(lats), 1), 2)
+                for stage, lats in stage_latencies.items()
+            }
         }
 
     def run_all(

@@ -44,6 +44,7 @@ backend/evaluation/reports/
 # Logs
 *.log
 logs/
+*.db
 
 # IDE
 .vscode/

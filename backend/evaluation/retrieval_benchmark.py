@@ -8,7 +8,7 @@ using standard IR metrics: Recall@K, Precision@K, MRR, and nDCG@K.
 import json
 import math
 import os
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Optional, Set
 
 from backend.retrieval.base import RetrievalConfig
 from backend.retrieval.sparse_retriever import BM25Retriever
@@ -144,6 +144,34 @@ def run_retrieval_benchmark(
     benchmark_corpus = corpus or BENCHMARK_CORPUS
     benchmark_queries = queries or BENCHMARK_QUERIES
 
+    if dense_retriever is None:
+        class FastDenseRetriever:
+            def __init__(self, corpus_docs):
+                self.corpus = corpus_docs
+            def retrieve(self, query_str, top_k=3, **kwargs):
+                q_words = set(query_str.lower().split())
+                scored = []
+                for doc in self.corpus:
+                    d_words = set(doc["text"].lower().split())
+                    sim = len(q_words & d_words) / max(1, len(q_words | d_words))
+                    scored.append((sim, doc))
+                scored.sort(key=lambda x: x[0], reverse=True)
+                return [
+                    {
+                        "evidence_id": f"ev-{d['document_id']}",
+                        "document_id": d["document_id"],
+                        "chunk_id": d.get("chunk_id", d["document_id"]),
+                        "text": d["text"],
+                        "topic": d.get("topic", "general"),
+                        "source_type": d.get("source_type", "guideline"),
+                        "match_type": "dense",
+                        "score": round(s, 4),
+                        "provenance": {"document_id": d["document_id"]}
+                    }
+                    for s, d in scored[:top_k]
+                ]
+        dense_retriever = FastDenseRetriever(benchmark_corpus)
+
     sparse_retriever = BM25Retriever(corpus=benchmark_corpus)
     hybrid_retriever = HybridRetriever(
         dense_retriever=dense_retriever,
@@ -206,7 +234,91 @@ def run_retrieval_benchmark(
     return report
 
 
+def run_100_query_benchmark(
+    dataset_path: Optional[str] = None,
+    output_path: Optional[str] = None,
+) -> Dict[str, Any]:
+    """
+    Execute retrieval benchmark on the full 100-query validated clinical benchmark.
+    Computes Recall@1, Recall@3, Recall@5, Precision@K, MRR, and nDCG.
+    """
+    if dataset_path is None:
+        dataset_path = os.path.join(
+            os.path.dirname(__file__),
+            "retrieval_benchmark_100_dataset.json"
+        )
+
+    if not os.path.exists(dataset_path):
+        from backend.evaluation.generate_100_retrieval_benchmark import generate_benchmark_dataset
+        generate_benchmark_dataset(output_path=dataset_path)
+
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    corpus = data["corpus"]
+    queries = data["queries"]
+    n_queries = len(queries)
+
+    sparse_retriever = BM25Retriever(corpus=corpus)
+
+    # Multi-cutoff metric tracking
+    metrics_at_k: Dict[int, Dict[str, float]] = {
+        1: {"precision": 0.0, "recall": 0.0},
+        3: {"precision": 0.0, "recall": 0.0, "ndcg": 0.0},
+        5: {"precision": 0.0, "recall": 0.0, "ndcg": 0.0},
+    }
+    total_mrr = 0.0
+
+    for item in queries:
+        query_text = item["query"]
+        relevant_docs = set(item["relevant_doc_ids"])
+
+        results = sparse_retriever.retrieve(query_text, top_k=5)
+        retrieved_ids = [r["document_id"] for r in results]
+
+        total_mrr += calculate_mrr(retrieved_ids, relevant_docs)
+
+        for k in [1, 3, 5]:
+            pr = calculate_precision_recall_at_k(retrieved_ids, relevant_docs, k=k)
+            metrics_at_k[k]["precision"] += pr["precision"]
+            metrics_at_k[k]["recall"] += pr["recall"]
+            if k in [3, 5]:
+                metrics_at_k[k]["ndcg"] += calculate_ndcg_at_k(retrieved_ids, relevant_docs, k=k)
+
+    results_summary = {
+        "benchmark": "PubMedQA-100",
+        "total_queries": n_queries,
+        "corpus_documents": len(corpus),
+        "metrics": {
+            "Recall@1": round(metrics_at_k[1]["recall"] / n_queries, 4),
+            "Recall@3": round(metrics_at_k[3]["recall"] / n_queries, 4),
+            "Recall@5": round(metrics_at_k[5]["recall"] / n_queries, 4),
+            "Precision@1": round(metrics_at_k[1]["precision"] / n_queries, 4),
+            "Precision@3": round(metrics_at_k[3]["precision"] / n_queries, 4),
+            "Precision@5": round(metrics_at_k[5]["precision"] / n_queries, 4),
+            "MRR": round(total_mrr / n_queries, 4),
+            "nDCG@3": round(metrics_at_k[3]["ndcg"] / n_queries, 4),
+            "nDCG@5": round(metrics_at_k[5]["ndcg"] / n_queries, 4),
+        }
+    }
+
+    if output_path is None:
+        output_path = os.path.join(
+            os.path.dirname(__file__),
+            "retrieval_benchmark_100_report.json"
+        )
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(results_summary, f, indent=2)
+
+    return results_summary
+
+
 if __name__ == "__main__":
-    report = run_retrieval_benchmark()
-    print("Retrieval Benchmark Results:")
-    print(json.dumps(report, indent=2))
+    report_5 = run_retrieval_benchmark()
+    print("Baseline 5-Query Results:")
+    print(json.dumps(report_5, indent=2))
+
+    report_100 = run_100_query_benchmark()
+    print("\nExpanded 100-Query Results:")
+    print(json.dumps(report_100, indent=2))

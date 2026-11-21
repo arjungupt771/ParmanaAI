@@ -1,5 +1,5 @@
 import re
-from typing import Any
+from typing import Any, Optional
 from backend.agents.numerical_extractor import (
     extract_numerical_mentions
 )
@@ -107,6 +107,92 @@ NUMERICAL_PATTERN = re.compile(
 # ---------------------------------------------------------
 # 2. TEXT NORMALIZATION
 # ---------------------------------------------------------
+
+def strip_inline_markdown(text: str) -> str:
+    """
+    Remove inline formatting (bold, italic, links, code spans, strikethrough)
+    while keeping the underlying text.
+    """
+    if not isinstance(text, str):
+        return ""
+    text = re.sub(r"```[^\n]*\n?", "", text)
+    text = text.replace("```", "")
+    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
+    text = re.sub(r"__(.*?)__", r"\1", text)
+    text = re.sub(r"(?<!\*)\*(?!\*)(.*?)\*", r"\1", text)
+    text = re.sub(r"(?<!_)_(?!_)(.*?)_", r"\1", text)
+    text = re.sub(r"~~(.*?)~~", r"\1", text)
+    text = re.sub(r"`([^`]+)`", r"\1", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    return text.strip()
+
+
+def parse_markdown_blocks(text: str) -> list[tuple[str, dict[str, Any]]]:
+    """
+    Parse text/Markdown into structured blocks (list items, paragraphs)
+    while preserving hierarchy, headings, and list ordering.
+    """
+    if not isinstance(text, str) or not text.strip():
+        return []
+
+    lines = text.replace("\r\n", "\n").split("\n")
+    blocks: list[tuple[str, dict[str, Any]]] = []
+
+    current_header: Optional[str] = None
+    current_para_lines: list[str] = []
+
+    def flush_paragraph():
+        nonlocal current_para_lines
+        if current_para_lines:
+            para_text = " ".join(current_para_lines).strip()
+            if para_text:
+                blocks.append((
+                    para_text,
+                    {
+                        "is_list_item": False,
+                        "list_index": None,
+                        "parent_header": current_header,
+                    }
+                ))
+            current_para_lines = []
+
+    header_pattern = re.compile(r"^\s*#{1,6}\s+(.+)$")
+    list_pattern = re.compile(r"^\s*(?:([-*+]|•|◦|▪)|(\d+)[.)])\s+(.+)$")
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            flush_paragraph()
+            continue
+
+        h_match = header_pattern.match(line)
+        if h_match:
+            flush_paragraph()
+            current_header = strip_inline_markdown(h_match.group(1)).strip("# ")
+            continue
+
+        l_match = list_pattern.match(line)
+        if l_match:
+            flush_paragraph()
+            bullet_char, num_str, content = l_match.groups()
+            list_idx = int(num_str) if num_str else None
+            clean_content = strip_inline_markdown(content)
+            if clean_content:
+                blocks.append((
+                    clean_content,
+                    {
+                        "is_list_item": True,
+                        "list_index": list_idx,
+                        "parent_header": current_header,
+                    }
+                ))
+            continue
+
+        current_para_lines.append(stripped)
+
+    flush_paragraph()
+    return blocks
+
 
 def clean_markdown(text: str) -> str:
     """
@@ -218,22 +304,28 @@ def split_sentences(text: str) -> list[str]:
 
 def is_meaningful_claim(text: str) -> bool:
     """
-    Filter headings, fragments and very short statements.
+    Filter headings, fragments, questions, and very short statements.
     """
 
     if not isinstance(text, str):
         return False
 
-    words = re.findall(r"\b[A-Za-z]{2,}\b", text)
+    cleaned = text.strip()
+    if not cleaned or cleaned.endswith("?"):
+        return False
+
+    words = re.findall(r"\b[A-Za-z]{2,}\b", cleaned)
 
     if len(words) < 4:
         return False
 
-    lowered = text.lower()
+    lowered = cleaned.lower()
 
     non_claim_patterns = [
         r"^(?:introduction|conclusion|summary|references)$",
         r"^(?:in conclusion|to summarize)\b",
+        r"^(?:overview|background|methods|results|discussion|recommendations|key findings|clinical takeaways|takeaways)[:.]?$",
+        r"^(?:note|disclaimer|important note|please note)[:.]?$",
     ]
 
     if any(
@@ -281,9 +373,15 @@ def has_explicit_subject(text: str) -> bool:
 
     first = words[0].lower()
 
+    subordinating = {
+        "if", "when", "whenever", "unless",
+        "although", "because", "since", "while",
+        "whereas", "after", "before", "until", "though"
+    }
+
     conjunctions = {
         "and", "but", "or", "while",
-        "whereas", "although", "because"
+        "whereas", "although", "because", "however", "yet"
     }
 
     pronouns = {
@@ -291,18 +389,21 @@ def has_explicit_subject(text: str) -> bool:
         "we", "this", "these", "those"
     }
 
+    # Definite / indefinite articles introducing a noun phrase: "the risk", "a study", "an increase"
+    if first in {"a", "an", "the"}:
+        return len(words) >= 3 and words[1].lower() not in PREDICATE_STARTERS
+
     # Explicit noun-like subject or pronoun.
     return (
         first not in conjunctions
+        and first not in subordinating
         and first not in PREDICATE_STARTERS
-        and first not in {"a", "an", "the"}
         and (
             first in pronouns
             or first[0].isupper()
             or len(words) >= 3
         )
     )
-        
 
 
 def split_compound_claim(sentence: str) -> list[str]:
@@ -310,8 +411,8 @@ def split_compound_claim(sentence: str) -> list[str]:
     Split only clearly independent propositions.
 
     Supported:
-    - Semicolon-separated propositions.
-    - Coordinated clauses with repeated explicit subjects.
+    - Semicolon-separated propositions (with or without transition words).
+    - Coordinated/contrastive clauses with explicit subjects (and, but, while, whereas, although, however, yet).
 
     Not supported:
     - Reconstructing omitted subjects.
@@ -326,6 +427,8 @@ def split_compound_claim(sentence: str) -> list[str]:
     if not sentence:
         return []
 
+    sentence = sentence.strip("\"'")
+
     # First, split explicit semicolon boundaries.
     semicolon_parts = [
         part.strip()
@@ -336,17 +439,24 @@ def split_compound_claim(sentence: str) -> list[str]:
     output = []
 
     for part in semicolon_parts:
-
-        # Only split conjunctions when both sides appear
-        # to contain independently stated subjects.
-        conjunction_parts = re.split(
-            r",?\s+\b(and|but|while|whereas|although)\b\s+",
+        # Strip transition adverbs at start of semicolon-separated clause
+        cleaned_part = re.sub(
+            r"^(?:however|moreover|furthermore|therefore|nevertheless|in addition|consequently|nonetheless),?\s*",
+            "",
             part,
+            flags=re.IGNORECASE
+        ).strip()
+        if not cleaned_part:
+            continue
+
+        conjunction_parts = re.split(
+            r",?\s+\b(and|but|while|whereas|although|however|yet)\b\s+",
+            cleaned_part,
             flags=re.IGNORECASE
         )
 
         if len(conjunction_parts) == 1:
-            output.append(part)
+            output.append(cleaned_part)
             continue
 
         clauses = []
@@ -359,12 +469,15 @@ def split_compound_claim(sentence: str) -> list[str]:
             conjunction = conjunction_parts[index]
             next_clause = conjunction_parts[index + 1].strip()
 
-            # Both clauses must have explicit subjects.
-            if not has_explicit_subject(current):
-                can_split = False
-                break
+            next_clause = re.sub(
+                r"^(?:however|moreover|furthermore|therefore|nevertheless),?\s*",
+                "",
+                next_clause,
+                flags=re.IGNORECASE
+            ).strip()
 
-            if not has_explicit_subject(next_clause):
+            # Both clauses must have explicit subjects.
+            if not has_explicit_subject(current) or not has_explicit_subject(next_clause):
                 can_split = False
                 break
 
@@ -374,7 +487,7 @@ def split_compound_claim(sentence: str) -> list[str]:
         if can_split and len(clauses) > 1:
             output.extend(clauses)
         else:
-            output.append(part)
+            output.append(cleaned_part)
 
     return output
 
@@ -460,61 +573,59 @@ def extract_claim_records(
     Extract atomic claim records.
 
     Every record represents one independently stated
-    proposition, subject to conservative decomposition.
+    proposition, decomposed conservatively from Markdown lists,
+    paragraphs, headers, and compound sentences.
     """
 
     if not isinstance(text, str) or not text.strip():
         return []
 
-    normalized = clean_markdown(text)
-
-    sentences = split_sentences(normalized)
-
+    blocks = parse_markdown_blocks(text)
     records = []
     seen = set()
 
-    for sentence in sentences:
+    for block_text, block_meta in blocks:
+        sentences = split_sentences(block_text)
+        if not sentences and block_text:
+            sentences = [block_text]
 
-        atomic_candidates = split_compound_claim(sentence)
+        for sentence in sentences:
+            atomic_candidates = split_compound_claim(sentence)
 
-        for candidate in atomic_candidates:
+            for candidate in atomic_candidates:
+                candidate = candidate.strip(" -*:\u2022\u25E6\u25AA")
+                candidate = candidate.strip()
 
-            candidate = candidate.strip(" -*:\u2022")
+                if not is_meaningful_claim(candidate):
+                    continue
 
-            # Remove residual surrounding punctuation.
-            candidate = candidate.strip()
+                lowered = candidate.lower()
+                normalized_key = re.sub(
+                    r"\s+",
+                    " ",
+                    lowered
+                )
 
-            if not is_meaningful_claim(candidate):
-                continue
+                if normalized_key in seen:
+                    continue
 
-            lowered = candidate.lower()
+                metadata = classify_claim(candidate)
 
-            # Avoid exact duplicate claims.
-            normalized_key = re.sub(
-                r"\s+",
-                " ",
-                lowered
-            )
+                if inferential and not metadata["is_inferential"]:
+                    continue
 
-            if normalized_key in seen:
-                continue
+                seen.add(normalized_key)
 
-            metadata = classify_claim(candidate)
-
-            # Preserve existing inferential-mode behavior:
-            # only cautious claims are eligible.
-            if inferential and not metadata["is_inferential"]:
-                continue
-
-            seen.add(normalized_key)
-
-            records.append({
-                "claim_id": f"CLM-{len(records) + 1:04d}",
-                "claim_text": candidate,
-                "original_sentence": sentence,
-                "atomic": len(atomic_candidates) > 1,
-                **metadata
-            })
+                records.append({
+                    "claim_id": f"CLM-{len(records) + 1:04d}",
+                    "claim_text": candidate,
+                    "original_sentence": sentence,
+                    "atomic": len(atomic_candidates) > 1,
+                    "is_list_item": block_meta["is_list_item"],
+                    "list_index": block_meta["list_index"],
+                    "parent_header": block_meta["parent_header"],
+                    **metadata
+                })
 
     return records
 

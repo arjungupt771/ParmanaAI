@@ -1,0 +1,1712 @@
+{
+  "metadata": {
+    "source": "PubMedQA",
+    "total_queries": 100,
+    "total_corpus_documents": 100,
+    "version": "1.0.0"
+  },
+  "corpus": [
+    {
+      "document_id": "doc-pmid-25429730",
+      "chunk_id": "chunk-pmid-25429730-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Chronic rhinosinusitis (CRS) is a heterogeneous disease with an uncertain pathogenesis. Group 2 innate lymphoid cells (ILC2s) represent a recently discovered cell population which has been implicated in driving Th2 inflammation in CRS; however, their relationship with clinical disease characteristics has yet to be investigated. The aim of this study was to identify ILC2s in sinus mucosa in patients with CRS and controls and compare ILC2s across characteristics of disease. A cross-sectional study of patients with CRS undergoing endoscopic sinus surgery was conducted. Sinus mucosal biopsies were obtained during surgery and control tissue from patients undergoing pituitary tumour resection through transphenoidal approach. ILC2s were identified as CD45(+) Lin(-) CD127(+) CD4(-) CD8(-) CRTH2(CD294)(+) CD161(+) cells in single cell suspensions through flow cytometry. ILC2 frequencies, measured as a percentage of CD45(+) cells, were compared across CRS phenotype, endotype, inflammatory CRS subtype and other disease characteristics including blood eosinophils, serum IgE, asthma status and nasal symptom score. 35 patients (40% female, age 48 \u00b1 17 years) including 13 with eosinophilic CRS (e"
+    },
+    {
+      "document_id": "doc-pmid-25433161",
+      "chunk_id": "chunk-pmid-25433161-01",
+      "topic": "gastroenterology",
+      "source_type": "peer_reviewed",
+      "text": "Phosphatidylethanolamine N-methyltransferase (PEMT), a liver enriched enzyme, is responsible for approximately one third of hepatic phosphatidylcholine biosynthesis. When fed a high-fat diet (HFD), Pemt(-/-) mice are protected from HF-induced obesity; however, they develop steatohepatitis. The vagus nerve relays signals between liver and brain that regulate peripheral adiposity and pancreas function. Here we explore a possible role of the hepatic branch of the vagus nerve in the development of diet induced obesity and steatohepatitis in Pemt(-/-) mice. 8-week old Pemt(-/-) and Pemt(+/+) mice were subjected to hepatic vagotomy (HV) or capsaicin treatment, which selectively disrupts afferent nerves, and were compared to sham-operated or vehicle-treatment, respectively. After surgery, mice were fed a HFD for 10 weeks. HV abolished the protection against the HFD-induced obesity and glucose intolerance in Pemt(-/-) mice. HV normalized phospholipid content and prevented steatohepatitis in Pemt(-/-) mice. Moreover, HV increased the hepatic anti-inflammatory cytokine interleukin-10, reduced chemokine monocyte chemotactic protein-1 and the ER stress marker C/EBP homologous protein. Furtherm"
+    },
+    {
+      "document_id": "doc-pmid-25445714",
+      "chunk_id": "chunk-pmid-25445714-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Psammaplin A (PsA) is a natural product isolated from marine sponges, which has been demonstrated to have anticancer activity against several human cancer cell lines via the induction of cell cycle arrest and apoptosis. New drugs that are less toxic and more effective against multidrug-resistant cancers are urgently needed. We tested cell proliferation, cell cycle progression and autophagic cell death pathway in doxorubicin-resistant MCF-7 (MCF-7/adr) human breast cancer cells. The potency of PsA was further determined using an in vivo xenograft model."
+    },
+    {
+      "document_id": "doc-pmid-25431941",
+      "chunk_id": "chunk-pmid-25431941-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "This study examined links between DNA methylation and birth weight centile (BWC), and explored the impact of genetic variation. Using HumanMethylation450 arrays, we examined candidate gene-associated CpGs in cord blood from newborns with low (<15th centile), medium (40-60th centile) and high (>85th centile) BWC (n = 12). Candidates were examined in an investigation cohort (n = 110) using pyrosequencing and genotyping for putative methylation-associated polymorphisms performed using standard PCR. Array analysis identified 314 candidate genes associated with BWC extremes, four of which showed \u2265 4 BWC-linked CpGs. Of these, PM20D1 and MI886 suggested genetically determined methylation levels. However, methylation at three CpGs in FGFR2 remained significantly associated with high BWC (p = 0.004-0.027)."
+    },
+    {
+      "document_id": "doc-pmid-25432519",
+      "chunk_id": "chunk-pmid-25432519-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Tumor microenvironment immunity is associated with breast cancer outcome. A high lymphocytic infiltration has been associated with response to neoadjuvant chemotherapy, but the contribution to response and prognosis of immune cell subpopulations profiles in both pre-treated and post-treatment residual tumor is still unclear. We analyzed pre- and post-treatment tumor-infiltrating immune cells (CD3, CD4, CD8, CD20, CD68, Foxp3) by immunohistochemistry in a series of 121 breast cancer patients homogeneously treated with neoadjuvant chemotherapy. Immune cell profiles were analyzed and correlated with response and survival. We identified three tumor-infiltrating immune cell profiles, which were able to predict pathological complete response (pCR) to neoadjuvant chemotherapy (cluster B: 58%, versus clusters A and C: 7%). A higher infiltration by CD4 lymphocytes was the main factor explaining the occurrence of pCR, and this association was validated in six public genomic datasets. A higher chemotherapy effect on lymphocytic infiltration, including an inversion of CD4/CD8 ratio, was associated with pCR and with better prognosis. Analysis of the immune infiltrate in post-chemotherapy residu"
+    },
+    {
+      "document_id": "doc-pmid-25440440",
+      "chunk_id": "chunk-pmid-25440440-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Hidradenitis suppurativa (HS) is a chronic inflammatory disease involving intertriginous skin. Previous epidemiologic studies have been limited by small sample size. We sought to describe the prevalence and comorbidities of HS in a large patient care database. In this retrospective case-control study, we chart-validated all patients within a hospital database who received at least 1 billing code for HS between 1980 and 2013. Verified cases were matched with controls based on age, gender, and race. Prevalences of a priori selected comorbidities were compared between HS and control groups. A total of 2292 patients at Massachusetts General Hospital received at least 1 code for HS. A total of 1776 cases had a validated diagnosis of HS, yielding a prevalence of 0.08%. In unadjusted analysis, all comorbidities were diagnosed significantly more in HS compared with control including (in rank order of likelihood): smoking, arthropathies, dyslipidemia, polycystic ovarian syndrome, psychiatric disorders, obesity, drug dependence, hypertension, diabetes, thyroid disease, alcohol dependence, and lymphoma (all P < .01)."
+    },
+    {
+      "document_id": "doc-pmid-25444977",
+      "chunk_id": "chunk-pmid-25444977-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The interassay variability found in the measurement of testosterone (T) levels warrants the need for laboratories to validate their methods to establish trustworthy cut-off points for diagnosis of male hypogonadism. The aims of this study were to validate measurement of total T (TT) at our laboratory in order to obtain reference ranges for TT, calculated free T (CFT), calculated bioavailable T (CBT), and salivary T (ST) in healthy young men from the Mediterranean region, and to evaluate the potential clinical value of ST by establishing its correlation with serum T. An observational, cross-sectional study with sequential sampling. men aged 18-30 years with body mass index (BMI)<30. chronic diseases, hepatic insufficiency or use of drugs altering circulating T levels. Main outcome measures TT (chemiluminescent immunoassay UniCell DXI 800 [Access T Beckman Coulter]), CFT and CBT (Vermeulen's formula), and ST (radioimmunoassay for serum TT modified for saliva [Coat-A-Count, Siemens]). Descriptive statistical analyses and correlation by Spearman's rho (SPSS 19.0 Inc., Chicago) were used. One hundred and twenty-one subjects aged 24\u00b13.6 years with BMI 24\u00b12.5 kg/m(2) were enrolled. Hormon"
+    },
+    {
+      "document_id": "doc-pmid-25429648",
+      "chunk_id": "chunk-pmid-25429648-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Secretory phospholipases A2 (sPLA2) initiate the biosynthesis of eicosanoids, are increased in the airways of people with severe asthma, and induce mucin hypersecretion. We used IL-13-transformed, highly enriched goblet cells and differentiated (ciliary cell-enriched) human bronchial epithelial cell culture to evaluate the relative contribution of ciliated and goblet cells to airway sPLA2 generation and response. We wished to determine the primary source(s) of sPLA2 and leukotrienes in human airway epithelial cells. Human bronchial epithelial cells from subjects without lung disease were differentiated to a ciliated-enriched or goblet-enriched cell phenotype. Synthesis of sPLA2, cysteinyl leukotrienes (cysLTs), and airway mucin messenger RNA and protein was measured by real-time-polymerase chain reaction and an enzyme-linked immunosorbent assay, and the localization of mucin and sPLA2 to specific cells types was confirmed by confocal microscopy. sPLA2 group IIa, V, and X messenger RNA expression was increased in ciliated-enriched cells (P < .001) but not in goblet-enriched cells. sPLA2 were secreted from the apical (air) side of ciliated-enriched cells but not goblet-enriched cells"
+    },
+    {
+      "document_id": "doc-pmid-25424148",
+      "chunk_id": "chunk-pmid-25424148-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Hyperglycemia on admission is associated with increased mortality rates in patients with ST-elevation myocardial infarction (STEMI) who are treated with either fibrinolytic therapy (FT) or primary percutaneous coronary intervention (PCI). However, data regarding the relationship between hyperglycemia and the success of FT are lacking. The aim of this study was to investigate the value of admission blood glucose for the prediction of failed reperfusion following FT. This is a retrospective study of 304 STEMI patients who received FT and whose admission glucose levels were recorded. The main outcome measure was ST segment resolution\u226550%. The median (interquartile range [IQR]) blood glucose level in the entire study group was 112 (95-153). In 92 (30.2%) patients, FT was unsuccessful and rescue PCI was performed. Admission glucose (126 [99-192] vs. 110 [94-144] mg/dL, p<0.001), time from symptom onset to FT (180 [120-270] vs. 150 [120-180] min, p=0.009), and maximum ST elevation amplitude (3 [2-7] vs. 3 [2-6] mm, p=0.05) were higher in the failed reperfusion group than in the reperfusion group. Admission hyperglycemia was an independent predictive factor for failed reperfusion (hazard "
+    },
+    {
+      "document_id": "doc-pmid-25447560",
+      "chunk_id": "chunk-pmid-25447560-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Publication bias compromises the validity of systematic reviews. This problem can be addressed in part through searching clinical trials registries to identify unpublished studies. This study aims to determine how often systematic reviews published in emergency medicine journals include clinical trials registry searches. We identified all systematic reviews published in the 6 highest-impact emergency medicine journals between January 1 and December 31, 2013. Systematic reviews that assessed the effects of an intervention were further examined to determine whether the authors described searching a clinical trials registry and whether this search identified relevant unpublished studies. Of 191 articles identified through PubMed search, 80 were confirmed to be systematic reviews. Our sample consisted of 41 systematic reviews that assessed a specific intervention. Eight of these 41 (20%) searched a clinical trials registry. For 4 of these 8 reviews, the registry search identified at least 1 relevant unpublished study."
+    },
+    {
+      "document_id": "doc-pmid-25447567",
+      "chunk_id": "chunk-pmid-25447567-01",
+      "topic": "pulmonology",
+      "source_type": "peer_reviewed",
+      "text": "Obese patients with idiopathic pulmonary fibrosis (IPF) have higher 90-day mortality after lung transplantation. We sought to determine whether body mass index (BMI) differentially modified the effect of transplant procedure type on 90-day mortality in IPF patients. We analyzed data from the Organ Procurement and Transplantation Network (OPTN) for all patients with IPF who were transplanted between 2000 and 2010. Post-transplant survival was examined using Kaplan-Meier estimates. Multivariable logistic regression modeling was used to determine the difference in 90-day survival. The primary variable of interest was the interaction term between body mass index (BMI) and transplant type. A total of 3,389 (58% single-lung transplant [SLT] and 42% bilateral lung transplant [BLT]) subjects were included. Multivariable logistic regression modeling demonstrated a statistically significant interaction between BMI and transplant type (p = 0.047). Patients with a BMI > 30 kg/m(2) who received a BLT are 1.71 times (95% CI [1.03 to 2.85], p = 0.038) more likely to die within 90 days than BLT recipients with a BMI of 18.5 to 30 kg/m(2)."
+    },
+    {
+      "document_id": "doc-pmid-25445624",
+      "chunk_id": "chunk-pmid-25445624-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Schizophrenia is recognized as a disorder of the brain and neuronal connectivity. The neural cell adhesion molecule 1 (NCAM1) gene plays a crucial role in regulating neuronal connectivity. We conducted a two-stage association analysis on 17 NCAM1 SNPs in two independent Han Chinese schizophrenia case-control cohorts (discovery sample from Hunan Province: 986 patients and 1040 normal controls; replication sample from Yunnan Province: 564 cases and 547 healthy controls). Allele, genotype and haplotype frequencies were compared between case and control samples. Transcription factor binding site prediction and luciferase reporter assays were employed to assess the potential function of promoter SNPs. We detected developmental changes at the transcriptional level of NCAM1 during neuron differentiation in Macaca mulatta neural progenitor cells (NPC). Serum levels of NCAM1 were measured in 72 cases and 88 controls. A promoter variant, rs2301228, was found to be associated with schizophrenia at the allelic level and was validated in a replication cohort. Luciferase reporter assays demonstrated that risk allele rs2301228-A significantly down-regulated NCAM1 gene transcription compared to th"
+    },
+    {
+      "document_id": "doc-pmid-25445628",
+      "chunk_id": "chunk-pmid-25445628-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Oxidative stress generated within inflammatory joints can produce autoimmune phenomena and joint destruction. Radical species with oxidative activity, including reactive nitrogen species, represent mediators of inflammation and cartilage damage. To assess serum nitric oxide as a marker of oxidative stress in Egyptian patients with rheumatoid arthritis and its relation to disease activity. 80 patients with rheumatoid arthritis were divided into 2 groups, according to the DAS-28 score: Group I: 42 patients with disease activity, and Group II: 38 patients with no disease activity. Forty age- and sex-matched individuals were included as control group (Group III). Routine laboratory investigations were done, and nitric oxide was measured using Elisa. Hand plain radiographies were done for radiological status scoring using the Sharp method. A comparison between nitric oxide in all three groups showed a highly significant difference (p < 0.001), significantly higher levels were obtained among rheumatoid arthritis patients in comparison to controls, and higher levels were obtained in patients with active disease (mean\u00b1SD 82.38\u00b120.46) in comparison to patients without active disease (35.53\u00b1"
+    },
+    {
+      "document_id": "doc-pmid-25432781",
+      "chunk_id": "chunk-pmid-25432781-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Activation of B cells is a hallmark of systemic lupus erythematosus (SLE). Syk and TRAF6 are key signaling molecules in B-cell activation through BCR and CD40/TLR, respectively. Nevertheless, whether expression of Syk and TRAF6 is altered in SLE B cells remains unknown. Phosphorylation and/or expression of Syk and TRAF6 were analyzed by flow cytometry in peripheral blood mononuclear cells isolated from SLE patients. Pronounced phosphorylation and expression of Syk were noted in B cells from SLE patients compared with healthy donors. Levels of Syk phosphorylation correlated with the disease activity score. TRAF6 was significantly over-expressed in B cells of SLE patients as compared with healthy donors, and significant correlation of levels of TRAF6 expression and Syk phosphorylation was observed in SLE patients. Levels of TRAF6 expression were more pronounced in CD27+ memory B cells than in CD27-na\u00efve B cells. In vitro treatment of SLE B cells with a Syk inhibitor (BAY61-3606) reduced Syk phosphorylation as well as TRAF6 expression."
+    },
+    {
+      "document_id": "doc-pmid-25429481",
+      "chunk_id": "chunk-pmid-25429481-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The aim of this study was to determine the reasons for which erupted third molars (3M) are extracted in a sample of Mexican patients. A retrospective cross-sectional study was performed on a sample of 83 patients attending exodontia (minor oral surgery) clinics of a public university in Mexico (Autonomous University of Hidalgo State). The outcome variable was the reason for extractions using Kay and Blinkhorn's classification. The independent variables were age, gender, arch and tooth number according to the World Health Organization (WHO). For statistical analysis, we used the Chi-squared test in Stata 9.0. Eighty-three patients underwent 150 3M extractions. Mean age was 38.67 \u00b1 13.96 years, and 71.1% were female. The four reasons for 3M extraction were prosthetic (44.0%), followed by orthodontic (24.7%), dental caries (20.0%) and periodontal disease (11.3%). Differences were observed in the reasons for 3M extractions across age groups (p < 0.05). No significant differences existed between men and women (p > 0.05), or the WHO tooth number (p > 0.05)."
+    },
+    {
+      "document_id": "doc-pmid-25424372",
+      "chunk_id": "chunk-pmid-25424372-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To measure the through-focus curve for eyes implanted with a type 1 Boston keratoprosthesis (KPro) and compare it to that of pseudophakic controls with fixed pupil sizes. The results should assist in evaluating postoperative visual quality after surgery. They should also help to determine the necessary KPro inventories in terms of refractive power steps. Autorefraction and manifest refraction were performed on all eyes. The monocular through-focus acuity curve was plotted in reference to the best-corrected visual acuity by spectacle plane defocus ranging from +5.00 to -5.00\u00a0dioptres in 0.50\u00a0dioptre increments. These measurements were obtained on KPro-implanted eyes, pseudophakic eyes as controls, and on the same control eyes after fixing the pupil diameter to 3 and 2\u00a0mm using black painted iris contact lenses. Ten KPro eyes and five control eyes were included. Good agreement was noted between the subjective refractions and autorefraction in KPro eyes. The average through-focus curve for the control eyes was significantly steeper than that of the KPro curve, but became comparable after fixing the control pupil to 2 and 3\u00a0mm."
+    },
+    {
+      "document_id": "doc-pmid-25449410",
+      "chunk_id": "chunk-pmid-25449410-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Larger food portions lead to increased intake but the mechanism behind this effect is unclear. We investigated the effect of portion size on bite size, eating rate, deceleration rate, and meal duration. Thirty-seven overweight women attended 5 visits after a 3 h fast and consumed a 229, 303, 400, 529 or 700 g portion of a lunch meal in random order. Meal eating parameters were measured with the Sussex Ingestion Pattern Monitor. Data were analyzed with mixed effects models. Average bite size increased by 0.22 g for every 100 g increase in portion size (p=0.001); portion size had a non-linear effect on eating rate, increasing with portion sizes up to about 540 g (p=0.01). Deceleration rate (reduction in speed of eating) decreased by 20% (p<0.001) and meal duration increased by 22.5% for every 100 g increase in portion size (p<0.001), relative to the smallest portion."
+    },
+    {
+      "document_id": "doc-pmid-25448648",
+      "chunk_id": "chunk-pmid-25448648-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Pre-operative restaging CT scans are often performed routinely following neoadjuvant chemoradiotherapy for locally advanced rectal cancer. There is a paucity of data on the utility of this common practice. We sought to determine how often restaging CTs identified disease progression or regression that altered management. We performed a single-institution retrospective study. From 2007 to 2011, 182 patients had newly-diagnosed, non-metastatic rectal adenocarcinoma, of which 96 were surgical candidates with clinical stage II/III disease. Ninety-one of these patients (95%) completed neoadjuvant chemoradiation. Eighty-three out of 91 patients (91%) had restaging CTs. Four patients (5%) had new lesions suspicious for distant metastasis (2 lung, 2 liver) on restaging CT scan reports (1 of these was present on initial staging CT but not reported). All 4 patients had node-positive disease. In no case did restaging CT result in a change in surgical management."
+    },
+    {
+      "document_id": "doc-pmid-25445712",
+      "chunk_id": "chunk-pmid-25445712-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Plasma levels of pancreatic polypeptide (PP) rise upon food intake. Although other pancreatic islet hormones, such as insulin and glucagon, have been extensively investigated, PP secretion and actions are still poorly understood. The release of PP upon glucose stimulation and the effects of PP on glucagon and insulin secretion were analyzed in isolated pancreatic islets. Expression of PP receptor (PPYR1) was investigated by immunoblotting, quantitative RT-PCR on sorted pancreatic islet cells, and immunohistochemistry. In isolated mouse pancreatic islets, glucose stimulation increased PP release, while insulin secretion was up and glucagon release was down. Direct exposure of islets to PP inhibited glucagon release. In mouse islets, PPYR1 protein was observed by immunoblotting and quantitative RT-PCR revealed PPYR1 expression in the FACS-enriched glucagon alpha-cell fraction. Immunohistochemistry on pancreatic sections showed the presence of PPYR1 in alpha-cells of both mouse and human islets, while the receptor was absent in other islet cell types and exocrine pancreas."
+    },
+    {
+      "document_id": "doc-pmid-25449344",
+      "chunk_id": "chunk-pmid-25449344-01",
+      "topic": "pulmonology",
+      "source_type": "peer_reviewed",
+      "text": "To review UK newspaper reports relating to Do Not Attempt Cardiopulmonary Resuscitation (DNACPR) decisions in order to identify common themes and encourage dialogue. An online media database (LexisNexis(\u00ae)) was searched for UK Newspaper articles between 1993 and 2013 that referenced DNACPR decisions. Legal cases, concerning resuscitation decisions, were identified using two case law databases (Lexis Law(\u00ae) and Westlaw(\u00ae)), and referenced back to newspaper publications. All articles were fully reviewed. Three hundred and thirty one articles were identified, resulting from 77 identifiable incidents. The periods 2000-01 and 2011-13 encompassed the majority of articles. There were 16 high-profile legal cases, nine of which resulted in newspaper articles. Approximately 35 percent of newspaper reports referred to DNACPR decisions apparently made without adequate patient and/or family consultation. \"Ageism\" was referred to in 9 percent of articles (mostly printed 2000-02); and \"discrimination against the disabled\" in 8 percent (mostly from 2010-12). Only five newspaper articles (2 percent) discussed patients receiving CPR against their wishes. Eighteen newspaper reports (5 percent) associ"
+    },
+    {
+      "document_id": "doc-pmid-25440267",
+      "chunk_id": "chunk-pmid-25440267-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "The interval between neoadjuvant chemoradiation treatment and surgery has been described as an important predictor of pathologic response to therapy in nonesophageal cancer sites. We retrospectively reviewed our experience with patients who underwent neoadjuvant chemoradiation and esophagectomy to better understand the impact of the timing of surgery on pathologic complete response rates in esophageal cancer. Two hundred thirty-one sequentially treated patients from 2000 to 2011 were identified for this study; 88 of these patients completed neoadjuvant chemoradiation followed by esophagectomy at our institution. The interval between completion of chemoradiation and surgery was calculated for each patient. The patients were categorized into quartiles and also into 3-week interval groups. Treatment factors and surgical morbidity data, including the estimated blood loss and length of operative stay, were also assessed. Quartiles for the neoadjuvant chemoradiation to surgery interval were less than 45 days, 46 to 50 days, 51 to 63 days, and 64+ days. Corresponding pathologic complete response rates were 12.5%, 20.0%, 22.7%, and 40.9% (p = 0.03). Results for 3-week intervals were simila"
+    },
+    {
+      "document_id": "doc-pmid-25440261",
+      "chunk_id": "chunk-pmid-25440261-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To investigate whether epileptogenic focus localization is possible based on resting state connectivity analysis of magnetoencephalographic (MEG) data. A multivariate autoregressive (MVAR) model was constructed using the sensor space data and was projected to the source space using lead field and inverse matrix. The generalized partial directed coherence was estimated from the MVAR model in the source space. The dipole with the maximum information inflow was hypothesized to be within the epileptogenic focus. Applying the focus localization algorithm (FLA) to the interictal MEG recordings from five patients with neocortical epilepsy, who underwent presurgical evaluation for the identification of epileptogenic focus, we were able to correctly localize the focus, on the basis of maximum interictal information inflow in the presence or absence of interictal epileptic spikes in the data, with three out of five patients undergoing resective surgery and being seizure free since."
+    },
+    {
+      "document_id": "doc-pmid-25432826",
+      "chunk_id": "chunk-pmid-25432826-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To assess the effect of treatment of seminal Helicobacter pylori in infertile asthenozoospermic men. In all, 223 infertile asthenozoospermic men were consecutively selected. They were subjected to history taking, clinical examination, semen analysis, and estimation of H pylori IgA antibodies in their seminal fluid. Infertile men with high seminal H pylori IgA were subjected to triple drug treatment, omeprazole, 20 mg; tinidazole, 500 mg; and clarithromycin, 250 mg twice a day for 2 weeks. Semen analysis as well as H pylori IgA antibodies was estimated after 3 months. In all, 22 of 223 men (9.87%) demonstrated H pylori IgA antibodies in their seminal plasma. After treatment, mean seminal H pylori IgA levels demonstrated significant decrease (1.55 \u00b1 0.4 vs 0.52 \u00b1 0.26; 95% confidence interval, 0.83-1.21; P = .001) concomitant with improved progressive as well as nonprogressive sperm motility. H pylori IgA antibodies demonstrated significant negative correlation with progressive sperm motility, nonprogressive sperm motility, normal sperm morphology, and significant positive correlation with immotile sperm motility."
+    },
+    {
+      "document_id": "doc-pmid-25447994",
+      "chunk_id": "chunk-pmid-25447994-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "In most cells, the cilium is formed within a compartment separated from the cytoplasm. Entry into the ciliary compartment is regulated by a specialized gate located at the base of the cilium in a region known as the transition zone. The transition zone is closely associated with multiple structures of the ciliary base, including the centriole, axoneme, and ciliary membrane. However, the contribution of these structures to the ciliary gate remains unclear. Here we report that, in Drosophila spermatids, a conserved module of transition zone proteins mutated in Meckel-Gruber syndrome (MKS), including Cep290, Mks1, B9d1, and B9d2, comprise a ciliary gate that continuously migrates away from the centriole to compartmentalize the growing axoneme tip. We show that Cep290 is essential for transition zone composition, compartmentalization of the axoneme tip, and axoneme integrity and find that MKS proteins also delimit a centriole-independent compartment in mouse spermatids."
+    },
+    {
+      "document_id": "doc-pmid-25453030",
+      "chunk_id": "chunk-pmid-25453030-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Active commuters have lower risk of chronic disease. Understanding which of the, to some extent, modifiable characteristics of public transportation that facilitate its use is thus important in a public health perspective. The aim of the study was to examine the association between individual public transportation accessibility and self-reported active commuting, and whether the associations varied with commute distance, age, and gender. Twenty-eight thousand nine hundred twenty-eight commuters in The Capital Region of Denmark reported self-reported time spent either walking or cycling to work or study each day and the distance to work or study. Data were obtained from the Danish National Health Survey collected in February to April 2010. Individual accessibility by public transportation was calculated using a multi-modal network in a GIS. Multilevel logistic regression was used to analyze the association between accessibility, expressed as access area, and being an active commuter. Public transport accessibility area based on all stops within walking and cycling distance was positively associated with being an active commuter. Distance to work, age, and gender modified the associa"
+    },
+    {
+      "document_id": "doc-pmid-25444989",
+      "chunk_id": "chunk-pmid-25444989-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Pathophysiological mechanisms leading to chordee in patients with hypospadias and to the hidden state of buried penis in the prepubic fat remain unclear. Resection of dartos tissue usually makes the penis straight in patients with hypospadias and corrects it in those with buried penis, suggesting a common pathophysiology related to dartos tissue. Tissue samples from 113 children undergoing primary penile surgery for hypospadias (94 patients), epispadias (1) or buried penis (18) were collected between November 2011 and September 2013. Tissue samples from 79 children undergoing circumcision for nonmedical reasons served as controls. All samples were stained with smooth muscle actin and analyzed by the same pathologist, who was blinded to indication for surgery. Chi-square and Fisher exact tests were applied. Three different dartos tissue patterns were observed. Pattern I (normal) consisted of smooth muscle fibers of dartos tissue organized in a parallel configuration in the subcutaneous tissue. Pattern II was characterized by poorly developed and hypotrophic smooth muscle fibers. Pattern III was determined by randomly distributed smooth muscle fibers in the subcutaneous tissue, witho"
+    },
+    {
+      "document_id": "doc-pmid-25444981",
+      "chunk_id": "chunk-pmid-25444981-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Several risk factors have been claimed to predict the progression of clinically high grade T1 bladder tumors. However, these factors are not specific enough to define which patients should be treated immediately with radical cystectomy. Therefore, it is critical to identify molecular markers that can help provide individualized, risk stratified decision making. Our main goal was to evaluate the role of total p63, p53 and \u0394Np63 expression in cases of clinically high grade T1 bladder cancer progression. Total p63, p53 and \u0394Np63 expression was analyzed by immunohistochemistry in 134 clinically high grade T1 tumors. We assessed clinical progression to muscle invasive disease or radical cystectomy as a patient outcome end point. Survival analysis was done for recurrence-free, progression-free, disease specific and overall survival. A total of 132 patients (98.5%) underwent repeat transurethral resection. Cases of early progression (less than 3 months) were excluded from study to avoid under staging. Of the tumors 90 (67.2%) showed \u0394Np63 expression loss. During a median followup of 62.1 months 19 patients (14.2%) progressed to muscle invasive disease. The progression rate was 21.1% in pa"
+    },
+    {
+      "document_id": "doc-pmid-25436308",
+      "chunk_id": "chunk-pmid-25436308-01",
+      "topic": "gastroenterology",
+      "source_type": "peer_reviewed",
+      "text": "To date, no data is available about procalcitonin (PCT) levels and its relevance to morbidity and graft function in the early phase after pediatric liver transplantation (pLTx). The aim of this study was to analyse the prognostic relevance of early postoperative PCT elevations in pediatric liver recipients. Thirty pediatric patients who underwent 32 liver transplantations were included into this observational single-center study. Patients with high PCT levels on postoperative day (POD) 2 had higher International Normalized Ratio values on POD 5 (p<0.05) and suffered more often from primary graft non-function (p<0.05). They also had a longer stay in the pediatric intensive care unit (p<0.01) and on mechanical ventilation (p=0.001). There was no correlation between PCT elevation and systemic infection. However, PCT levels were correlated with peak serum lactate levels immediately after graft reperfusion and elevation of serum aminotransferases on POD 1 (r2=0.61, p<0.001)."
+    },
+    {
+      "document_id": "doc-pmid-25436304",
+      "chunk_id": "chunk-pmid-25436304-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "The purpose of this study was to assess liver-type fatty acid-binding protein (L-FABP) expression and its association with clinicopathological features in hepatocellular carcinoma (HCC). L-FABP mRNA expression in 57 samples of HCC and corresponding adjacent liver tissue and 8 normal liver tissue samples were examined by real-time reverse transcriptase (RT)\u2013PCR analyses. Tissue microarray technique and immunohistochemistry (IHC) were used to detect the expression of L-FABP in 163 HCCs. The association between L-FABP expression and the clinicopathological factors and prognosis was analyzed. The average expression of L-FABP mRNA was 0.233 in the HCC tissues, 1.407 in the peri-carcinoma tissues, and 1.0 in the normal liver tissues. IHC analysis showed that there were 47% (76/163) HCCs exhibited weak or even no immunoreactivity of L-FABP. The L-FABP expression in HCC showed significant associations with preoperative levels of AFP (p=0.039), tumor size (p=0.026), histological grade (p=0.000), differential degree (p=0.000), vascular invasion (p=0.016), capsular invasion (p=0.029) and recurrence (p=0.004). Patients with L-FABP high-expression showed better prognosis than patients with L-FA"
+    },
+    {
+      "document_id": "doc-pmid-25446283",
+      "chunk_id": "chunk-pmid-25446283-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Vein bypass is an essential therapy for patients with advanced peripheral and coronary artery disease despite development of neointimal hyperplasia. We have shown that stimulation of the receptor tyrosine kinase ephrin type-B receptor 4 (Eph-B4) with its ligand ephrin-B2 prevents neointimal hyperplasia in murine vein grafts. This study determines whether Eph-B4 in adult human veins is capable of phosphorylation and activation of downstream signaling pathways, as well as functional to release nitric oxide (NO) and prevent neointimal hyperplasia in vitro. Discarded human saphenous veins were taken from the operating room and placed in organ culture without or with ephrin-B2/Fc (2 \u03bcg/mL) for 14 days, and the neointima/media ratio was measured in matched veins. Primary human umbilical vein endothelial cells were treated with ephrin-B2/Fc (2 \u03bcg/mL) and examined with quantitative polymerase chain reaction, Western blot, immunoassays, and for release of NO. Ephrin-B2/Fc (2 \u03bcg/mL) was placed on the adventitia of saphenous veins treated with arterial shear stress for 24 hours in a bioreactor and activated Eph-B4 examined with immunofluorescence. The baseline intima/media ratio in saphenous "
+    },
+    {
+      "document_id": "doc-pmid-25438665",
+      "chunk_id": "chunk-pmid-25438665-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "Low serum levels of vitamin D have been associated with depression in non-stroke subjects. Our aim was to examine the possible association between serum vitamin D levels and the development of post-stroke depression (PSD). In total, 189 patients with acute ischaemic stroke were consecutively recruited. Serum levels of 25-hydroxyvitamin D [25(OH)D] were measured by competitive protein-binding assay within 24 h after admission. The 17-item Hamilton Depression Scale was used for screening for the existence of depressive symptoms at 1 month after stroke. Patients with a Hamilton Depression Scale score of \u22657 were given the Structured Clinical Interview of the Diagnostic and Statistical Manual of Mental Disorders, 4th edition, for diagnosis of PSD. Meanwhile, 100 healthy control subjects were also recruited and underwent measurement of 25(OH)D. Fifty-five patients (29.1%) were diagnosed as having PSD at 1 month. Serum vitamin D levels within 24 h after admission were significantly lower in both non-PSD patients and PSD patients than in normal controls. PSD patients had significantly lower vitamin D than non-PSD patients. Serum vitamin D levels (\u226437.1 and \u226564.1 nmol/l) were independently "
+    },
+    {
+      "document_id": "doc-pmid-25447851",
+      "chunk_id": "chunk-pmid-25447851-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Barrett's esophagus (BE) increases the risk of esophageal adenocarcinoma (EAC). We found the risk to be BE has been associated with single nucleotide polymorphisms (SNPs) on chromosome 6p21 (within the HLA region) and on 16q23, where the closest protein-coding gene is FOXF1. Subsequently, the Barrett's and Esophageal Adenocarcinoma Consortium (BEACON) identified risk loci for BE and esophageal adenocarcinoma near CRTC1 and BARX1, and within 100 kb of FOXP1. We aimed to identify further SNPs that increased BE risk and to validate previously reported associations. We performed a genome-wide association study (GWAS) to identify variants associated with BE and further analyzed promising variants identified by BEACON by genotyping 10,158 patients with BE and 21,062 controls. We identified 2 SNPs not previously associated with BE: rs3072 (2p24.1; odds ratio [OR] = 1.14; 95% CI: 1.09-1.18; P = 1.8 \u00d7 10(-11)) and rs2701108 (12q24.21; OR = 0.90; 95% CI: 0.86-0.93; P = 7.5 \u00d7 10(-9)). The closest protein-coding genes were respectively GDF7 (rs3072), which encodes a ligand in the bone morphogenetic protein pathway, and TBX5 (rs2701108), which encodes a transcription factor that regulates esoph"
+    },
+    {
+      "document_id": "doc-pmid-25435286",
+      "chunk_id": "chunk-pmid-25435286-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Danzhi Xiaoyao San (DXS) is a canonical Chinese medicine formula from Principles of Internal Medicine, which was written during the Ming dynasty. This formula is approved and commercialized for use in the prevention and treatment of affective disorders. This study is aimed to investigate the hypothesis that DXS treats depressive-like behavior by shifting the balance of the kynurenine (Kyn)/serotonin (5-HT) pathway toward the 5-HT pathway through the downregulation of hippocampal indoleamine 2,3-dioxygenase (IDO). Chemical fingerprints of gardenoside, paeoniflorin, ferulic acid, paeonol, and ligustilide in standard extraction were used as the material bases of DXS. Rats with depressive-like behavior induced by chronic unpredictable mild stress (CUMS) were randomly divided into four groups, namely the control, model, DXS, and fluoxetine groups. Cytokines, IDO, and tryptophan (Trp) catabolites were analyzed by enzyme-linked immunosorbent assay, western blot, and liquid chromatography-electrospray ionization tandem mass spectrometry, respectively. DXS significantly increased crossing grid numbers, sucrose consumption, and body weight. This treatment significantly decreased the serum le"
+    },
+    {
+      "document_id": "doc-pmid-25429340",
+      "chunk_id": "chunk-pmid-25429340-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Prostate cancer is the world's leading cause of cancer and the second cause of cancer-related death in men after lung cancer. Differentiation of prostate adenocarcinoma from benign prostate lesions and hyperplasia sometimes cannot be done on the basis of morphologic findings. Considering the fact that in the prostate adenocarcinoma there is no basal cell layer, basal cell markers can help to differentiate prostate adenocarcinoma from cancer mimickers. We studied 98 prostate biopsy blocks (40 adenocarcinoma and 58 benign lesions) for basal cell marker expression. p63 and 34\u03b2E12 were negative in all prostate adenocarcinoma specimens, but all benign prostate hyperplasia and high grade intraepithelial neoplasia cases expressed them."
+    },
+    {
+      "document_id": "doc-pmid-25451441",
+      "chunk_id": "chunk-pmid-25451441-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Disturbed sleep is associated with mood disorders. Both depression and insomnia may increase the risk of disability retirement. The longitudinal links among insomnia, depression and work incapacity are poorly known. We examined association of self-reported sleep quality with incident symptoms of depression and disability retirement due to depressive disorders in a longitudinal population-based sample of twins (n=12,063 individuals). These adults were categorized by their sleep quality in 1975 and 1981, excluding individuals with depressed mood in 1975/1981. The outcomes were the Beck Depression Inventory (BDItot) and its subscale Negative Attitudes Towards Self (BDINATS) in 1990 as dichotomized measures, and the incidence of disability retirement due to depressive disorder during 1991-2004. Onset of poor sleep between 1975 and 1981 predicted incident depression (BDItot OR=4.5, 95% CI: 2.7-7.4, BDINATS OR=2.0, 95% CI: 1.4-2.7), while persistent poor sleep showed somewhat weaker effects (BDItot; OR=2.5, 95% CI: 1.0-6.0, BDINATS OR=1.9, 95% CI: 1.1-3.3). Among those with few recent stressful life events, onset of poor sleep predicted strongly depression (BDINATS OR=9.5, 95% CI: 3.7-24"
+    },
+    {
+      "document_id": "doc-pmid-25434319",
+      "chunk_id": "chunk-pmid-25434319-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Phospholipase C epsilon 1 (PLCE1) plays a crucial role in carcinogenesis and progression of several types of cancers. A single nucleotide polymorphism (SNP, rs2274223) in PLCE1 has been identified as a novel susceptibility locus. The aim of the present study was to investigate the role of three potentially functional SNPs (rs2274223A > G, rs3765524C > T, and rs7922612C > T) of PLCE1 in gastric cancer patients from Kashmir Valley. The study was conducted in 108 GC cases and 195 healthy controls from Kashmir Valley. Genotyping was performed by polymerase chain reaction-restriction fragment length polymorphism method. Data were statistically analyzed using c2 test and logistic regression models. A P value of less than 0.05 was regarded as statistically significant. The frequency of PLCE1 A2274223C3765524T7922612, G2274223C3765524T7922612 , and G2274223T3765524C7922612 haplotypes were higher in patients compared with controls, conferred high risk for GC [odds ratio (OR) =6.29; P = 0.001; Pcorr = 0.003], (OR = 3.23; P = 0.011; Pcorr = 0.033), and (OR = 5.14; P = 0.011; Pcorr = 0.033), respectively. Smoking and salted tea are independent risk factors for GC, but we did not find any signi"
+    },
+    {
+      "document_id": "doc-pmid-25448803",
+      "chunk_id": "chunk-pmid-25448803-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Esophageal squamous cell carcinoma (ESCC) is an important cause of cancer-related death worldwide. To improve prognoses in patients with ESCC, we evaluated the potential of transforming growth factor-beta-induced protein (TGFBI), which is overexpressed in ESCC, as a therapeutic candidate. We examined the clinical significance of TBFBI in 102 ESCC samples using real-time RT-PCR. Immunohistochemical studies were conducted to examine the localization of TGFBI. Knockdown of TGFBI in cocultured fibroblasts was performed to determine the roles of TGFBI in migration and invasion. The level of TGFBI in ESCC tissues was higher than that in normal tissues. The high TGFBI expression group (n = 16) had higher TGFB1 expression and more frequent hematogenous recurrence than the low-expression group (n = 86). High TGFBI expression was an independent prognostic factor in patients with ESCC. TGFBI was mainly localized in stromal cells of ESCC. Moreover, suppression of TGFBI in fibroblasts inhibited the migration and invasion capacity of TE8 ESCC cells."
+    },
+    {
+      "document_id": "doc-pmid-25437817",
+      "chunk_id": "chunk-pmid-25437817-01",
+      "topic": "infectious_disease",
+      "source_type": "peer_reviewed",
+      "text": "Chronic antibiotic-refractory pouchitis (CARP) occurs more frequently in patients with ileal pouch-anal anastomosis (IPAA) with concomitant autoimmune disorders. The aim of this study was to assess the overlap between dysregulated immune features in patients with IPAA and their association with CARP. We identified 150 symptomatic patients with IPAA who met inclusion criteria, including measurement of select autoimmune serology. Demographic and clinical variables were compared between patients with and without CARP. Autoimmune thyroid disease was more frequent among patients with CARP. The frequency of primary sclerosing cholangitis (16.7% versus 5.3%; P = 0.04) and serum positivity for microsomal antibody (25% versus 6.1%, P = 0.003) were significantly greater in patients with CARP compared with non-CARP patients, respectively. Increased tissue infiltration by IgG4-expressing plasma cells was detected in 17 of 31 patients (54.8%) in the CARP group as compared with 10/67 (14.9%) in the non-CARP group (P = 0.0001). Forty-seven percent of patients in the CARP group versus 22.8% in the non-CARP group had at least 2 immune features (P = 0.019). Among patients with IgG4 histology, 87% of"
+    },
+    {
+      "document_id": "doc-pmid-25439493",
+      "chunk_id": "chunk-pmid-25439493-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "Alternating hemiplegia of childhood and rapid-onset dystonia parkinsonism are two separate movement disorders with different dominant mutations in the same sodium-potassium transporter ATPase subunit gene, ATP1A3. We present a child with topiramate-responsive alternating hemiplegia of childhood who was tested for an ATP1A3 gene mutation. Gene sequencing revealed an identical ATP1A3 mutation as in three typical adult-onset rapid-onset dystonia parkinsonism cases but never previously described in an alternating hemiplegia of childhood case."
+    },
+    {
+      "document_id": "doc-pmid-25450181",
+      "chunk_id": "chunk-pmid-25450181-01",
+      "topic": "endocrinology",
+      "source_type": "peer_reviewed",
+      "text": "The principal oxidative-stress defense in the human parasite Trypanosoma cruzi is the tryparedoxin-dependent peroxide detoxification pathway, constituted by trypanothione reductase (TryR), tryparedoxin (TXN), tryparedoxin peroxidase (TXNPx) and tryparedoxin-dependent glutathione peroxidase A (GPxA). Here, Metabolic Control Analysis (MCA) was applied to quantitatively prioritize drug target(s) within the pathway by identifying its flux-controlling enzymes. The recombinant enzymes were kinetically characterized at physiological pH/temperature. Further, the pathway was in vitro reconstituted using enzyme activity ratios and fluxes similar to those observed in the parasites; then, enzyme and substrate titrations were performed to determine their degree of control on flux. Also, kinetic characterization of the whole pathway was performed. Analyses of the kinetic properties indicated that TXN is the less efficient pathway enzyme derived from its high Kmapp for trypanothione and low Vmax values within the cell. MCA established that the TXN-TXNPx and TXN-GPxA redox pairs controlled by 90-100% the pathway flux, whereas 10% control was attained by TryR. The Kmapp values of the complete pathw"
+    },
+    {
+      "document_id": "doc-pmid-25450186",
+      "chunk_id": "chunk-pmid-25450186-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The role of Kdr (VEGFR-2/Flk-1) in vascular formation has been well described, but the role of Flt1 (VEGFR-1) is not well studied and is generally considered as a decoy receptor for trapping VEGF. The effects of VEGFR1/2 kinase inhibitor (VRI) and calycosin on Flt1 tyrosine kinase (TK) activity were evaluated by molecular docking, enzymatic inhibition assay, protein co-immunoprecipitation and siRNA gene knock-down analysis in HUVECs. Toxicities of the chemicals were examined using HUVECs viability. Their effects on angiogenesis and vessel formation were furthered studied in HUVECs in vitro and Tg(fli-1:EGFP) zebrafish in vivo. The gene and protein expression of VEGF and VEGF receptors were investigated by quantitative RT-PCR and Western blot. VRI strongly inhibited physiological functions of both VEGF receptors and suppressed endothelial cell survival. This resulted in blood vessel loss in zebrafish embryos. Interestingly, calycosin co-treatment impeded VRI-induced blood vessel loss. Docking and kinase inhibition assay revealed that calycosin competed with VRI for the tyrosine kinase domain of Flt1 without affecting ATP binding. On the contrary, calycosin did not affect the interac"
+    },
+    {
+      "document_id": "doc-pmid-25449231",
+      "chunk_id": "chunk-pmid-25449231-01",
+      "topic": "gastroenterology",
+      "source_type": "peer_reviewed",
+      "text": "The capacity of toll-like receptor (TLR) 7/8 agonist-conjugated hepatitis B virus (HBV) proteins (HBV-Ag) to overcome established hepatitis B surface antigen (HBsAg)-specific immune tolerance was explored. A TLR7/8 agonist, CL097, was conjugated with alum-absorbed HBsAg and hepatitis B core antigen (HBcAg), as confirmed by ultra performance liquid chromatography quadrupole time-of-flight mass spectrometry (UPLC-Q/TOF MS). Mice from two independently generated HBV-transgenic (HBV-Tg) colonies, C57BL/6J-TgN (AlblHBV) 44Bri/J mice and C57BL/6-HBV-1.3 genome-eq mice, were immunized with CL097-conjugated HBV-Ag every 2 weeks, four times. After immunization, 8/11 (72.7%) of the AlblHBV mice and 10/13 (76.9%) of the HBV-1.3 genome-eq mice generated serum detectable antibodies against HBsAg (anti-HBs). HBsAg-specific interferon gamma (IFN-\u03b3)-producing CD4(+) and CD8(+) T-cells were detected in splenocytes from these mice. Na\u00efve normal mice receiving splenocytes from the mice immunized with CL097-conjugated HBV-Ag generated immediate recall immune responses, e.g., the mice that received CD4(+)CD25(+)-depleted splenocytes generated anti-HBs on day 3 after HBsAg challenge while those receivin"
+    },
+    {
+      "document_id": "doc-pmid-25427958",
+      "chunk_id": "chunk-pmid-25427958-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Normal aging is associated with a decline in cognitive abilities, particularly in the domains of psychomotor speed and executive functioning. However, 'aging,' per se, is not a cause of cognitive decline but rather a variable that likely captures multiple accumulating biological changes over time that collectively affect mental abilities. Recent work has focused on the role of cerebrovascular disease as one of the biological changes. In the current study, we examined whether lobar microbleeds - magnetic resonance imaging (MRI) signal voids due to hemosiderin deposits secondary to cerebral amyloid angiopathy - are associated with cognitive decline in normal aging. Previous studies that reported a relationship between the presence of lobar microbleeds and decreased cognitive abilities have been primarily cross-sectional. Here, we used a retrospective longitudinal design to examine whether the presence of lobar microbleeds is associated with the rate of cognitive decline among non-demented older adults. Participants came from an ongoing longitudinal community-based aging study, in which subjects are evaluated at 18-24 months intervals and received a full medical, neurological, and neu"
+    },
+    {
+      "document_id": "doc-pmid-25427957",
+      "chunk_id": "chunk-pmid-25427957-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "In recent years, the relationship between physical activity (PA) and smoking cessation has been increasingly studied. However, very few studies have investigated the possible protective role of PA on smoking relapse on the long term. This study evaluated the impact of self-reported PA in precessation on smoking relapse. Other variables evaluated included measures of dependence, socio-demographic factors and smoking-related variables. Several possible interactions between PA and well identified factors influencing smoking relapse rate were also explored. After the initial consultation, 345 smokers were consecutively recruited in a smoking-cessation unit. Smoking abstinence was collected regularly during consultation or by phone calls. PA was measured with the International Physical Activity Questionnaire short form. Cox proportional hazard model was performed to determine factors associated with smoking relapse. Among the initial sample, 227 adults were included in the survival analysis. After adjustment for potential cofounders, PA was not associated with smoking relapse. Self-efficacy level, absence of professional activity, previous attempts to quit and alcohol use disorders were"
+    },
+    {
+      "document_id": "doc-pmid-25452165",
+      "chunk_id": "chunk-pmid-25452165-01",
+      "topic": "cardiology",
+      "source_type": "peer_reviewed",
+      "text": "Many assume that most patients hospitalized with heart failure (HF) are short of breath at rest (SOBAR). The National HF Audit for England and Wales suggests that this assumption is false, which has profound implications for management A retrospective case-note review was carried out of patients hospitalized with HF to determine how many present with shortness of breath at rest or are comfortable at rest but breathless on slight exertion (CARBOSE). Vital signs were tracked for 24\u2009h and mortality for 180 days. Of 311 patients, those who were SOBAR (42%) had higher median heart rate (HR) (100 vs. 85 b.p.m.; P\u2009<\u20090.001), systolic blood pressure (SBP) (141 vs. 122\u2009mmHg; P\u2009<\u20090.001), and respiratory rate (RR) (24 vs. 18 breaths/min; P\u2009<\u20090.001) compared with those who were CARBOSE (56%). Vital signs changed little in those who were CARBOSE over the first 4-6\u2009h, but SBP (141-128\u2009mmHg; P\u2009<\u20090.001), HR (100-90 b.p.m.; P\u2009=\u20090.002), and RR (24-20 breaths/min; P\u2009<\u20090.001) fell in those who were SOBAR. At presentation, SBP was >125\u2009mmHg in 73% of patients who were SOBAR and in 46% who were CARBOSE, dropping to 52% and 37%, respectively, by 4-6\u2009h. Mortality amongst those who were SOBAR and those who "
+    },
+    {
+      "document_id": "doc-pmid-25437683",
+      "chunk_id": "chunk-pmid-25437683-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Duodenal stump disruption remains one of the most dreadful postgastrectomy complications, posing an overwhelming therapeutic challenge. The present report describes the extremely rare occurrence of a delayed duodenal stump disruption following total gastrectomy with Roux-en-Y esophagojejunostomy for cancer, because of mechanical obstruction of the distal jejunum resulting in increased backpressure on afferent limp and duodenal stump. Surgical management included repair of distal jejunum obstruction, mobilization and re-stapling of the duodenum at the level of its intact second part and retrograde decompressing tube duodenostomy through the proximal jejunum."
+    },
+    {
+      "document_id": "doc-pmid-25428761",
+      "chunk_id": "chunk-pmid-25428761-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "Elevated lipoprotein-associated phospholipase A2 (Lp-PLA2) levels are associated with both coronary artery and cerebrovascular diseases. The clinical diagnosis of neurovascular events, specifically transient ischemic attack can be challenging, although there is disagreement among vascular trained neurologists regarding this. Currently, there is no single accurate biomarker for the diagnosis of acute brain ischemia. We studied the relationship between Lp-PLA2 mass and activity levels and the diagnosis of acute brain ischemia in the acute phase among patients evaluated in the emergency department following transient focal neurological symptoms. Patients evaluated in our academic center for transient neurological symptoms of possible ischemic mechanism were enrolled with informed consent. Lp-PLA2 mass and activity levels were performed by DiaDexus, Inc. 100 patients were enrolled: 58 were ischemic (30 stroke, 28 TIA), 10 were unknown, and 28 were non-ischemic. Blood samples were collected after a median delay of 23 h (IQR: 17, 36) after symptom onset. The median levels of Lp-PLA2 activity level for ischemic (stroke and TIA) versus non-ischemic events were 186.5 nmol/ml/min (IQR = 153,"
+    },
+    {
+      "document_id": "doc-pmid-25442456",
+      "chunk_id": "chunk-pmid-25442456-01",
+      "topic": "cardiology",
+      "source_type": "peer_reviewed",
+      "text": "Recently, the role of osteoprotegerin (OPG) in the pathogenesis of heart failure through different mechanisms has received much attention. Subclinical changes in left ventricular (LV) function can be identified using quantification of myocardial strain, and global longitudinal strain (GLS) is a superior predictor of outcomes than ejection fraction. We hypothesized that increased OPG levels could predict subclinical LV systolic dysfunction in treated diabetic hypertensive patients with preserved LV ejection fraction. The study was composed of 86 diabetic hypertensive and 30 nondiabetic hypertensive patients. All patients underwent echocardiography and venous blood samples were taken for determination of OPG. The relation between OPG levels and LV GLS was investigated using 2-dimensional speckle tracking echocardiography. Diabetic hypertensive patients had higher diastolic peak early/early diastolic tissue velocity and lower systolic tissue velocity, GLS, GLS rate systolic, and GLS rate early diastolic than nondiabetic hypertensive patients (P = 0.009, P = 0.049, P < 0.001, P = 0.004, and P < 0.001, respectively). Diabetic hypertensive patients were divided into 2 groups according to"
+    },
+    {
+      "document_id": "doc-pmid-25440857",
+      "chunk_id": "chunk-pmid-25440857-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Burns are common and recurrent events treated by physicians on a daily basis at most emergency rooms around the world. There is a constant need to understand the physiopathology of burns, so as to minimize their devastating results. The objective of the present report is to describe a burn apparatus in association with an innovative method of animal fixation, as to produce burns of varying sizes and depths. Rats were subjected to burns of 60 \u00b0C, 70 \u00b0C, and 80 \u00b0C for 10 s and after 3 days half of the rats in each group were killed and the resulting lesions were analyzed using histological techniques. In the other half of the rats the wound was measured weakly until complete re-epithelialization. All burns were easily visible and the histological feature for the 60 \u00b0C burn was a superficial second-degree burn (28% of the dermis), for 70 \u00b0C we observed a deep second-degree burn (72% of the dermis), and in the 80 \u00b0C group, a third degree-burn was present (100% of the dermis)."
+    },
+    {
+      "document_id": "doc-pmid-25452597",
+      "chunk_id": "chunk-pmid-25452597-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "The goal of this study was to identify genetic determinants of plasma N-terminal proatrial natriuretic peptide (NT-proANP) in the general community by performing a large-scale genetic association study and to assess its functional significance in in vitro cell studies and on disease susceptibility. Genotyping was performed across 16 000 genes in 893 randomly selected individuals, with replication in 891 subjects from the community. Plasma NT-proANP1-98 concentrations were determined using a radioimmunoassay. Thirty-three genome-wide significant single-nucleotide polymorphisms were identified in the MTHFR-CLCN6-NPPA-NPPB locus and were all replicated. To assess the significance, in vitro functional genomic studies and clinical outcomes for carriers of a single-nucleotide polymorphism rs5063 (V32M) located in NPPA that represented the most significant variation in this genetic locus were assessed. The rs5063 variant allozyme in transfected HEK293 cells was decreased to 55\u00b18% of wild-type protein (P=0.01) as assessed by quantitative western blots. Carriers of rs5063 had lower NT-proANP levels (1427 versus 2291 pmol/L; P<0.001) and higher diastolic blood pressures (75 versus 73 mm Hg; "
+    },
+    {
+      "document_id": "doc-pmid-25452595",
+      "chunk_id": "chunk-pmid-25452595-01",
+      "topic": "infectious_disease",
+      "source_type": "peer_reviewed",
+      "text": "Mycobacterium abscessus has emerged as a major pathogen in cystic fibrosis (CF) patients and has been associated with poor clinical outcomes, particularly following lung transplant. We investigated the acquisition of this bacterium in a cohort of pediatric CF patients. Demographic and patient location data were used to uncover epidemiological links between patients with genetically related strains of M. abscessus that had been previously typed by variable-number tandem repeat profiling. Whole-genome sequencing was applied to 27 M. abscessus isolates from the 20 patients in this cohort to provide definitive data on the genetic relatedness of strains. Whole-genome sequencing data demonstrated that M. abscessus isolates from 16 patients were unrelated, differing by at least 34 single-nucleotide polymorphisms (SNPs) from any other isolate, suggesting that independent acquisition events have occurred. Only 2 clusters of very closely related (<25 SNPs) isolates from different patients were seen. The first cluster contained 8 isolates, differing by a maximum of 17 SNPs, from a sibling pair who had intense exposure to each other both inside and outside the hospital. The second cluster cont"
+    },
+    {
+      "document_id": "doc-pmid-25452591",
+      "chunk_id": "chunk-pmid-25452591-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Bacterial vaginosis is a risk factor for preterm birth. The various conventional methods for its diagnosis are laborious and not easily reproducible. Molecular quantification methods have been reported recently, but the specific risk factors they might identify remain unclear. A prospective multicenter national study included pregnant women at risk of preterm birth. A quantitative molecular tool using a specific real-time polymerase chain reaction assay and serial dilutions of a plasmid suspension quantified Atopobium vaginae, Gardnerella vaginalis, lactobacilli, Mycoplasma hominis, and the human albumin gene (for quality control). In 813 pregnancies, high vaginal loads of either or both of A. vaginae and G. vaginalis were associated with preterm birth (hazard ratio [HR], 3.9; 95% confidence interval {CI}, 1.1-14.1; P = .031). A high vaginal load of A. vaginae was significantly associated with shortened time to delivery and therefore pregnancy length. These times were, respectively, 152.2 and 188.2 days (HR, 5.6; 95% CI, 1.5-21.3; P < .001) before 22 weeks, 149.0 and 183.2 days (HR, 2.8; 95% CI, 1.1-8.2; P = .048) before 28 weeks, and 132.6 and 170.4 days (HR, 2.2; 95% CI, 1.1-4.6;"
+    },
+    {
+      "document_id": "doc-pmid-25429803",
+      "chunk_id": "chunk-pmid-25429803-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Extranodal natural killer/T-cell lymphoma, nasal type (ENKTL), is an aggressive type of lymphoma whose standard treatment and validated prognostic model have not yet been defined. CD30 expression was detected using immunohistochemistry in 96 ENKTL patients, and the data were used to evaluate its relationship with clinical features, treatment response and prognosis. Expression of CD30 was detected in 31.2% of ENKTL patients, which was significantly correlated with B symptoms and elevated serum lactate dehydrogenase. The complete remission rate was not significantly different between CD30-positive and negative groups. After a median follow-up time of 31 months, 5-year overall survival (OS) and 5-year progression-free survival (PFS) rates in the CD30-positive group were both significantly lower than those in the CD30-negative group (34.1% vs. 64.4%, P=0.002, for 5 year-OS; 26.0% vs. 66.7%, P<0.001, for 5 year-PFS). In patients with an International Prognostic Index (IPI) or Korean Prognostic Index (KPI) score of 0-1, CD30 positivity was associated with shorter 5-year OS and PFS (IPI: P=0.001 and 0.002, respectively; KPI: P=0.018 and 0.023, respectively). In a multivariate Cox regressi"
+    },
+    {
+      "document_id": "doc-pmid-25429809",
+      "chunk_id": "chunk-pmid-25429809-01",
+      "topic": "infectious_disease",
+      "source_type": "peer_reviewed",
+      "text": "To observe the therapeutic effects of continuous plasma filtration absorption (CPFA) treatment on burn sepsis. Thirty burn patients with sepsis hospitalized in Beijing Fengtai You'anmen Hospital from July 2009 to October 2012 were treated by CPFA for twice besides routine treatment. The blood samples were collected at five sites (A, B, C, D, and E, respectively) of blood purification equipment before and after CPFA, before and after hemoabsorption, and before hemofiltration. The plasma levels of TNF-\u03b1, IL-1\u03b2, IL-6, IL-10, interleukin-1 receptor antagonist (IL-1RA), soluble tumor necrosis factor receptor (sTNFR) I , and sTNFR-II from sites A, C, and E were determined with ELISA before CPFA was performed for the first time, and those from sites B and D were determined with ELISA after CPFA was performed for the first time. Plasma levels of the above-mentioned cytokines from sites A and B were determined with ELISA before CPFA and after CPFA was performed for the second time. The data of plasma levels of IL-1\u03b2P3, IL-1RA, sTNFR-I, sTNFR-II, and TNF-\u03b1 before CPFA and after CPFA was performed for the second time were collected for calculation of the ratios of IL-1RA to IL-1\u03b2 and sTNFR-I "
+    },
+    {
+      "document_id": "doc-pmid-25424667",
+      "chunk_id": "chunk-pmid-25424667-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Studies performed in Andean populations living in high altitude, indicate that the reduced availability of oxygen could be associated to both a fetal growth retardation and a lower birth weight. These variables are predictive of morbidity and mortality during the first year of life. To study perinatal variables of newborns of mothers living at contrasting altitudinal levels, harboring different degrees of Aymara ancestry. Review of medical records of 5,295 women whose deliveries occurred between February 2004 and August 2010. Information was obtained on place of residence, grouped into two categories: coast (150 to 3,000 m) and high plateau (3,000 to 4,300 m), ancestry was estimated using number of Aymara surnames that were homologated to percentages of Amerindian admixture, gestational age, birth weight, height, head circumference and obstetric variables. Gestational age showed a tendency to increase and birth weight, height and head circumference to decrease with altitude of residence. Only weight reached statistical significance. Women with Aymara ancestry gave birth to children with a significantly higher gestational age, weight and cranial circumference."
+    },
+    {
+      "document_id": "doc-pmid-25424481",
+      "chunk_id": "chunk-pmid-25424481-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The aim of this study was to determine the association between 25-hydroxyvitamin D (25(OH)D) and neuroimaging correlates of cerebral small vessel disease. We identified 759 consecutive patients with acute ischemic stroke or transient ischemic attack. Lacunes, white matter hyperintensity, and cerebral microbleed (CMB) were assessed using MR images. Deep CMB was defined as the presence of CMB in basal ganglia, thalamus, or brain stem. The association between 25(OH)D and small vessel disease was tested using linear and logistic regression analyses. Mean age was 68 (\u00b113) years. Mean level of 25(OH)D was 34.1\u00b117.8 nmol/L. On bivariate analysis, a 25-nmol/L decrease in 25(OH)D was associated with lacunes (regression coefficient, 0.23; 95% confidence interval [CI], 0.02-0.45), severe white matter hyperintensity (odds ratio, 2.05; 95% CI, 1.41-3.08), and deep CMB (odds ratio, 1.28; 95% CI, 1.01-1.63). Also, 25(OH)D deficiency (\u226425 nmol/L) was associated with lacunes (regression coefficient, 0.5; 95% CI, 0.04-0.95), severe white matter hyperintensity (odds ratio, 2.74; 95% CI, 1.31-6.45), and deep CMB (odds ratio, 1.68; 95% CI, 1.03-2.78). The association remained significant even after mul"
+    },
+    {
+      "document_id": "doc-pmid-25436124",
+      "chunk_id": "chunk-pmid-25436124-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "The aims of this study were to demonstrate the tumorigenicity of CD133+ colon cancer cells in vitro, analyze the correlations between spheroid formation and clinicopathologic variables, and screen for overexpressed genes in CD133+ colon cancer stem cells. Moreover, the aim of this study was to establish a living tumor tissue bank using surgically resected specimens. Using LoVo cell line, we isolated CD133+ cells and performed clonogenic assay and animal experiment to test tumorigenicity of CD133+ cells. Twenty-nine surgical samples were freshly collected from 27 patients who received curative or palliative surgery, and the samples were mechanically and enzymatically dissociated into single cells. We confirmed the enhanced tumorigenicity of CD133+ cells isolated from LoVo cell line both in vitro and in vivo. Of these 29 samples, 8 (28%) contained >3% CD133+ cells. Sphere formation was significantly higher in samples from patients with lymphatic invasion than in those without lymphatic invasion [54.5% (6/11) vs. 12.5% (2/16); P=0.033] and in samples containing >3% of CD133+ cells than in those containing \u22643% of CD133+ cells [36.4% (4/11) vs. 0% (0/16); P=0.019]."
+    },
+    {
+      "document_id": "doc-pmid-25446758",
+      "chunk_id": "chunk-pmid-25446758-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "Traumatic brain injury (TBI) affects millions of people each year and is characterized by direct tissue injury followed by a neuroinflammatory response. The post-TBI recovery period can be associated with a negative emotional state characterized by alterations in affective behaviors implicated in the development of Alcohol Use Disorder in humans. The aim of this study was to test the hypothesis that post-TBI neuroinflammation is associated with behavioral dysfunction, including escalated alcohol intake. Adult male Wistar rats were trained to self-administer alcohol prior to counterbalanced assignment into na\u00efve, craniotomy, and TBI groups by baseline drinking. TBI was produced by lateral fluid percussion (LFP; >2 ATM; 25ms). Alcohol drinking and neurobehavioral function were measured at baseline and following TBI in all experimental groups. Markers of neuroinflammation (GFAP and ED1) and neurodegeneration (FJC) were determined by fluorescence histochemistry in brains excised at sacrifice 19 days post-TBI. The cumulative increase in alcohol intake over the 15 days post-TBI was greater in TBI animals compared to na\u00efve controls. A higher rate of pre-injury alcohol intake was associate"
+    },
+    {
+      "document_id": "doc-pmid-25439841",
+      "chunk_id": "chunk-pmid-25439841-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To determine the effects of maternal undernutrition (MUN) on the reproductive axis of aging offspring. Animal (rat) study. Research laboratory. Female Sprague-Dawley rats. Food restriction during the second half of pregnancy in rats. Circulating gonadotropins, antim\u00fcllerian hormone (AMH), ovarian morphology, estrous cyclicity, and gene expression studies in the hypothalamus and ovary in 1-day-old (P1) and aging adult offspring. Offspring of MUN dams had low birth weight (LBW) and by adult age developed obesity. In addition, 80% of adult LBW offspring had disruption of estrous cycle by 8 months of age, with the majority of animals in persistent estrous. Ovarian morphology was consistent with acyclicity, with ovaries exhibiting large cystic structures and reduced corpora lutea. There was an elevation in circulating T, increased ovarian expression of enzymes involved in androgen synthesis, an increase in plasma LH/FSH levels, a reduction in E2 levels, and no changes in AMH in adult LBW offspring compared with in control offspring. Hypothalamic expression of leptin receptor (ObRb), estrogen receptor-\u03b1 (ER-\u03b1), and GnRH protein was altered in an age-dependent manner with increased ObRb a"
+    },
+    {
+      "document_id": "doc-pmid-25439845",
+      "chunk_id": "chunk-pmid-25439845-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "To determine whether granulocyte colony-stimulating factor (G-CSF) could prevent loss of spermatogenesis induced by busulfan chemotherapy via protection of undifferentiated spermatogonia, which might serve as an adjuvant approach to preserving male fertility among cancer patients. Laboratory animal study. University. Laboratory mice. Five-week-old mice were treated with a sterilizing busulfan dose and with 7 days of G-CSF or vehicle treatment and evaluated 10 weeks later (experiment 1) or 24 hours after treatment (experiment 2). Experiment 1: testis weights, epididymal sperm counts, testis histology. Experiment 2: PLZF immunofluorescent costaining with apoptotic markers. Molecular analysis of G-CSF receptor expression in undifferentiated spermatogonia. Ten weeks after treatment, busulfan-treated mice that also received treatment with G-CSF exhibited significantly better recovery of spermatogenesis and epididymal sperm counts than animals receiving busulfan alone. G-CSF led to increased numbers of PLZF+ spermatogonia 24 hours after treatment that was not accompanied by changes in apoptosis. To address the cellular target of G-CSF, mRNA for the G-CSF receptor, Csf3r, was found in adu"
+    },
+    {
+      "document_id": "doc-pmid-25450204",
+      "chunk_id": "chunk-pmid-25450204-01",
+      "topic": "infectious_disease",
+      "source_type": "peer_reviewed",
+      "text": "A vaccine against hepatitis C virus (HCV) is unavailable and cost-effective antivirals that prevent HCV infection and re-infection, such as in the transplant setting, do not exist. In a search for novel and economical prophylactic agents, we examined the antiviral activity of saikosaponins (SSa, SSb2, SSc, and SSd) from Bupleurum kaoi root (BK) as entry inhibitors against HCV infection. Infectious HCV culture systems were used to examine the effect of saikosaponins on the complete virus life cycle (entry, RNA replication/translation, and particle production). Antiviral activity against various HCV genotypes, clinical isolates, and infection of primary human hepatocytes were also evaluated. BK and the saikosaponins potently inhibited HCV infection at non-cytotoxic concentrations. These natural agents targeted early steps of the viral life cycle, while leaving replication/translation, egress, and spread relatively unaffected. In particular, we identified SSb2 as an efficient inhibitor of early HCV entry, including neutralization of virus particles, preventing viral attachment, and inhibiting viral entry/fusion. Binding analysis, using soluble viral glycoproteins, demonstrated that SS"
+    },
+    {
+      "document_id": "doc-pmid-25450205",
+      "chunk_id": "chunk-pmid-25450205-01",
+      "topic": "gastroenterology",
+      "source_type": "peer_reviewed",
+      "text": "Intrahepatic cholestasis of pregnancy (ICP) is defined by pruritus, elevated total fasting serum bile salts (TBS) and transaminases, and an increased risk of adverse fetal outcome. An accurate diagnostic marker is needed. Increased serum autotaxin correlates with cholestasis-associated pruritus. We aimed at unraveling the diagnostic accuracy of autotaxin in ICP. Serum samples and placental tissue were collected from 44 women with uncomplicated pregnancies and 105 with pruritus and/or elevated serum transaminases. Autotaxin serum levels were quantified enzymatically and by Western blotting, autotaxin gene expression by quantitative PCR. Serum autotaxin was increased in ICP (mean \u00b1 SD: 43.5 \u00b1 18.2 nmol ml(-1)min(-1), n=55, p<0.0001) compared to other pruritic disorders of pregnancy (16.8 \u00b1 6.7 nmol ml(-1)min(-1), n=33), pre-eclampsia complicated by HELLP-syndrome (16.8 \u00b1 8.9 nmol ml(-1)min(-1), n=17), and pregnant controls (19.6 \u00b1 5.7 nmol ml(-1)min(-1), n=44). Longitudinal analysis during pregnancy revealed a marked rise in serum autotaxin with onset of ICP-related pruritus. Serum autotaxin was increased in women taking oral contraceptives. Increased serum autotaxin during ICP was n"
+    },
+    {
+      "document_id": "doc-pmid-25448329",
+      "chunk_id": "chunk-pmid-25448329-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Programs seek to expose trainees to research during residency. However, little is known in any formal sense regarding how to do this effectively, or whether these efforts result in more or better-quality research output. The objective of our study was to evaluate a dedicated resident research program in terms of the quantity and quality of resident research peer-reviewed publications. Specifically we asked: (1) Did residents mentored through a dedicated resident research program have more peer-reviewed publications in higher-impact journals with higher citation rates compared with residents who pursued research projects under a less structured approach? (2) Did this effect continue after graduation? In 2006, our department of orthopaedic surgery established a dedicated resident research program, which consisted of a new research policy and a research committee to monitor quality and compliance with this policy. Peer-reviewed publications (determined from PubMed) of residents who graduated 6 years before establishing the dedicated resident research program were compared with publications from an equal period of the research-program-directed residents. The data were assessed using de"
+    },
+    {
+      "document_id": "doc-pmid-25448327",
+      "chunk_id": "chunk-pmid-25448327-01",
+      "topic": "gastroenterology",
+      "source_type": "peer_reviewed",
+      "text": "Heterotopic ossification (HO) may occur after musculoskeletal trauma, traumatic brain injury, and total joint arthroplasty. As such, HO is a compelling clinical concern in both military and civilian medicine. A possible etiology of HO involves dysregulated signals in the bone morphogenetic protein osteogenic cascade. Contemporary treatment options for HO (ie, nonsteroidal antiinflammatory drugs and radiation therapy) have adverse effects associated with their use and are not biologically engineered to abrogate the molecular mechanisms that govern osteogenic differentiation. We hypothesized that (1) nanogel-mediated short interfering RNA (siRNA) delivery against Runt-related transcription factor 2 (Runx2) and osterix (Osx) genes will decrease messenger RNA expression; (2) inhibit activity of the osteogenic marker alkaline phosphatase (ALP); and (3) inhibit hydroxyapatite (HA) deposition in osteoblast cell cultures. Nanogel nanostructured polymers delivered siRNA in 48-hour treatment cycles against master osteogenic regulators, Runx2 and Osx, in murine calvarial preosteoblasts (MC3T3-E1.4) stimulated for osteogenic differentiation by recombinant human bone morphogenetic protein (rhBM"
+    },
+    {
+      "document_id": "doc-pmid-25448325",
+      "chunk_id": "chunk-pmid-25448325-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Restoration of posterior condylar offset during TKA is believed to be important to improving knee kinematics, maximizing ROM, and minimizing flexion instability. However, controversy exists regarding whether there are important anatomic differences between sexes and whether a unisex knee prosthesis can restore the anatomy of knees in males and females. The purposes of our study were to determine if sex differences exist in (1) absolute posterior condylar offset size, (2) relative posterior condylar offset size in relation to total condylar height, and (3) posterior condylar articular cartilage thickness. We identified 100 patients (50 men and 50 women) without a history of arthritis, deformity, dysplasia, osteochondral defect, fracture, or surgery about the knee who had MRI of the knee performed. All MR images were ordered by primary care medical physicians for evaluation of nonspecific knee pain. Using a previously described three-dimensional MRI protocol, we measured posterior condylar offset, total condylar height, and articular cartilage thickness at the medial and lateral femoral condyles and compared values to evaluate for potential sex differences. We performed an a priori p"
+    },
+    {
+      "document_id": "doc-pmid-25434615",
+      "chunk_id": "chunk-pmid-25434615-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "We sought to identify whether stable single nucleotide polymorphisms (SNPs) of various endocrine and immune molecules could be used as biomarkers associated with specific immune alterations and chronic stress measures in normal humans. A total of 207 volunteer participants answered stress questionnaire and gave peripheral blood cells for identification of SNPs in genes coding for glucocorticoid receptor (GR), beta 2 adrenergic receptor (B2AR), interferon-gamma receptors (IFNGR1, IFNGR2), and interleukin-4 receptor (IL4R). Immunoregulatory profiles were measured by flow cytometry and genotyping assays were performed by allelic discrimination real-time PCR. Several significant differences were revealed in associations between stress marker and immune indicators based on SNP categories. For instance, Th1 levels of the minor alleles of GR TthIIII (AA) and IFNGR2 Q64R (Arg/Arg) groups were positively associated with chronic stress (PSS) (p = 0.024 and 0.005, respectively) compared with wild type (WT) and negatively associated with PSS in the heterozygous genotypes of GR BclI and IL4R Ile50Val (p = 0.040 and p = 0.052, respectively). Treg levels of the minor alleles of BclI (GG) and IFNG"
+    },
+    {
+      "document_id": "doc-pmid-25430986",
+      "chunk_id": "chunk-pmid-25430986-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Researchers studying the murine response to stress generally use mice housed under standard, nationally mandated conditions as controls. Few investigators are concerned whether basic physical aspects of mouse housing could be an additional source of stress, capable of influencing the subsequent impact of an experimentally applied stressor. We have recently become aware of the potential for housing conditions to impact important physiological and immunological properties in mice. Here we sought to determine whether housing mice at standard temperature (ST; 22\u2009\u00b0C) vs. thermoneutral temperature (TT; 30\u2009\u00b0C) influences baseline expression of heat shock proteins (HSPs) and their typical induction following a whole body heating. There were no significant differences in baseline expression of HSPs at ST and TT. However, in several cases, the induction of Hsp70, Hsp110 and Hsp90 in tissues of mice maintained at ST was greater than at TT following 6\u2009h of heating (which elevated core body temperature to 39.5\u2009\u00b0C). This loss of HSP induction was also seen when mice housed at ST were treated with propranolol, a \u03b2-adrenergic receptor antagonist, used clinically to treat hypertension and stress."
+    },
+    {
+      "document_id": "doc-pmid-25430980",
+      "chunk_id": "chunk-pmid-25430980-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The important functions of the meniscus are shock absorption, passive stabilization and load transmission of the knee. Because of the avascularity of two-thirds of the meniscal center region, the treatment of tears in this area is hard. Recently, microRNAs have been proven to play an important role in the pathogenesis of diseases. We focused on microRNA (miR)-210, which plays a wide spectrum of roles comprising mitochondrial metabolism, angiogenesis, DNA repair and cell survival. This study aimed to investigate the effect of intra-articular injection of synthetic miR-210 on the injured meniscus in the avascular zone. The middle segments of the medial meniscus of Spraque Dawley rats were incised longitudinally with a scalpel. An intra-articular injection of double-stranded (ds) miR-210 (for control group using control dsRNA) with atelocollagen was administered immediately after injury. Four weeks and 12\u00a0weeks after the injection, we conducted a histologic evaluation, immunohistochemical evaluation and Real-time PCR analysis. In vitro, the inner meniscus and synovial cells were isolated from rat knee joint, and were transfected with ds miR-210 or control dsRNA. Real-time PCR and immu"
+    },
+    {
+      "document_id": "doc-pmid-25424361",
+      "chunk_id": "chunk-pmid-25424361-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Protein arginine methyltransferase 5 (PRMT5), is thought to play a role in epigenetic reprogramming of mouse germ cells. However, up to now there has been little information concerning its expression profile and effects on generation of induced pluripotent stem cells (iPSCs) from somatic cells, in livestock. Here, we have explored PRMT5 expression profiles in dairy goats and its consequences to derivation of iPSCs from dairy goat embryonic fibroblasts (GEFs). We investigated effects of PRMT5 on iPS-like cells production in vitro. alkaline phosphatase (AP) staining, QRT-PCR and western blotting analysis of expression of related markers were used to evaluate efficiency of generation of iPSCs derived from GEFs. These showed PRMT5 to be a conservative gene widely expressed in various tissues and different-aged testes. PRMT5 overexpression in combination with OCT3/4, SOX2, KLF4 and C-MYC (POSKM) significantly increased number of AP positive iPS-like colony-derived GEFs compared to OSKM alone, in our dairy goats. Moreover, our results demonstrated that PRMT5 overexpression stimulated GEF proliferation and down-regulated p53, p21 (a target gene of p53) and the apoptotic marker caspase 3, "
+    },
+    {
+      "document_id": "doc-pmid-25424363",
+      "chunk_id": "chunk-pmid-25424363-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Minimally invasive retroperitoneoscopic surgery (MIS) for psoas abscess (PA) in patients with thoracolumbar tuberculosis is not well-illustrated and has not reached the status of being fully clinically assessed when we review the English literatures. The aim of this study is to introduce and investigate on efficacy and feasibility of MIS (retroperitoneoscopic technique) for PA in patients with thoracolumbar tuberculosis. From January 2008 to 2013, 39 consecutive patients of the diagnosis of PA with thoracolumbar tuberculosis received the debridement of abscesses and cavity walls of abscesses by the retroperitoneoscopic technique (MIS) in combination with anti-tuberculosis chemotherapy. Medical records and follow-up data were retrospectively studied. CRP and ESR of every patient preoperatively and postoperatively were analyzed Immediate relief in clinical symptoms and signs, and amelioration in imaging and laboratory examinations were obviously observed in all the patients. The follow-up had proceeded for 12-48 (mean 23) months. No complication was observed during the follow-up postoperatively."
+    },
+    {
+      "document_id": "doc-pmid-25450850",
+      "chunk_id": "chunk-pmid-25450850-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To evaluate the thickness of cartilage at the posterior aspect of the medial and lateral condyle in Osteoarthritis (OA) knees compared to non-OA knees using computed tomography arthrography (CTA). 535 consecutive knee CTAs (mean patient age = 48.7 \u00b1 16.0; 286 males), were retrospectively analyzed. Knees were radiographically classified into OA or non-OA knees according to a modified Kellgren/Lawrence (K/L) grading scheme. Cartilage thickness at the posterior aspect of the medial and lateral femoral condyles was measured on sagittal reformations, and compared between matched OA and non-OA knees in the whole sample population and in subgroups defined by gender and age. The cartilage of the posterior aspect of medial condyle was statistically significantly thicker in OA knees (2.43 mm (95% confidence interval (CI) = 2.36, 2.51)) compared to non-OA knees (2.13 mm (95%CI = 2.02, 2.17)) in the entire sample population (P < 0.001), as well as for all subgroups of patients over 40 years old (all P \u2264 0.01), except for females above 60 years old (P = 0.07). Increase in cartilage thickness at the posterior aspect of the medial condyle was associated with increasing K/L grade in the entire sam"
+    },
+    {
+      "document_id": "doc-pmid-25450854",
+      "chunk_id": "chunk-pmid-25450854-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To investigate the specific role of Frizzled-related protein (FRZB) and Secreted frizzled-related protein 1 (SFRP1) in the onset and progression of Osteoarthritis (OA) using Frzb(-/-) and Sfrp1(-/-) mice in the destabilization of medial meniscus model (DMM), a slowly progressing model of OA. Secreted frizzled-related proteins (SFRPs) were identified as secreted Wingless-type (Wnt) antagonists. The Wnt signaling cascade is a major regulator in cartilage development, homeostasis and degeneration. The DMM model was surgically induced in eight-week-old male C57/Bl6 Frzb(-/-), Sfrp1(-/-) or wild-type mice by transection of the medial meniscotibial ligament. Cartilage damage in the femoral and tibial articular surfaces was calculated following the Osteoarthritis Research Society International (OARSI) histopathology initiative guidelines. Histomorphometry was used to evaluate the subchondral bone plate thickness. OA severity scores were significantly higher in the tibia of Frzb(-/-) mice as compared to littermates, whereas no interaction was seen between genotype and intervention in Sfrp1(-/-) mice. Moreover, the DMM model resulted in significantly greater subchondral bone changes compare"
+    },
+    {
+      "document_id": "doc-pmid-25430589",
+      "chunk_id": "chunk-pmid-25430589-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Recently, pluripotency of induced pluripotent stem (iPS) cells has been displayed after producing adult mice, in tetraploid complementation assays. These studies lead us to the last piece of the puzzle for reprogramming somatic cells into fully pluripotent cells which function as embryonic stem cells in most applications. However, in all of previous studies, skin fibroblasts were used as the starting population for reprogramming, raising questions as to whether the pluripotency of the iPS cells was dependent on the particular starting cell type. Our iPS cell lines were prepared from murine adipose stem cells (ASCs). Their multi-potency was first tested by teratoma formation in nude mice. Then, tetraploid complementation was performed to generate progeny from them. We succeeded to the birth of viable and fertile adult mice derived entirely from reprogrammed ASC, indicating cell types other than fibroblasts can also be restored to the embryonic level of pluripotency."
+    },
+    {
+      "document_id": "doc-pmid-25441600",
+      "chunk_id": "chunk-pmid-25441600-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Several reports have indicated the benefits of the acute care surgery (ACS) model in surgical outcomes. We tried to delineate the impact of the ACS model on surgical efficiency and quality. Before the ACS model was implemented, abdominal surgical emergencies were evaluated by an on-call nontrauma general surgeon (pre-ACS model). An in-house trauma surgeon treated all patients with trauma or nontrauma abdominal surgical emergencies after the ACS model. Patients with acute appendicitis who underwent appendectomies were included. We conducted a pre- and poststudy to compare the time patients were in the emergency department and surgical qualities. There were 146 and 159 patients enrolled in the pre-ACS model and ACS model, respectively. The overall ED length of stay in the ACS model was significantly shorter than that in the pre-ACS model (300.3 \u00b1 61.7 vs 719.1 \u00b1 339.0 minutes, P < .001). Hospital LOS was also significantly shorter in the ACS model than in the pre-ACS model (2.44 \u00b1 1.39 vs 3.83 \u00b1 2.21 days, P = .022)."
+    },
+    {
+      "document_id": "doc-pmid-25431044",
+      "chunk_id": "chunk-pmid-25431044-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Most hepatocellular carcinomas (HCCs) are associated with cirrhosis. Portal hypertension (PHT) and esophageal variceal bleeding (EVB) can limit the patient's treatment options. Surgical therapy in such patients is challenging. We performed devascularization plus liver resection or radiofrequency ablation (RFA) to treat HCC patients with concomitant EVB resulting from PHT secondary to cirrhosis. Such combined operations have never been reported for the management of HCC patients with variceal esophageal bleeding. To evaluate two different treatment regimens for patients with HCC and EVB. We evaluated 35 BCLC stage 0/A patients with HCC and EVB who underwent either devascularization plus liver resection (Group A) or devascularization plus RFA (Group B). We reviewed the safety and outcomes of the two groups and assessed risk factors for patient survival and tumor recurrence. Significant factors for overall survival were surgical approach and Child-Pugh classification. Child-Pugh classification was the only independent risk factor for overall postoperative survival [hazard ratio (HR) 8.320, 95 % confidence interval (CI) 1.739-39.799, P = 0.008]. Age was the only independent risk factor"
+    },
+    {
+      "document_id": "doc-pmid-25423883",
+      "chunk_id": "chunk-pmid-25423883-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Assessment of the activity of thioridazine towards Mycobacterium tuberculosis (Mtb), in\u00a0vitro and in\u00a0vivo as a single drug and in combination with tuberculosis (TB) drugs. The in\u00a0vitro activity of thioridazine as single drug or in combination with TB drugs was assessed in terms of MIC and by use of the time-kill kinetics assay. Various Mtb strains among which the Beijing genotype strain BE-1585 were included. In\u00a0vivo, mice with TB induced by BE-1585 were treated with a TB drug regimen with thioridazine during 13 weeks. Therapeutic efficacy was assessed by the change in mycobacterial load in the lung, spleen and liver during treatment and 13 weeks post-treatment. In\u00a0vitro, thioridazine showed a concentration-dependent and time-dependent bactericidal activity towards both actively-replicating and slowly-replicating Mtb. Thioridazine at high concentrations could enhance the activity of isoniazid and rifampicin, and in case of isoniazid resulted in elimination of mycobacteria and prevention of isoniazid-resistant mutants. Thioridazine had no added value in combination with moxifloxacin or amikacin. In mice with TB, thioridazine was poorly tolerated, limiting the maximum tolerated dose "
+    },
+    {
+      "document_id": "doc-pmid-25440451",
+      "chunk_id": "chunk-pmid-25440451-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The prevalence of obesity in children is high, and many do not meet physical activity recommendations. The Safe Routes to School (SRTS) program encourages school-aged children to walk and bike to school. We assessed the condition of the walking/biking environment around schools in Louisiana prior to the state's first SRTS program. Assessments were made at the neighborhood level with the Pedestrian Environmental Data Scan (PEDS) instrument, and at the school and individual levels using the National SRTS Center's teacher tallies and parent surveys. PEDS scores were developed to rate conduciveness to walking/bicycling of proposed SRTS routes. Sites' scores were compared with the percentage of students who walk/bike to school. Five schools in Louisiana were evaluated. Overall, more students walked (range: 2.4-17.4%) than biked (range: 0.3-4.5%) to school with more students walking home than to school. Predictors of walking/biking to school include distance from school, speed of traffic, school encouragement, and if a student asked permission. Sites with the highest PEDS score had the highest percentage of students who walked/biked to school."
+    },
+    {
+      "document_id": "doc-pmid-25429176",
+      "chunk_id": "chunk-pmid-25429176-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "Stroke is the third leading cause of invalidism and death in industrialized countries. There are conflicting reports about the effects of Angiotensin II on ischemia-reperfusion brain injuries and most data have come from chronic hypertensive rats. In this study, hypotensive and non-hypotensive doses of candesartan were used to investigate the effects of angiotensin II AT1 receptor blockade by transient focal cerebral ischemia in normotensive rats. In this experimental study, 48 male Sprague-Dawley rats were randomly divided into four groups (n=12). Sham group, the control ischemic group, and two ischemic groups received candesartan at doses of 0.1 or 0.5 mg/kg at one hour before ischemia. Transient focal cerebral ischemia was induced by 60 minutes occlusion of the middle cerebral artery, followed by 24 h reperfusion. The neurological deficit score was evaluated at the end of the reperfusion period. The total cortical and striatal infarct volumes were determined using triphenyltetrazolium chloride staining technique. Tissue swelling was calculated for the investigation of ischemic brain edema formation. In comparison with the control ischemic group, AT1 receptor blockade with both d"
+    },
+    {
+      "document_id": "doc-pmid-25444158",
+      "chunk_id": "chunk-pmid-25444158-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Genetic haploinsufficiency of SYNGAP1/Syngap1 commonly occurs in developmental brain disorders, such as intellectual disability, epilepsy, schizophrenia, and autism spectrum disorder. Thus, studying mouse models of Syngap1 haploinsufficiency may uncover pathologic developmental processes common among distinct brain disorders. A Syngap1 haploinsufficiency model was used to explore the relationship between critical period dendritic spine abnormalities, cortical circuit assembly, and the window for genetic rescue to understand how damaging mutations disrupt key substrates of mouse brain development. Syngap1 mutations broadly disrupted a developmentally sensitive period that corresponded to the period of heightened postnatal cortical synaptogenesis. Pathogenic Syngap1 mutations caused a coordinated acceleration of dendrite elongation and spine morphogenesis and pruning of these structures in neonatal cortical pyramidal neurons. These mutations also prevented a form of developmental structural plasticity associated with experience-dependent reorganization of brain circuits. Consistent with these findings, Syngap1 mutant mice displayed an altered pattern of long-distance synaptic inputs "
+    },
+    {
+      "document_id": "doc-pmid-25425421",
+      "chunk_id": "chunk-pmid-25425421-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Immunologic abnormalities have been found in bipolar disorder but pentraxin 3, a marker of innate immunity, has not been studied in this population. Levels of pentraxin 3 were measured in individuals with bipolar disorder, schizophrenia, and non-psychiatric controls. Linear regression models were used to compare the pentraxin 3 levels in each of the psychiatric groups to that in the control group, adjusting for demographic and clinical variables. Logistic regression models were used to calculate the odds ratios associated with levels of pentraxin 3 which differed from specified levels of the control group. The sample consisted of 831 individuals: 256 with bipolar disorder, 309 with schizophrenia, and 266 without a psychiatric disorder. The levels of pentraxin 3 in the bipolar disorder, but not in the schizophrenia, group were significantly lower than those of controls, adjusting for age, gender, race, maternal education, smoking status, and body mass index (t = -3.78, p < 0.001). The individuals with bipolar disorder also had significantly increased odds of having low levels of pentraxin 3 relative to both the 10th and 25th percentile level of the controls and significantly decreas"
+    },
+    {
+      "document_id": "doc-pmid-25426190",
+      "chunk_id": "chunk-pmid-25426190-01",
+      "topic": "neurology",
+      "source_type": "peer_reviewed",
+      "text": "Convulsions associated with fever and acute onset of unknown aetiology with case fatalities have become a long observed medical condition at the Child Health Department of the Korle-Bu Teaching Hospital. Children admitted to the department with seizures of undetermined origin and fever has been a source of diagnostic confusion. Studies from the Asia Pacific region suggest a link with non-polio enteroviruses. The aim of the study was to investigate the association between non-polio enterovirus and acute encephalopathy causing neurological morbidity in children. One hundred and fifty cerebrospinal fluid (CSF), throat swab and serum samples were collected from participants at the Child Health Department of the Korle-Bu Teaching Hospital for virus isolation and characterization. Samples were cultured on cells and positive culture assayed by microneutralisation. Direct PCR as well as multiplex PCR were used to detect other viral agents present. Enterovirus isolation rate was approximately 0.67%. Intratypic differentiation by molecular characterization identified a poliovirus from vaccine origin. Further screening by real-time RT-PCR identified the virus as normal Sabin and not vaccine-d"
+    },
+    {
+      "document_id": "doc-pmid-25447577",
+      "chunk_id": "chunk-pmid-25447577-01",
+      "topic": "cardiology",
+      "source_type": "peer_reviewed",
+      "text": "Ex vivo heart perfusion (EVHP) provides the opportunity to resuscitate unused donor organs and facilitates assessments of myocardial function that are required to demonstrate organ viability before transplantation. We sought to evaluate the effect of different oxygen carriers on the preservation of myocardial function during EVHP. Twenty-seven pig hearts were perfused ex vivo in a normothermic beating state for 6 hours and transitioned into working mode for assessments after 1 (T1), 3 (T3), and 5 (T5) hours. Hearts were allocated to 4 groups according to the perfusate composition. Red blood cell concentrate (RBC, n = 6), whole blood (RBC+Plasma, n = 6), an acellular hemoglobin-based oxygen carrier (HBOC, n = 8), or HBOC plus plasma (HBOC+Plasma, n = 7) were added to STEEN Solution (XVIVO Perfusion, Goteborg, Sweden) to achieve a perfusate hemoglobin concentration of 40 g/liter. The perfusate composition affected the preservation of systolic (T5 dP/dtmax: RBC+Plasma = 903 \u00b1 99, RBC = 771 \u00b1 77, HBOC+Plasma = 691 \u00b1 82, HBOC = 563 \u00b1 52 mm Hg/sec; p = 0.047) and diastolic (T5 dP/dtmin: RBC+Plasma = -574 \u00b1 48, RBC = -492 \u00b1 63, HBOC+Plasma = -326 \u00b1 32, HBOC = -268 \u00b1 22 mm Hg/sec; p < 0.00"
+    },
+    {
+      "document_id": "doc-pmid-25429902",
+      "chunk_id": "chunk-pmid-25429902-01",
+      "topic": "cardiology",
+      "source_type": "peer_reviewed",
+      "text": "Immune monitoring (IM) has not been shown to be associated with cardiac allograft vasculopathy (CAV). Maximal intimal area, average percent stenosis, plaque volume, and maximal intimal thickness (MIT) were measured for matched baseline and one-yr IVUS segments in a blinded fashion. Patients were divided into quartiles by IM scores and outcomes compared. Optimal IM cutoff was determined. IM assays were measured at 63.7 \u00b1 16.4 d after transplantation in fifty patients. Progression of maximal intimal area (p = 0.005), average percent stenosis (p < 0.001), plaque volume (p = 0.005), and MIT (p = 0.001) were increased across the quartiles. An optimal IM assay cutoff of 406.0 ng ATP/mL demonstrated a sensitivity of 66.7% and specificity of 94.3% for predicting rapid progression of MIT \u2265 0.5 mm. Mean IM scores for Group 1 vs. Group 2 were 176.4 \u00b1 102.2 and 616.3 \u00b1 239.5 ngATP/mL, respectively. Rapid progression of MIT \u2265 0.5 mm occurred in 5/38 patients (13.2%) in Group 1 vs. 10/12 patients (83.3%) in Group 2 (p < 0.001). The risk ratio for rapid progression with elevated IM was 11.7 (p < 0.001)."
+    },
+    {
+      "document_id": "doc-pmid-25427406",
+      "chunk_id": "chunk-pmid-25427406-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Poultry remains a major source of foodborne bacterial infections. A variety of additives with presumed anti-microbial and/or growth-promoting effects are commonly added to poultry feed during commercial grow-out, yet the effects of these additives on the gastrointestinal microbial community (the GI microbiome) as the bird matures remain largely unknown. Here we compared temporal changes in the cecal microbiome to the effects of formic acid, propionic acid, and medium-chain fatty acids (MCFA) added to feed and/or drinking water. Cecal bacterial communities at day of hatch (n\u2009=\u20095 birds), 7d (n\u2009=\u200932), 21d (n\u2009=\u200927), and 42d (n\u2009=\u200936) post-hatch were surveyed using direct 454 sequencing of 16S rRNA gene amplicons from each bird in combination with cultivation-based recovery of a Salmonella Typhimurium marker strain and quantitative-PCR targeting Clostridium perfringens. Treatment effects on specific pathogens were generally non-significant. S. Typhimurium introduced by oral gavage at day of hatch was recovered by cultivation from nearly all birds sampled across treatments at 7d and 21d, but by 42d, S. Typhimurium was only recovered from ca. 25% of birds, regardless of treatment. Sequenci"
+    },
+    {
+      "document_id": "doc-pmid-25436452",
+      "chunk_id": "chunk-pmid-25436452-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Palmitate, a saturated fatty acid (FA), is known to induce toxicity and cell death in various types of cells. Resveratrol (RSV) is able to prevent pathogenesis and/or decelerate the progression of a variety of diseases. Several in vitro and in vivo studies have also shown a protective effect of RSV on fat accumulation induced by FAs. Additionally, endoplasmic reticulum (ER) stress has recently been linked to cellular adipogenic responses. To address the hypothesis that the RSV effect on excessive fat accumulation promoted by elevated saturated FAs could be partially mediated by a reduction of ER stress, we studied the RSV action on experimentally induced ER stress using palmitate in several cancer cell lines. We show that, unexpectedly, RSV promotes an amplification of palmitate toxicity and cell death and that this mechanism is likely due to a perturbation of palmitate accumulation in the triglyceride form and to a less important membrane fluidity variation. Additionally, RSV decreases radical oxygen species (ROS) generation in palmitate-treated cells but leads to enhanced X-box binding protein-1 (XBP1) splicing and C/EBP homologous protein (CHOP) expression. These molecular effec"
+    },
+    {
+      "document_id": "doc-pmid-25443276",
+      "chunk_id": "chunk-pmid-25443276-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "In renal cell carcinoma (RCC), the prediction of metastasis via tumor prognostic markers remains a major problem. The objective of our study was to evaluate the efficacy of cyclin-dependent kinase (CDK)1 and CDK2 activity as a prognostic marker in human RCC. Surgical specimens were obtained from 125 patients with RCC without metastasis. Protein expression and kinase activity of CDKs were analyzed using a newly developed assay system named C2P (Sysmex, Kobe, Japan). We then examined the specific activities (SAs) of CDK1 and CDK2 and calculated CDK2SA-CDK1SA ratio in RCC. Also, risk score (RS) was examined. A total of 125 cases were tested, though 34 cases were excluded because of low sample quality (25 cases) and assay failure (9 cases). In total, 91 cases were analyzed. They included 68 male and 23 female patients, ranging in age from 19 to 83 years. At a median follow-up of 36 months (1-109M), tumor with low CDK2SA-CDK1SA ratio showed significantly better 5-year recurrence-free survival than those with high CDK2SA-CDK1SA ratio (88.7% vs. 54.7%, P = 0.00141). Also, RS enabled the classification of RCCs into high-risk and low-risk groups, and patients with tumors classified as low R"
+    },
+    {
+      "document_id": "doc-pmid-25425302",
+      "chunk_id": "chunk-pmid-25425302-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To compare optic nerve head (ONH) morphology between eyes with normal-tension glaucoma (NTG) and primary open-angle glaucoma (POAG). Seventy-eight NTG patients and 78 POAG patients matched according to age and axial length were analyzed. Optic nerve head tilt and torsion were identified from cross-sectional images of optical coherence tomography. The degree of horizontal, vertical, and maximum ONH tilt and torsion was compared between NTG and POAG eyes, and additional comparisons were based on the presence of myopia and the location of the visual field defect. Logistic regression analysis was used to determine the factors related to the degree of ONH torsion. Vertical (P = 0.610) and horizontal tilt degree (P = 0.746) did not differ between NTG and POAG eyes. However, torsion degree (P = 0.022) differed significantly between NTG and POAG eyes. Direction of vertical tilt (P = 0.040) and torsion (P < 0.001) showed more prevalent superior tilt and torsion in NTG eyes (21.8% and 33.3%, respectively) compared to POAG eyes (10.3% and 10.3%, respectively). Myopic NTG eyes showed greater torsion degree (P = 0.014) than nonmyopic NTG eyes, which was not observed in the comparison between my"
+    },
+    {
+      "document_id": "doc-pmid-25433285",
+      "chunk_id": "chunk-pmid-25433285-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The aims of this study were to determine the effect of failed prior endovascular treatment (EV) on early and midterm outcomes of subsequent lower extremity open surgical (OS) bypass. Patients undergoing infrainguinal bypass for critical limb ischemia (CLI) from January 2008 to December 2011 were retrospectively reviewed. The results after first-line bypass and bypass after failure of EV treatment were compared. A total of 213 patients (65.25% men; average age, 73.30 years) underwent bypass. OS patients were then divided into 2 groups: group 1 consisted of 138 patients who underwent primary OS for CLI without prior EV (control group) and group 2 consisted of 75 patients who had OS after a failed attempt at elective EV for peripheral vascular disease. Of the 213 bypass performed, 34% had a prior infrainguinal failed EV. The primary study end points were early and 1-year major amputations and graft occlusion. The secondary outcomes included early and 1-year mortality and the level of distal revascularization. Secondary patency and limb salvage rates were significantly better in group 1 up to 1 year (99% vs. 86%; P < 0.001 at 1 month and 95% vs. 76%, P < 0.05 at 12 months, respectively"
+    },
+    {
+      "document_id": "doc-pmid-25433284",
+      "chunk_id": "chunk-pmid-25433284-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Guillotine below-knee amputation (BKA) for wet gangrene is an unfortunate complication of poorly controlled diabetes. We examined risk factors associated with wound complications after amputation formalization in this patient population. Retrospective data over a 4-year period were collected for patients undergoing guillotine BKA for wet gangrene followed by staged formalization. Patients with abnormal distal pulses underwent evaluation before formalization to stratify for peripheral arterial disease (PAD). Those patients with palpable pulses and no known PAD went to formalization without further investigation. Poor operative candidates underwent delayed formalization to allow for preoperative optimization. Patient history, interval between surgeries, pathology, and preformalization laboratories were tested for significance. Primary outcome was postformalization wound complication. Fifty-six amputations in 55 patients met inclusion criteria. Wound complications after formalization occurred in 18 cases, all BKAs (32%). A history of PAD was present in 19 patients (34.5%). On pathology, 23 patients (41%) had small-vessel atherosclerosis or arteriosclerosis. There was no association be"
+    },
+    {
+      "document_id": "doc-pmid-25433282",
+      "chunk_id": "chunk-pmid-25433282-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Remote renal ischemia-reperfusion injury (IRI) following infra-renal aortic occlusion leads to acute kidney injury and systemic inflammation. Hydrogen sulfide is a mediator of IRI and can ameliorate tissue injury in many organ systems. Its role in vascular surgery has yet to be established. We assessed the role of hydrogen sulfide in a rodent model of aortic occlusion. Wistar rats were divided into sham, control, and treatment groups (n = 6). Inflammation was assessed using a nonrecovery protocol. The infra-renal aorta was cross-clamped for 60 min and animals were reperfused for 120 min. Ten minutes before clamp release, treatment animals received hydrogen sulfide (10, 30, or 50 \u03bcg/kg) and control animals received 0.9% saline injected into the retroperitoneum. Renal injury and histology were assessed by a recovery protocol. The procedure was identical to the nonrecovery arm but with a single dose of hydrogen sulfide (30 \u03bcg/kg) and animals were recovered for 7 days. There was no difference in animal weight between the groups (P = 0.337). In the nonrecovery arm, there was a reduction in serum levels of tumor necrosis factor alpha in sulfide-treated animals compared with controls (909"
+    },
+    {
+      "document_id": "doc-pmid-25452253",
+      "chunk_id": "chunk-pmid-25452253-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Gene flow from crops to their wild relatives has the potential to alter population growth rates and demography of hybrid populations, especially when a new crop has been genetically modified (GM). This study introduces a comprehensive approach to assess this potential for altered population fitness, and uses a combination of demographic data in two habitat types and mathematical (matrix) models that include crop rotations and outcrossing between parental species. Full life-cycle demographic rates, including seed bank survival, of non-GM Brassica rapa\u2009\u00d7\u2009B. napus F1 hybrids and their parent species were estimated from experiments in both agricultural and semi-natural habitats. Altered fitness potential was modelled using periodic matrices including crop rotations and outcrossing between parent species. The demographic vital rates (i.e. for major stage transitions) of the hybrid population were intermediate between or lower than both parental species. The population growth rate (\u03bb) of hybrids indicated decreases in both habitat types, and in a semi-natural habitat hybrids became extinct at two sites. Elasticity analyses indicated that seed bank survival was the greatest contributor to"
+    },
+    {
+      "document_id": "doc-pmid-25428612",
+      "chunk_id": "chunk-pmid-25428612-01",
+      "topic": "oncology",
+      "source_type": "peer_reviewed",
+      "text": "Progression from actinic keratosis (AK) to invasive squamous cell carcinoma (iSCC) of the skin is thought to occur after the development of full thickness epidermal neoplasia, as in the classic pathway of cervical cancer. Nevertheless, cutaneous iSCC may also directly arise from a proliferation of atypical basaloid cells limited mostly to the epidermal basal layer (AK I), akin to what happens in the 'differentiated pathway' of iSCC of the vulva, oral cavity and other locations. To evaluate the prevalence of classic and differentiated pathways in the development of cutaneous iSCC. The epidermis adjacent to and overlying iSCC, assumed to be representative of pre-existing lesions, was histologically studied in 196 skin biopsy specimens showing iSCC. AK I, AK II and AK III lesions overlying iSCC were present in 63.8%, 17.9% and 18.4% of cases respectively. The corresponding percentages in the epidermis adjacent to iSCC were 77.9%, 6.6% and 8.3% respectively (stage could not be assessed in 8.1% of cases). Focal epidermal ulceration overlying iSCC was seen in 32% of AK I, 28.6% of AK II and 33.3% of AK III instances. Adnexal involvement by atypical keratinocytes (proliferative AK) was pr"
+    },
+    {
+      "document_id": "doc-pmid-25443761",
+      "chunk_id": "chunk-pmid-25443761-01",
+      "topic": "pulmonology",
+      "source_type": "peer_reviewed",
+      "text": "Ascent to high altitude leads to a reduction in ambient pressure and a subsequent fall in available oxygen. The resulting hypoxia can lead to elevated pulmonary artery (PA) pressure, capillary stress, and an increase in interstitial fluid. This fluid can be assessed on lung ultrasound (LUS) by the presence of B-lines. We undertook a chamber and field study to assess the impact of high-intensity exercise in hypoxia on the development of pulmonary interstitial edema in healthy lowlanders. Thirteen volunteers completed a high-intensity intermittent exercise (HIIE) test at sea level, in acute normobaric hypoxia (12% O2, approximately 4090 m equivalent altitude), and in hypobaric hypoxia during a field study at 4090 m after 6 days of acclimatization. Pulmonary interstitial edema was assessed by the evaluation of LUS B-lines. After HIIE, no increase in B-lines was seen in normoxia, and a small increase was seen in acute normobaric hypoxia (2 \u00b1 2; P < .05). During the field study at 4090 m, 12 participants (92%) demonstrated 7 \u00b1 4 B-lines at rest, which increased to 17 \u00b1 5 immediately after the exercise test (P < .001). An increase was evident in all participants. There was a reciprocal f"
+    },
+    {
+      "document_id": "doc-pmid-25439094",
+      "chunk_id": "chunk-pmid-25439094-01",
+      "topic": "endocrinology",
+      "source_type": "peer_reviewed",
+      "text": "To determine whether older adults with type 2 diabetes mellitus and cognitive dysfunction have poorer metabolic control of glycosylated hemoglobin, systolic blood pressure, and low-density lipoprotein cholesterol than those without cognitive dysfunction. Prospective cohort study. A minority cohort in New York City previously recruited for a trial of telemedicine. Persons aged 73.0 \u00b1 3.0 (N = 613; 69.5% female; 82.5% Hispanic, 15.5% non-Hispanic black). Participants were classified with executive or memory dysfunction based on standardized score cutoffs (<16th percentile) for the Color Trails Test and Selective Reminding Test. Linear mixed models were used to compare repeated measures of the metabolic measures and evaluate the rates of change in individuals with and without dysfunction. Of the 613 participants, 331 (54%) had executive dysfunction, 202 (33%) had memory dysfunction, and 96 (16%) had both. Over a median of 2 years, participants with executive or memory dysfunction did not exhibit significantly poorer metabolic control than those without executive function or memory type cognitive dysfunction."
+    },
+    {
+      "document_id": "doc-pmid-25439526",
+      "chunk_id": "chunk-pmid-25439526-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "To investigate whether serum anti-high mobility group box 1 (anti-HMGB1) antibodies are related to the development of skin lesions in systemic lupus erythematosus (SLE). This study involved 21 SLE patients with skin lesions, 18 without skin lesions, and 22 healthy controls. The presence and serum levels of anti-HMGB1-IgG and -IgM were measured by western blot and enzyme-linked immunosorbent assay (ELISA), respectively. HMGB1 expression and serum antibodies deposited in the skin were visualized by immunofluorescence staining. Using western blot analysis, we detected anti-HMGB1-IgG antibodies in 13 out of 21 SLE patients with skin lesions and 11 out of 18 SLE patients without skin lesions (p > 0.05). Serum levels of anti-HMGB1-IgG measured by ELISA were also comparable between the two groups of SLE patients (p > 0.05) but were higher in patients than in healthy controls (p < 0.05). Similar results were found with serum anti-HMGB1-IgM antibodies. HMGB1 accumulated under the stratum corneum in lupus cutaneous lesions without forming immune complexes with IgG or IgM, which were mainly observed along the epidermal-dermal junction. Furthermore, serum anti-HMGB1-IgM was higher in the group"
+    },
+    {
+      "document_id": "doc-pmid-25447846",
+      "chunk_id": "chunk-pmid-25447846-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Excessive consumption of ethanol is one of the most common causes of acute and chronic pancreatitis. Alterations to the gene encoding the cystic fibrosis transmembrane conductance regulator (CFTR) also cause pancreatitis. However, little is known about the role of CFTR in the pathogenesis of alcohol-induced pancreatitis. We measured CFTR activity based on chloride concentrations in sweat from patients with cystic fibrosis, patients admitted to the emergency department because of excessive alcohol consumption, and healthy volunteers. We measured CFTR levels and localization in pancreatic tissues and in patients with acute or chronic pancreatitis induced by alcohol. We studied the effects of ethanol, fatty acids, and fatty acid ethyl esters on secretion of pancreatic fluid and HCO3(-), levels and function of CFTR, and exchange of Cl(-) for HCO3(-) in pancreatic cell lines as well as in tissues from guinea pigs and CFTR knockout mice after administration of alcohol. Chloride concentrations increased in sweat samples from patients who acutely abused alcohol but not in samples from healthy volunteers, indicating that alcohol affects CFTR function. Pancreatic tissues from patients with a"
+    },
+    {
+      "document_id": "doc-pmid-25428725",
+      "chunk_id": "chunk-pmid-25428725-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Flow-mediated dilation (FMD) is a complex mechanism involving several mediators, and different hemodynamic forces. Temporally distinct FMD patterns can be elicited by ischemic stimulus. Some subjects dilate early after cuff release, while others dilate later or do not dilate at all. Aim of the present research was to verify if hemorheological and hemodynamic factors might influence different FMD pattern. 148 free-living subjects were studied. FMD was measured at 50 s, 2 min and 3 min. Blood viscosity was measured and shear stress calculated. Shear stress stimulus was quantified as the area under the curve after ischemia (SSAUC) over the first 40-s post-occlusion. Based on the timing or absence of arterial dilation, 82 subjects were classified as Early dilators, 37 as Late dilators and 29 as No dilators. Peak FMD was 7.9 \u00b1 4.3 % in Early dilators, and 9.1 \u00b1 5.7 in Late dilators (p = NS). SSAUC was not significantly different among three groups, while blood viscosity was significantly higher in Late FMD subjects. Regression analyses showed the independent predictive role of age and blood viscosity on FMD patterns, and the lack of any association between FMD pattern and the magnitude "
+    },
+    {
+      "document_id": "doc-pmid-25428728",
+      "chunk_id": "chunk-pmid-25428728-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Neutrophils can synthesize leukotriene B4 (LTB4) by activating the 5-lipoxygenase (5-LO)signaling pathway. LTB4 is a pro-inflammatory mediator associated with the etiology and progression of atherosclerosis. It can increase function and number of neutrophils in an autocrine manner. Since hypercholesterolemia is associated with an increase in the number and function of neutrophils, we hypothesized that this effect could be mediated through increased production of LTB4 in neutrophils. Hypercholesterolemia was modeled in Wistar rats by feeding them with a high cholesterol diet. The induction of hypercholesterolemia caused an increase in the plasma levels of LTB4, following lipopolysaccharide stimulation. This effect was recapitulated in vitro, both in the presence and absence of stimulation with the activator of 5-LO, A23187. Neutrophils in hypercholesterolemia rats expressed similar total levels of 5-LO as control rats, but displayed increased nuclear localization of 5-LO, as well as elevated levels of phosphorylated 5-LO and ERK1/2. In vitro, M\u03b2CD/cholesterol complexes enriched cholesterol in neutrophils, resulted in similar changes in 5-LO/LTB4. In addition, these alterations could"
+    },
+    {
+      "document_id": "doc-pmid-25451397",
+      "chunk_id": "chunk-pmid-25451397-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "The purpose of this study was to address the affects of mood modifying drugs on the transcriptome, in a tissue culture model, using qPCR arrays as a cost effective approach to identifying regulatory networks and pathways that might coordinate the cell response to a specific drug. We addressed the gene expression profile of 90 plus genes associated with human mood disorders using the StellARray\u2122 qPCR gene expression system in the human derived SH-SY5Y neuroblastoma cell line. Global Pattern Recognition (GPR) analysis identified a total of 9 genes (DRD3(\u204e), FOS(\u2020), JUN(\u204e), GAD1(\u204e\u2020), NRG1(\u204e), PAFAH1B3(\u204e), PER3(\u204e), RELN(\u204e) and RGS4(\u204e)) to be significantly regulated in response to cellular challenge with the mood stabilisers sodium valproate ((\u204e)) and lithium ((\u2020)). Modulation of FOS and JUN highlights the importance of the activator protein 1 (AP-1) transcription factor pathway in the cell response. Enrichment analysis of transcriptional networks relating to this gene set also identified the transcription factor neuron restrictive silencing factor (NRSF) and the oestrogen receptor as an important regulatory mechanism."
+    },
+    {
+      "document_id": "doc-pmid-25439779",
+      "chunk_id": "chunk-pmid-25439779-01",
+      "topic": "general_medicine",
+      "source_type": "peer_reviewed",
+      "text": "Skeletal myoblasts fuse to form functional syncytial myotubes as an integral part of the skeletal muscle. During this differentiation process, expression of proteins for mechanical and electrical integration is seized, which is a major drawback for the application of skeletal myoblasts in cardiac regenerative cell therapy, because global heart function depends on intercellular communication. Mechanically preconditioned engineered tissue constructs containing neonatal mouse skeletal myoblasts were transplanted epicardially. A Y-chromosomal specific polymerase chain reaction (PCR) was undertaken up to 10 weeks after transplantation to confirm the presence of grafted cells. Histologic and electrophysiologic analyses were carried out 1 week after transplantation. Cells within the grafted construct expressed connexin 43 at the interface to the host myocardium, indicating electrical coupling, confirmed by sharp electrode recordings. Analyses of the maximum stimulation frequency (5.65 \u00b1 0.37 Hz), conduction velocity (0.087 \u00b1 0.011 m/s) and sensitivity for pharmacologic conduction block (0.736 \u00b1 0.080 mM 1-heptanol) revealed effective electrophysiologic coupling between graft and host cell"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "q-001",
+      "query": "Are group 2 innate lymphoid cells ( ILC2s ) increased in chronic rhinosinusitis with nasal polyps or eosinophilia?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25429730"
+      ],
+      "pmid": "25429730",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-002",
+      "query": "Does vagus nerve contribute to the development of steatohepatitis and obesity in phosphatidylethanolamine N-methyltransferase deficient mice?",
+      "topic": "gastroenterology",
+      "relevant_doc_ids": [
+        "doc-pmid-25433161"
+      ],
+      "pmid": "25433161",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-003",
+      "query": "Does psammaplin A induce Sirtuin 1-dependent autophagic cell death in doxorubicin-resistant MCF-7/adr human breast cancer cells and xenografts?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25445714"
+      ],
+      "pmid": "25445714",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-004",
+      "query": "Is methylation of the FGFR2 gene associated with high birth weight centile in humans?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25431941"
+      ],
+      "pmid": "25431941",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-005",
+      "query": "Do tumor-infiltrating immune cell profiles and their change after neoadjuvant chemotherapy predict response and prognosis of breast cancer?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25432519"
+      ],
+      "pmid": "25432519",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-006",
+      "query": "Is hidradenitis suppurativa a systemic disease with substantial comorbidity burden : a chart-verified case-control analysis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25440440"
+      ],
+      "pmid": "25440440",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-007",
+      "query": "Does reference range for serum and salivary testosterone in young men of Mediterranean region?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25444977"
+      ],
+      "pmid": "25444977",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-008",
+      "query": "Are secretory phospholipases A2 secreted from ciliated cells and increase mucin and eicosanoid secretion from goblet cells?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25429648"
+      ],
+      "pmid": "25429648",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-009",
+      "query": "Is admission hyperglycemia associated with failed reperfusion following fibrinolytic therapy in patients with STEMI : results of a retrospective study?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25424148"
+      ],
+      "pmid": "25424148",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-010",
+      "query": "Do systematic Reviews Published in Emergency Medicine Journals Routinely Search Clinical Trials Registries : A Cross-Sectional Analysis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25447560"
+      ],
+      "pmid": "25447560",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-011",
+      "query": "Do obese patients with idiopathic pulmonary fibrosis have a higher 90-day mortality risk with bilateral lung transplantation?",
+      "topic": "pulmonology",
+      "relevant_doc_ids": [
+        "doc-pmid-25447567"
+      ],
+      "pmid": "25447567",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-012",
+      "query": "Does promoter variant rs2301228 on the neural cell adhesion molecule 1 gene confer risk of schizophrenia in Han Chinese?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25445624"
+      ],
+      "pmid": "25445624",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-013",
+      "query": "Are [ Higher nitric oxide levels associated with disease activity in Egyptian rheumatoid arthritis patients ]?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25445628"
+      ],
+      "pmid": "25445628",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-014",
+      "query": "Does increased Syk phosphorylation lead to overexpression of TRAF6 in peripheral B cells of patients with systemic lupus erythematosus?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25432781"
+      ],
+      "pmid": "25432781",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-015",
+      "query": "Are reasons why erupted third molars extracted in a public university in Mexico?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25429481"
+      ],
+      "pmid": "25429481",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-016",
+      "query": "Does the Boston keratoprosthesis provide a wide depth of focus?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25424372"
+      ],
+      "pmid": "25424372",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-017",
+      "query": "Do large portion sizes increase bite size and eating rate in overweight women?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25449410"
+      ],
+      "pmid": "25449410",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-018",
+      "query": "Are routine preoperative restaging CTs after neoadjuvant chemoradiation for locally advanced rectal cancer low yield : a retrospective case study?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25448648"
+      ],
+      "pmid": "25448648",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-019",
+      "query": "Does pancreatic polypeptide regulate glucagon release through PPYR1 receptors expressed in mouse and human alpha-cells?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25445712"
+      ],
+      "pmid": "25445712",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-020",
+      "query": "Do two decades of British newspaper coverage regarding attempt cardiopulmonary resuscitation decisions : Lessons for clinicians?",
+      "topic": "pulmonology",
+      "relevant_doc_ids": [
+        "doc-pmid-25449344"
+      ],
+      "pmid": "25449344",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-021",
+      "query": "Is increased time from neoadjuvant chemoradiation to surgery associated with higher pathologic complete response rates in esophageal cancer?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25440267"
+      ],
+      "pmid": "25440267",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-022",
+      "query": "Is epileptic focus localization based on resting state interictal MEG recordings feasible irrespective of the presence or absence of spikes?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25440261"
+      ],
+      "pmid": "25440261",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-023",
+      "query": "Does seminal Helicobacter pylori treatment improve sperm motility in infertile asthenozoospermic men?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25432826"
+      ],
+      "pmid": "25432826",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-024",
+      "query": "Does a migrating ciliary gate compartmentalize the site of axoneme assembly in Drosophila spermatids?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25447994"
+      ],
+      "pmid": "25447994",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-025",
+      "query": "Is individual Public Transportation Accessibility Positively Associated with Self-Reported Active Commuting?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25453030"
+      ],
+      "pmid": "25453030",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-026",
+      "query": "Is congenital penile pathology associated with abnormal development of the dartos muscle : a prospective study of primary penile surgery at a tertiary referral center?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25444989"
+      ],
+      "pmid": "25444989",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-027",
+      "query": "Is \u03b4Np63 expression a protective factor of progression in clinical high grade T1 bladder cancer?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25444981"
+      ],
+      "pmid": "25444981",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-028",
+      "query": "Do high levels of procalcitonin in the early phase after pediatric liver transplantation indicate poor postoperative outcome?",
+      "topic": "gastroenterology",
+      "relevant_doc_ids": [
+        "doc-pmid-25436308"
+      ],
+      "pmid": "25436308",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-029",
+      "query": "Is decreased expression of liver-type fatty acid-binding protein associated with poor prognosis in hepatocellular carcinoma?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25436304"
+      ],
+      "pmid": "25436304",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-030",
+      "query": "Does ephrin type-B receptor 4 activation reduce neointimal hyperplasia in human saphenous vein in vitro?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25446283"
+      ],
+      "pmid": "25446283",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-031",
+      "query": "Are low serum levels of vitamin D associated with post-stroke depression?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25438665"
+      ],
+      "pmid": "25438665",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-032",
+      "query": "Are polymorphisms near TBX5 and GDF7 associated with increased risk for Barrett 's esophagus?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25447851"
+      ],
+      "pmid": "25447851",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-033",
+      "query": "Does danzhi Xiaoyao San ameliorate depressive-like behavior by shifting toward serotonin via the downregulation of hippocampal indoleamine 2,3-dioxygenase?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25435286"
+      ],
+      "pmid": "25435286",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-034",
+      "query": "Is p63 more sensitive and specific than 34\u03b2E12 to differentiate adenocarcinoma of prostate from cancer mimickers?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25429340"
+      ],
+      "pmid": "25429340",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-035",
+      "query": "Does poor sleep predict symptoms of depression and disability retirement due to depression?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25451441"
+      ],
+      "pmid": "25451441",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-036",
+      "query": "Are phospholipase C epsilon 1 ( PLCE1 ) haplotypes associated with increased risk of gastric cancer in Kashmir Valley?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25434319"
+      ],
+      "pmid": "25434319",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-037",
+      "query": "Is tGFBI Expression in Cancer Stromal Cells Associated with Poor Prognosis and Hematogenous Recurrence in Esophageal Squamous Cell Carcinoma?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25448803"
+      ],
+      "pmid": "25448803",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-038",
+      "query": "Are autoimmune features associated with chronic antibiotic-refractory pouchitis?",
+      "topic": "infectious_disease",
+      "relevant_doc_ids": [
+        "doc-pmid-25437817"
+      ],
+      "pmid": "25437817",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-039",
+      "query": "Does identical ATP1A3 mutation cause alternating hemiplegia of childhood and rapid-onset dystonia parkinsonism phenotypes?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25439493"
+      ],
+      "pmid": "25439493",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-040",
+      "query": "Does metabolic control analysis of the Trypanosoma cruzi peroxide detoxification pathway identify tryparedoxin as a suitable drug target?",
+      "topic": "endocrinology",
+      "relevant_doc_ids": [
+        "doc-pmid-25450181"
+      ],
+      "pmid": "25450181",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-041",
+      "query": "Is basal Flt1 tyrosine kinase activity a positive regulator of endothelial survival and vascularization during zebrafish embryogenesis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25450186"
+      ],
+      "pmid": "25450186",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-042",
+      "query": "Do immunizations with hepatitis B viral antigens and a TLR7/8 agonist adjuvant induce antigen-specific immune responses in HBV-transgenic mice?",
+      "topic": "gastroenterology",
+      "relevant_doc_ids": [
+        "doc-pmid-25449231"
+      ],
+      "pmid": "25449231",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-043",
+      "query": "Are lobar microbleeds associated with a decline in executive functioning in older adults?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25427958"
+      ],
+      "pmid": "25427958",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-044",
+      "query": "Is self-reported physical activity in smoking pre-cessation a protective factor against relapse for all?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25427957"
+      ],
+      "pmid": "25427957",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-045",
+      "query": "Is breathlessness at rest the dominant presentation of patients admitted with heart failure?",
+      "topic": "cardiology",
+      "relevant_doc_ids": [
+        "doc-pmid-25452165"
+      ],
+      "pmid": "25452165",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-046",
+      "query": "Is delayed duodenal stump blow-out following total gastrectomy for cancer : Heightened awareness for the continued presence of the surgical past in the present the key to a successful duodenal stump disruption management . A case report?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25437683"
+      ],
+      "pmid": "25437683",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-047",
+      "query": "Are lipoprotein phospholipase A2 mass and activity associated with the diagnosis of acute brain ischemia?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25428761"
+      ],
+      "pmid": "25428761",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-048",
+      "query": "Is osteoprotegerin associated with subclinical left ventricular systolic dysfunction in diabetic hypertensive patients : a speckle tracking study?",
+      "topic": "cardiology",
+      "relevant_doc_ids": [
+        "doc-pmid-25442456"
+      ],
+      "pmid": "25442456",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-049",
+      "query": "Do a new model for the standardization of experimental burn wounds?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25440857"
+      ],
+      "pmid": "25440857",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-050",
+      "query": "Does circulating atrial natriuretic peptide genetic association study identify a novel gene cluster associated with stroke in whites?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25452597"
+      ],
+      "pmid": "25452597",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-051",
+      "query": "Do whole-genome sequencing and epidemiological analysis provide evidence for cross-transmission of mycobacterium abscessus in a cohort of pediatric cystic fibrosis patients?",
+      "topic": "infectious_disease",
+      "relevant_doc_ids": [
+        "doc-pmid-25452595"
+      ],
+      "pmid": "25452595",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-052",
+      "query": "Are high Atopobium vaginae and Gardnerella vaginalis vaginal loads associated with preterm birth?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25452591"
+      ],
+      "pmid": "25452591",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-053",
+      "query": "Is cD30 expression a novel prognostic indicator in extranodal natural killer/T-cell lymphoma , nasal type?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25429803"
+      ],
+      "pmid": "25429803",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-054",
+      "query": "Do [ Clinical study on continuous plasma filtration absorption treatment for burn sepsis ]?",
+      "topic": "infectious_disease",
+      "relevant_doc_ids": [
+        "doc-pmid-25429809"
+      ],
+      "pmid": "25429809",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-055",
+      "query": "Do [ Perinatal variables from newborns of Aymara mothers suggest a genetic adaptation to high altitude ]?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25424667"
+      ],
+      "pmid": "25424667",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-056",
+      "query": "Is 25-hydroxyvitamin D status associated with chronic cerebral small vessel disease?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25424481"
+      ],
+      "pmid": "25424481",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-057",
+      "query": "Is cD133-positive tumor cell content a predictor of early recurrence in colorectal cancer?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25436124"
+      ],
+      "pmid": "25436124",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-058",
+      "query": "Does traumatic brain injury induce neuroinflammation and neuronal degeneration that is associated with escalated alcohol self-administration in rats?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25446758"
+      ],
+      "pmid": "25446758",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-059",
+      "query": "Does maternal undernutrition induce premature reproductive senescence in adult female rat offspring?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25439841"
+      ],
+      "pmid": "25439841",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-060",
+      "query": "Does granulocyte colony-stimulating factor prevent loss of spermatogenesis after sterilizing busulfan chemotherapy?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25439845"
+      ],
+      "pmid": "25439845",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-061",
+      "query": "Is saikosaponin b2 a naturally occurring terpenoid that efficiently inhibits hepatitis C virus entry?",
+      "topic": "infectious_disease",
+      "relevant_doc_ids": [
+        "doc-pmid-25450204"
+      ],
+      "pmid": "25450204",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-062",
+      "query": "Does autotaxin activity have a high accuracy to diagnose intrahepatic cholestasis of pregnancy?",
+      "topic": "gastroenterology",
+      "relevant_doc_ids": [
+        "doc-pmid-25450205"
+      ],
+      "pmid": "25450205",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-063",
+      "query": "Does a dedicated research program increase the quantity and quality of orthopaedic resident publications?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25448329"
+      ],
+      "pmid": "25448329",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-064",
+      "query": "Does cationic Nanogel-mediated Runx2 and Osterix siRNA Delivery decrease Mineralization in MC3T3 Cells?",
+      "topic": "gastroenterology",
+      "relevant_doc_ids": [
+        "doc-pmid-25448327"
+      ],
+      "pmid": "25448327",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-065",
+      "query": "Do no sex differences exist in posterior condylar offsets of the knee?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25448325"
+      ],
+      "pmid": "25448325",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-066",
+      "query": "Do gene polymorphisms of stress hormone and cytokine receptors associate with immunomodulatory profile and psychological measurement?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25434615"
+      ],
+      "pmid": "25434615",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-067",
+      "query": "Does housing temperature influence the pattern of heat shock protein induction in mice following mild whole body hyperthermia?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25430986"
+      ],
+      "pmid": "25430986",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-068",
+      "query": "Does intra-articular injection of synthetic microRNA-210 accelerate avascular meniscal healing in rat medial meniscal injured model?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25430980"
+      ],
+      "pmid": "25430980",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-069",
+      "query": "Does pRMT5 enhance generation of induced pluripotent stem cells from dairy goat embryonic fibroblasts via down-regulation of p53?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25424361"
+      ],
+      "pmid": "25424361",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-070",
+      "query": "Do minimally invasive retroperitoneoscopic surgery for psoas abscess with thoracolumbar tuberculosis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25424363"
+      ],
+      "pmid": "25424363",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-071",
+      "query": "Is cartilage thickness at the posterior medial femoral condyle increased in femorotibial knee osteoarthritis : a cross-sectional CT arthrography study ( Part 2 )?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25450850"
+      ],
+      "pmid": "25450850",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-072",
+      "query": "Does loss of Frzb and Sfrp1 differentially affect joint homeostasis in instability-induced osteoarthritis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25450854"
+      ],
+      "pmid": "25450854",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-073",
+      "query": "Does tetraploid complementation prove pluripotency of induced pluripotent stem cells derived from adipose tissue?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25430589"
+      ],
+      "pmid": "25430589",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-074",
+      "query": "Does implementation of the acute care surgery model provide benefits in the surgical treatment of the acute appendicitis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25441600"
+      ],
+      "pmid": "25441600",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-075",
+      "query": "Is radiofrequency ablation plus devascularization the preferred treatment of hepatocellular carcinoma with esophageal varices?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25431044"
+      ],
+      "pmid": "25431044",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-076",
+      "query": "Is enhancement of in vitro activity of tuberculosis drugs by addition of thioridazine reflected by improved in vivo therapeutic efficacy?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25423883"
+      ],
+      "pmid": "25423883",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-077",
+      "query": "Do youth walking and biking rates vary by environments around 5 Louisiana schools?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25440451"
+      ],
+      "pmid": "25440451",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-078",
+      "query": "Does blockade of Central Angiotensin II AT1 Receptor protect the Brain from Ischemia/Reperfusion Injury in Normotensive Rats?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25429176"
+      ],
+      "pmid": "25429176",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-079",
+      "query": "Does syngap1 haploinsufficiency damage a postnatal critical period of pyramidal cell structural maturation linked to cortical circuit assembly?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25444158"
+      ],
+      "pmid": "25444158",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-080",
+      "query": "Is pentraxin 3 reduced in bipolar disorder?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25425421"
+      ],
+      "pmid": "25425421",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-081",
+      "query": "Are human enteroviruses the cause of neurological impairments in children at the Korle-Bu Teaching Hospital?",
+      "topic": "neurology",
+      "relevant_doc_ids": [
+        "doc-pmid-25426190"
+      ],
+      "pmid": "25426190",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-082",
+      "query": "Does a whole blood-based perfusate provide superior preservation of myocardial function during ex vivo heart perfusion?",
+      "topic": "cardiology",
+      "relevant_doc_ids": [
+        "doc-pmid-25447577"
+      ],
+      "pmid": "25447577",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-083",
+      "query": "Is elevated immune monitoring early after cardiac transplantation associated with increased plaque progression by intravascular ultrasound?",
+      "topic": "cardiology",
+      "relevant_doc_ids": [
+        "doc-pmid-25429902"
+      ],
+      "pmid": "25429902",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-084",
+      "query": "Are successional changes in the chicken cecal microbiome during 42 days of growth independent of organic acid feed additives?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25427406"
+      ],
+      "pmid": "25427406",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-085",
+      "query": "Does resveratrol enhance palmitate-induced ER stress and apoptosis in cancer cells?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25436452"
+      ],
+      "pmid": "25436452",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-086",
+      "query": "Is cDK1 and CDK2 activity a strong predictor of renal cell carcinoma recurrence?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25443276"
+      ],
+      "pmid": "25443276",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-087",
+      "query": "Is torsion of the optic nerve head a prominent feature of normal-tension glaucoma?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25425302"
+      ],
+      "pmid": "25425302",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-088",
+      "query": "Is endo first appropriate in some patients with critical limb ischemia because `` bridges are burned ''?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25433285"
+      ],
+      "pmid": "25433285",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-089",
+      "query": "Is unrecognized arteriosclerosis associated with wound complications after below-knee amputation?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25433284"
+      ],
+      "pmid": "25433284",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-090",
+      "query": "Does hydrogen sulfide reduce inflammation following abdominal aortic occlusion in rats?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25433282"
+      ],
+      "pmid": "25433282",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-091",
+      "query": "Do seed bank dynamics govern persistence of Brassica hybrids in crop and natural habitats?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25452253"
+      ],
+      "pmid": "25452253",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-092",
+      "query": "Is actinic keratosis with atypical basal cells ( AK I ) the most common lesion associated with invasive squamous cell carcinoma of the skin?",
+      "topic": "oncology",
+      "relevant_doc_ids": [
+        "doc-pmid-25428612"
+      ],
+      "pmid": "25428612",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-093",
+      "query": "Does high-intensity intermittent exercise increase pulmonary interstitial edema at altitude but not at simulated altitude?",
+      "topic": "pulmonology",
+      "relevant_doc_ids": [
+        "doc-pmid-25443761"
+      ],
+      "pmid": "25443761",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-094",
+      "query": "Does mild cognitive dysfunction affect diabetes mellitus control in minority elderly adults?",
+      "topic": "endocrinology",
+      "relevant_doc_ids": [
+        "doc-pmid-25439094"
+      ],
+      "pmid": "25439094",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-095",
+      "query": "Are anti-high mobility group box 1 ( anti-HMGB1 ) antibodies related to the occurrence of cutaneous lesions in systemic lupus erythematosus?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25439526"
+      ],
+      "pmid": "25439526",
+      "final_decision": "no"
+    },
+    {
+      "query_id": "q-096",
+      "query": "Does alcohol disrupt levels and function of the cystic fibrosis transmembrane conductance regulator to promote development of pancreatitis?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25447846"
+      ],
+      "pmid": "25447846",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-097",
+      "query": "Does blood viscosity but not shear stress associate with delayed flow-mediated dilation?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25428725"
+      ],
+      "pmid": "25428725",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-098",
+      "query": "Does hypercholesterolemia increase the production of leukotriene B4 in neutrophils by enhancing the nuclear localization of 5-lipoxygenase?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25428728"
+      ],
+      "pmid": "25428728",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-099",
+      "query": "Do molecular signatures of mood stabilisers highlight the role of the transcription factor REST/NRSF?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25451397"
+      ],
+      "pmid": "25451397",
+      "final_decision": "yes"
+    },
+    {
+      "query_id": "q-100",
+      "query": "Does preconditioning of skeletal myoblast-based engineered tissue constructs enable functional coupling to myocardium in vivo?",
+      "topic": "general_medicine",
+      "relevant_doc_ids": [
+        "doc-pmid-25439779"
+      ],
+      "pmid": "25439779",
+      "final_decision": "yes"
+    }
+  ]
+}

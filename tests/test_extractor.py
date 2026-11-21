@@ -246,3 +246,70 @@ def test_atomicity_evaluation_benchmark():
         assert len(claim_texts) == len(item["expected_claims"])
         for expected in item["expected_claims"]:
             assert any(expected.lower() in ct.lower() for ct in claim_texts)
+
+
+def test_markdown_lists_and_headers_atomicity():
+    """
+    Verify markdown lists (with/without periods) and headers are split
+    into independent claims with proper hierarchy metadata.
+    """
+    markdown_doc = """
+    # Treatment Guidelines for Type 2 Diabetes
+
+    Metformin is recommended as initial pharmacotherapy for all diagnosed patients.
+
+    ## First-Line Pharmacotherapy
+    - Metformin decreases hepatic glucose production
+    - SGLT2 inhibitors confer renal protection in CKD patients
+    - GLP-1 receptor agonists reduce cardiovascular events by 14%
+
+    ## Second-Line Considerations
+    1. Sulfonylureas increase the risk of hypoglycemic episodes.
+    2. Pioglitazone is contraindicated in patients with symptomatic heart failure.
+    """
+
+    records = extract_claim_records(markdown_doc)
+    assert len(records) == 6
+
+    # Verify header tracking
+    first_claim = records[0]
+    assert first_claim["parent_header"] == "Treatment Guidelines for Type 2 Diabetes"
+    assert first_claim["is_list_item"] is False
+
+    # Verify unordered list items under subheader
+    list_claims = [r for r in records if r["parent_header"] == "First-Line Pharmacotherapy"]
+    assert len(list_claims) == 3
+    assert all(r["is_list_item"] is True for r in list_claims)
+    assert "Metformin decreases hepatic glucose production" in list_claims[0]["claim_text"]
+    assert "SGLT2 inhibitors confer renal protection" in list_claims[1]["claim_text"]
+    assert list_claims[2]["numerical_values"] == ["14%"]
+
+    # Verify numbered list items
+    ordered_claims = [r for r in records if r["parent_header"] == "Second-Line Considerations"]
+    assert len(ordered_claims) == 2
+    assert ordered_claims[0]["list_index"] == 1
+    assert ordered_claims[1]["list_index"] == 2
+    assert ordered_claims[0]["is_list_item"] is True
+
+
+def test_compound_claim_with_article_subject():
+    """
+    Verify compound clauses where the second subject begins with 'the', 'a', or 'an'.
+    """
+    sentence = "Metformin lowers blood sugar, but the risk of lactic acidosis remains low."
+    claims = split_compound_claim(sentence)
+    assert len(claims) == 2
+    assert claims[0] == "Metformin lowers blood sugar"
+    assert "the risk of lactic acidosis remains low" in claims[1]
+
+
+def test_conditional_and_subordinate_clauses_stay_intact():
+    """
+    Ensure subordinate clauses (e.g. starting with 'if', 'when', 'unless')
+    are not broken into nonsensical fragments.
+    """
+    sentence = "If glomerular filtration rate is below 30, metformin must be discontinued immediately."
+    claims = split_compound_claim(sentence)
+    assert len(claims) == 1
+    assert claims[0] == sentence
+

@@ -21,15 +21,13 @@ from backend.agents.numerical_verdict import (
 logger = logging.getLogger(__name__)
 
 
-# Initial operating thresholds.
-# These are provisional and must be calibrated later.
-
+# Calibrated operating thresholds.
 ENTAILMENT_THRESHOLD = float(
-    os.getenv("PARMANA_ENTAILMENT_THRESHOLD", "0.75")
+    os.getenv("PARMANA_ENTAILMENT_THRESHOLD", "0.55")
 )
 
 CONTRADICTION_THRESHOLD = float(
-    os.getenv("PARMANA_CONTRADICTION_THRESHOLD", "0.75")
+    os.getenv("PARMANA_CONTRADICTION_THRESHOLD", "0.60")
 )
 
 CONTRADICTION_MIN_SHARED_TERMS = int(
@@ -115,16 +113,27 @@ def empty_result(claim: str) -> Dict:
 
 def classify_nli_scores(scores: Dict[str, float]) -> str:
     """
-    Convert NLI scores into conservative verdicts.
+    Convert NLI scores into calibrated conservative verdicts.
     """
 
-    entailment = scores["entailment"]
-    contradiction = scores["contradiction"]
+    entailment = scores.get("entailment", 0.0)
+    contradiction = scores.get("contradiction", 0.0)
+    neutral = scores.get("neutral", max(0.0, 1.0 - entailment - contradiction))
 
-    if entailment >= ENTAILMENT_THRESHOLD:
+    # Entailment check: must exceed calibrated threshold and lead contradiction
+    if entailment >= ENTAILMENT_THRESHOLD and entailment > contradiction:
         return "SUPPORTED"
 
-    if contradiction >= CONTRADICTION_THRESHOLD:
+    # Margin entailment check: dominant over neutral and clear lead over contradiction
+    if entailment >= 0.50 and entailment > neutral and entailment > (contradiction + 0.15):
+        return "SUPPORTED"
+
+    # Contradiction check: must exceed calibrated threshold and lead entailment
+    if contradiction >= CONTRADICTION_THRESHOLD and contradiction > entailment:
+        return "CONTRADICTED"
+
+    # Margin contradiction check: dominant over neutral and clear lead over entailment
+    if contradiction >= 0.50 and contradiction > neutral and contradiction > (entailment + 0.15):
         return "CONTRADICTED"
 
     return "INSUFFICIENT_EVIDENCE"
@@ -204,9 +213,6 @@ def combine_verification_signals(nli_verdict, numerical_assessment):
     if numerical_verdict == CONTEXT_MISMATCH:
         return CONTEXT_MISMATCH
 
-    if numerical_verdict == INCONCLUSIVE:
-        return INCONCLUSIVE
-
     if (
         nli_verdict == "SUPPORTED"
         and numerical_verdict == NUMERICALLY_CONSISTENT
@@ -230,6 +236,11 @@ def combine_verification_signals(nli_verdict, numerical_assessment):
         and numerical_verdict == NUMERICALLY_CONSISTENT
     ):
         return "CONFLICTING_SIGNALS"
+
+    if numerical_verdict == INCONCLUSIVE:
+        if nli_verdict in {"SUPPORTED", "CONTRADICTED"}:
+            return nli_verdict
+        return INCONCLUSIVE
 
     if nli_verdict == "INSUFFICIENT_EVIDENCE":
         return "INSUFFICIENT_EVIDENCE"
@@ -346,6 +357,8 @@ def deterministic_verify_claim(
 
     candidates = []
 
+    clean_hypothesis = re.sub(r"^\s*(?:[-*+]|\d+[.)]|•|◦|▪)\s*", "", claim).strip().strip("\"'")
+
     for index, evidence in enumerate(evidence_list):
 
         evidence_text = evidence.get("text", "")
@@ -356,7 +369,7 @@ def deterministic_verify_claim(
         try:
             scores = predict_nli(
                 premise=evidence_text,
-                hypothesis=claim
+                hypothesis=clean_hypothesis
             )
 
         except Exception as exc:

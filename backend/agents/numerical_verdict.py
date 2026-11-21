@@ -306,6 +306,43 @@ def assess_numerical_text(
             context_comparison=context_comparison,
         )
 
+    # When exactly one claim mention exists, attempt unit-aware alignment across evidence mentions
+    if len(claim_mentions) == 1 and len(evidence_mentions) >= 1:
+        c_mention = claim_mentions[0]
+        c_unit = (c_mention.get("unit") or "").lower()
+
+        candidates = [
+            e for e in evidence_mentions
+            if (e.get("unit") or "").lower() == c_unit
+            or (not c_unit and not e.get("unit"))
+        ]
+        if not candidates:
+            candidates = evidence_mentions
+
+        best_discrepancy = None
+        for cand_e in candidates:
+            cand_res = assess_numerical_claim(
+                c_mention,
+                cand_e,
+                claim_context=claim_context,
+                evidence_context=evidence_context,
+                absolute_tolerance=absolute_tolerance,
+                relative_tolerance=relative_tolerance,
+            )
+            if cand_res["verdict"] == NUMERICALLY_CONSISTENT:
+                return cand_res
+            if cand_res["verdict"] == NUMERICAL_DISCREPANCY and best_discrepancy is None:
+                best_discrepancy = cand_res
+
+        if best_discrepancy is not None and len(candidates) == 1:
+            return best_discrepancy
+
+        return _result(
+            INCONCLUSIVE,
+            "Multiple numerical mentions could not be unambiguously paired.",
+            context_comparison=context_comparison,
+        )
+
     # Multiple mentions must not be paired arbitrarily.
     if len(claim_mentions) != 1 or len(evidence_mentions) != 1:
         return _result(

@@ -1,0 +1,16 @@
+{
+  "benchmark": "PubMedQA-100",
+  "total_queries": 100,
+  "corpus_documents": 100,
+  "metrics": {
+    "Recall@1": 0.99,
+    "Recall@3": 1.0,
+    "Recall@5": 1.0,
+    "Precision@1": 0.99,
+    "Precision@3": 0.3333,
+    "Precision@5": 0.2,
+    "MRR": 0.995,
+    "nDCG@3": 0.9963,
+    "nDCG@5": 0.9963
+  }
+}

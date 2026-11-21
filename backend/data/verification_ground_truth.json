@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "name": "ParmanaAI Clinical Claim Verification Benchmark",
+    "version": "1.0.0",
+    "classes": ["SUPPORTED", "CONTRADICTED", "INSUFFICIENT_EVIDENCE"],
+    "description": "Gold-standard verification benchmark for evaluating textual NLI, numerical consistency, and evidence-conflict resolution."
+  },
+  "cases": [
+    {
+      "id": "GT-001",
+      "specialty": "Cardiology",
+      "claim": "Hypertension is diagnosed when systolic blood pressure is at least 130 mmHg.",
+      "evidence": [
+        {
+          "evidence_id": "ev-htn-01",
+          "document_id": "doc-aha-htn",
+          "text": "The AHA/ACC guidelines define stage 1 hypertension as systolic blood pressure between 130 and 139 mmHg or diastolic between 80 and 89 mmHg."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "factual_and_numerical"
+    },
+    {
+      "id": "GT-002",
+      "specialty": "Cardiology",
+      "claim": "Aspirin increases mortality in patients suffering an acute myocardial infarction.",
+      "evidence": [
+        {
+          "evidence_id": "ev-cardio-02",
+          "document_id": "doc-isis-2",
+          "text": "The ISIS-2 trial demonstrated that aspirin significantly reduced 5-week vascular mortality by 23% in patients with suspected acute myocardial infarction."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "medical_negation_inversion"
+    },
+    {
+      "id": "GT-003",
+      "specialty": "Cardiology",
+      "claim": "Beta-blockers improve survival in all patients with acute uncomplicated pericarditis.",
+      "evidence": [
+        {
+          "evidence_id": "ev-peri-01",
+          "document_id": "doc-esc-pericarditis",
+          "text": "First-line therapy for acute pericarditis consists of NSAIDs or aspirin plus colchicine. Exercise restriction is advised."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unmentioned_outcome"
+    },
+    {
+      "id": "GT-004",
+      "specialty": "Endocrinology",
+      "claim": "Type 2 diabetes is diagnosed with a fasting plasma glucose of 126 mg/dL or higher.",
+      "evidence": [
+        {
+          "evidence_id": "ev-t2dm-01",
+          "document_id": "doc-ada-criteria",
+          "text": "The American Diabetes Association criteria for the diagnosis of diabetes include a fasting plasma glucose level of 126 mg/dL (7.0 mmol/L) or greater."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "numerical_threshold"
+    },
+    {
+      "id": "GT-005",
+      "specialty": "Endocrinology",
+      "claim": "Metformin therapy causes marked hyperglycemia in diabetic patients.",
+      "evidence": [
+        {
+          "evidence_id": "ev-met-01",
+          "document_id": "doc-metformin-mech",
+          "text": "Metformin improves glycemic control by decreasing hepatic glucose production and improving peripheral insulin sensitivity."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "direction_inversion"
+    },
+    {
+      "id": "GT-006",
+      "specialty": "Endocrinology",
+      "claim": "Continuous glucose monitoring prevents diabetic retinopathy progression by 95%.",
+      "evidence": [
+        {
+          "evidence_id": "ev-cgm-01",
+          "document_id": "doc-cgm-study",
+          "text": "Continuous glucose monitoring provides real-time interstitial glucose readings and reduces time in hypoglycemia."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unsupported_numerical_claim"
+    },
+    {
+      "id": "GT-007",
+      "specialty": "Pulmonology",
+      "claim": "Inhaled corticosteroids reduce the frequency of asthma exacerbations.",
+      "evidence": [
+        {
+          "evidence_id": "ev-asthma-01",
+          "document_id": "doc-gina-asthma",
+          "text": "Inhaled corticosteroids (ICS) are the most effective anti-inflammatory therapy for persistent asthma, significantly reducing exacerbation risk and hospitalizations."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "treatment_efficacy"
+    },
+    {
+      "id": "GT-008",
+      "specialty": "Pulmonology",
+      "claim": "Smoking tobacco protects against the development of chronic obstructive pulmonary disease.",
+      "evidence": [
+        {
+          "evidence_id": "ev-copd-01",
+          "document_id": "doc-gold-copd",
+          "text": "Cigarette smoking is the primary causative etiology of chronic obstructive pulmonary disease (COPD), responsible for over 80% of cases."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "causal_inversion"
+    },
+    {
+      "id": "GT-009",
+      "specialty": "Pulmonology",
+      "claim": "Albuterol inhalers cure underlying genetic cystic fibrosis mutations.",
+      "evidence": [
+        {
+          "evidence_id": "ev-cf-01",
+          "document_id": "doc-cf-therapy",
+          "text": "Albuterol provides short-acting bronchodilation and helps facilitate airway clearance in patients with cystic fibrosis."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unsubstantiated_cure"
+    },
+    {
+      "id": "GT-010",
+      "specialty": "Infectious Disease",
+      "claim": "Fever is clinically defined as a core body temperature of 38.0°C or higher.",
+      "evidence": [
+        {
+          "evidence_id": "ev-fever-01",
+          "document_id": "doc-cdc-fever",
+          "text": "A fever is considered clinically present when oral or core body temperature reaches or exceeds 38.0 degrees Celsius (100.4 degrees Fahrenheit)."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "diagnostic_criteria"
+    },
+    {
+      "id": "GT-011",
+      "specialty": "Infectious Disease",
+      "claim": "Antibiotics are an effective treatment for uncomplicated viral influenza.",
+      "evidence": [
+        {
+          "evidence_id": "ev-flu-01",
+          "document_id": "doc-who-influenza",
+          "text": "Antibacterial agents are ineffective against viral pathogens such as influenza viruses and should not be prescribed in the absence of secondary bacterial infection."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "pharmacological_contradiction"
+    },
+    {
+      "id": "GT-012",
+      "specialty": "Infectious Disease",
+      "claim": "Vitamin C supplementation cures human immunodeficiency virus within two weeks.",
+      "evidence": [
+        {
+          "evidence_id": "ev-hiv-01",
+          "document_id": "doc-hiv-guideline",
+          "text": "Antiretroviral therapy (ART) consisting of multiple active antiretroviral agents is mandatory for suppressing HIV viral replication."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "spurious_medical_claim"
+    },
+    {
+      "id": "GT-013",
+      "specialty": "Nephrology",
+      "claim": "ACE inhibitors reduce proteinuria in diabetic kidney disease.",
+      "evidence": [
+        {
+          "evidence_id": "ev-neph-01",
+          "document_id": "doc-kdigo-ckd",
+          "text": "Renin-angiotensin system inhibitors (ACE inhibitors or ARBs) are strongly recommended to reduce albuminuria and slow CKD progression in diabetic patients."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "clinical_outcome"
+    },
+    {
+      "id": "GT-014",
+      "specialty": "Nephrology",
+      "claim": "Chronic kidney disease stage 5 requires no renal replacement therapy or dialysis.",
+      "evidence": [
+        {
+          "evidence_id": "ev-ckd-01",
+          "document_id": "doc-kdigo-dialysis",
+          "text": "Stage 5 CKD (eGFR < 15 mL/min/1.73m2) indicates kidney failure where renal replacement therapy, such as hemodialysis or transplantation, is essential to sustain life."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "guideline_contradiction"
+    },
+    {
+      "id": "GT-015",
+      "specialty": "Nephrology",
+      "claim": "Eating blueberries reverses end-stage renal disease within forty-eight hours.",
+      "evidence": [
+        {
+          "evidence_id": "ev-ckd-diet",
+          "document_id": "doc-kidney-diet",
+          "text": "Patients with chronic kidney disease require dietary monitoring of potassium, sodium, and phosphorus intake."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unrelated_alternative_medicine"
+    },
+    {
+      "id": "GT-016",
+      "specialty": "Neurology",
+      "claim": "Intravenous thrombolysis is beneficial when administered within 4.5 hours of ischemic stroke onset.",
+      "evidence": [
+        {
+          "evidence_id": "ev-stroke-01",
+          "document_id": "doc-aha-stroke",
+          "text": "Intravenous alteplase is recommended for eligible patients with acute ischemic stroke who can be treated within 4.5 hours of symptom onset."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "time_window_protocol"
+    },
+    {
+      "id": "GT-017",
+      "specialty": "Neurology",
+      "claim": "Thrombolytic therapy should be routinely administered to patients with acute hemorrhagic stroke.",
+      "evidence": [
+        {
+          "evidence_id": "ev-ich-01",
+          "document_id": "doc-ich-guideline",
+          "text": "Thrombolytic agents are strictly contraindicated in acute intracranial hemorrhage due to catastrophic risk of worsening intracranial bleeding."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "absolute_contraindication"
+    },
+    {
+      "id": "GT-018",
+      "specialty": "Neurology",
+      "claim": "Acupuncture resolves all neurological deficits in severe Parkinson disease.",
+      "evidence": [
+        {
+          "evidence_id": "ev-pd-01",
+          "document_id": "doc-pd-treatment",
+          "text": "Levodopa combined with a dopa-decarboxylase inhibitor remains the standard pharmacologic treatment for motor symptoms of Parkinson disease."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unproven_therapy"
+    },
+    {
+      "id": "GT-019",
+      "specialty": "Pharmacology",
+      "claim": "Statins lower low-density lipoprotein cholesterol by inhibiting HMG-CoA reductase.",
+      "evidence": [
+        {
+          "evidence_id": "ev-statin-01",
+          "document_id": "doc-statin-mech",
+          "text": "Statins competitively inhibit 3-hydroxy-3-methylglutaryl-coenzyme A (HMG-CoA) reductase, leading to upregulated LDL receptors and reduced circulating LDL-C."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "pharmacological_mechanism"
+    },
+    {
+      "id": "GT-020",
+      "specialty": "Pharmacology",
+      "claim": "Warfarin anticoagulation decreases the international normalized ratio below 1.0.",
+      "evidence": [
+        {
+          "evidence_id": "ev-warf-01",
+          "document_id": "doc-anticoag-guide",
+          "text": "Warfarin inhibits vitamin K-dependent clotting factors, thereby increasing the prothrombin time and elevating the INR to a therapeutic target range typically between 2.0 and 3.0."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "numerical_inversion"
+    },
+    {
+      "id": "GT-021",
+      "specialty": "Oncology",
+      "claim": "Screening colonoscopy reduces incidence and mortality from colorectal cancer.",
+      "evidence": [
+        {
+          "evidence_id": "ev-crc-01",
+          "document_id": "doc-usps-crc",
+          "text": "Screening for colorectal cancer with colonoscopy enables early detection and removal of adenomatous polyps, significantly decreasing colorectal cancer incidence and mortality."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "preventive_screening"
+    },
+    {
+      "id": "GT-022",
+      "specialty": "Oncology",
+      "claim": "Early detection of breast cancer via mammography increases overall disease-specific mortality.",
+      "evidence": [
+        {
+          "evidence_id": "ev-mammo-01",
+          "document_id": "doc-breast-screen",
+          "text": "Biennial screening mammography in women aged 50 to 74 years reduces breast cancer mortality by detecting tumors at earlier, more treatable stages."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "outcome_inversion"
+    },
+    {
+      "id": "GT-023",
+      "specialty": "Oncology",
+      "claim": "Coffee consumption completely eliminates the need for surgical resection in pancreatic adenocarcinoma.",
+      "evidence": [
+        {
+          "evidence_id": "ev-panc-01",
+          "document_id": "doc-nccn-pancreatic",
+          "text": "Surgical resection provides the only potentially curative treatment option for localized pancreatic ductal adenocarcinoma, followed by adjuvant chemotherapy."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unsupported_alternative_therapy"
+    },
+    {
+      "id": "GT-024",
+      "specialty": "Cardiology",
+      "claim": "SGLT2 inhibitors reduce hospitalizations for heart failure in patients with reduced ejection fraction.",
+      "evidence": [
+        {
+          "evidence_id": "ev-hf-01",
+          "document_id": "doc-dapa-hf",
+          "text": "The DAPA-HF trial demonstrated that dapagliflozin significantly reduced the risk of worsening heart failure or cardiovascular death by 26% in HFrEF patients."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "clinical_trial_evidence"
+    },
+    {
+      "id": "GT-025",
+      "specialty": "Endocrinology",
+      "claim": "An HbA1c level of 5.2% indicates severe uncontrolled diabetes mellitus.",
+      "evidence": [
+        {
+          "evidence_id": "ev-hba1c-01",
+          "document_id": "doc-ada-hba1c",
+          "text": "A normal HbA1c level is below 5.7%. Levels between 5.7% and 6.4% indicate prediabetes, and 6.5% or higher on two separate tests indicates diabetes."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "diagnostic_cutoff_contradiction"
+    },
+    {
+      "id": "GT-026",
+      "specialty": "Gastroenterology",
+      "claim": "Proton pump inhibitors reduce gastric acid secretion by inhibiting the H+/K+ ATPase enzyme.",
+      "evidence": [
+        {
+          "evidence_id": "ev-ppi-01",
+          "document_id": "doc-ppi-pharmacology",
+          "text": "Proton pump inhibitors (PPIs) suppress gastric acid secretion by specifically and irreversibly inhibiting the hydrogen-potassium ATPase pump on parietal cells."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "biochemical_mechanism"
+    },
+    {
+      "id": "GT-027",
+      "specialty": "Gastroenterology",
+      "claim": "Helicobacter pylori infection is entirely harmless and never causes peptic ulcers.",
+      "evidence": [
+        {
+          "evidence_id": "ev-hpylori-01",
+          "document_id": "doc-acg-hpylori",
+          "text": "Helicobacter pylori is a major etiological cause of chronic gastritis, peptic ulcer disease, and gastric mucosa-associated lymphoid tissue lymphoma."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "pathophysiological_contradiction"
+    },
+    {
+      "id": "GT-028",
+      "specialty": "Rheumatology",
+      "claim": "Methotrexate is a disease-modifying antirheumatic drug used as first-line therapy in rheumatoid arthritis.",
+      "evidence": [
+        {
+          "evidence_id": "ev-ra-01",
+          "document_id": "doc-acr-ra-guideline",
+          "text": "The American College of Rheumatology strongly recommends methotrexate monotherapy over other conventional synthetic DMARDs for treatment-naive patients with rheumatoid arthritis."
+        }
+      ],
+      "gold_verdict": "SUPPORTED",
+      "type": "pharmacotherapy_guideline"
+    },
+    {
+      "id": "GT-029",
+      "specialty": "Rheumatology",
+      "claim": "Uric acid levels below 6.0 mg/dL trigger acute gout attacks in asymptomatic individuals.",
+      "evidence": [
+        {
+          "evidence_id": "ev-gout-01",
+          "document_id": "doc-gout-acr",
+          "text": "Gout attacks occur due to supersaturation and monosodium urate crystal deposition, which typically occurs at serum urate levels above 6.8 mg/dL."
+        }
+      ],
+      "gold_verdict": "CONTRADICTED",
+      "type": "numerical_pathology_contradiction"
+    },
+    {
+      "id": "GT-030",
+      "specialty": "Pediatrics",
+      "claim": "A single dose of oral amoxicillin cures infantile hypertrophic pyloric stenosis.",
+      "evidence": [
+        {
+          "evidence_id": "ev-peds-01",
+          "document_id": "doc-pyloric-stenosis",
+          "text": "Infantile hypertrophic pyloric stenosis is an anatomic obstruction requiring surgical Ramstedt pyloromyotomy after fluid and electrolyte resuscitation."
+        }
+      ],
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "type": "unrelated_medical_intervention"
+    }
+  ]
+}

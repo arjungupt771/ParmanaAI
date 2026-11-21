@@ -3,6 +3,9 @@ Shared embedding utility. Single lazily-loaded SentenceTransformer model,
 reused by both retrieval (semantic_retriever.py) and verification
 (verifier.py) so the ~90MB model is only ever loaded once per process.
 """
+import os
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 import numpy as np
 
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

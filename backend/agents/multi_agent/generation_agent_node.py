@@ -57,37 +57,42 @@ class GenerationAgentNode(BaseAgent):
             state.relevance_score = 0.0
             return state
 
-        # 3. Evidence-Grounded Prompt Construction
+        # 3. Evidence-Grounded Prompt Construction with Strict QA Alignment
         evidence_text = "\n\n".join([e.get("text", "") for e in state.selected_evidence])
 
         if state.query_mode == "FACTUAL":
             prompt = f"""
-You are a medical assistant.
-Use ONLY the guideline information below.
-Do NOT add external knowledge.
+You are an evidence-grounded clinical assistant.
+Use ONLY the clinical guideline excerpts below.
+Do NOT extrapolate, infer, or provide external definitions.
+
+CRITICAL INSTRUCTIONS:
+1. Directly address the user's specific clinical question: "{state.user_query}"
+2. State exact numerical values, cutoffs, dosages, and units present in the evidence.
+3. Present verified facts in clear, concise bullet points.
 
 GUIDELINES:
 {evidence_text}
 
 QUESTION:
 {state.user_query}
-
-Answer in clear bullet points.
 """
         else:
             prompt = f"""
-You are a medical research assistant.
-Summarize evidence cautiously from the abstracts below.
-Use phrases like "evidence suggests", "is associated with", "may increase risk".
-Do NOT define diseases.
+You are a medical research evidence synthesis assistant.
+Synthesize findings strictly from the study abstracts below.
+
+CRITICAL INSTRUCTIONS:
+1. Directly address the user's specific clinical question in the very first sentence.
+2. Use precise, cautious language (e.g. "evidence indicates", "is associated with", "was shown to reduce").
+3. Preserve all stated numerical outcomes (percentages, confidence intervals, sample sizes).
+4. Do NOT provide generic disease definitions or speculative inferences.
 
 ABSTRACTS:
 {evidence_text}
 
 QUESTION:
 {state.user_query}
-
-Answer in 2-3 sentences.
 """
 
         gen_output = self.generator.generate(prompt, strict=False)
@@ -96,11 +101,13 @@ Answer in 2-3 sentences.
         if is_refusal(answer):
             state.generated_answer = "Unable to answer safely."
             state.is_refusal = True
+            state.relevance_score = 0.0
         else:
             state.generated_answer = answer
+            alignment = self.generator.compute_alignment(state.user_query, answer)
+            state.relevance_score = alignment["score"]
+            gen_output["qa_alignment"] = alignment
 
-        # Calculate relevance score
-        state.relevance_score = self.generator.relevance_score(state.user_query, state.generated_answer)
         state.generation_metadata = gen_output
 
         return state

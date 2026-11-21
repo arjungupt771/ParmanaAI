@@ -1,0 +1,359 @@
+{
+  "benchmark_name": "ParmanaAI Clinical Claim Verification Benchmark",
+  "total_cases": 30,
+  "overall_metrics": {
+    "accuracy": 0.7667,
+    "macro_f1": 0.756,
+    "macro_precision": 0.7609,
+    "macro_recall": 0.7538,
+    "micro_f1": 0.7667
+  },
+  "per_class_metrics": {
+    "SUPPORTED": {
+      "true_positive": 10,
+      "false_positive": 0,
+      "false_negative": 1,
+      "precision": 1.0,
+      "recall": 0.9091,
+      "f1": 0.9524,
+      "support": 11
+    },
+    "CONTRADICTED": {
+      "true_positive": 8,
+      "false_positive": 3,
+      "false_negative": 3,
+      "precision": 0.7273,
+      "recall": 0.7273,
+      "f1": 0.7273,
+      "support": 11
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "true_positive": 5,
+      "false_positive": 4,
+      "false_negative": 3,
+      "precision": 0.5556,
+      "recall": 0.625,
+      "f1": 0.5882,
+      "support": 8
+    }
+  },
+  "confusion_matrix": {
+    "SUPPORTED": {
+      "SUPPORTED": 10,
+      "CONTRADICTED": 0,
+      "INSUFFICIENT_EVIDENCE": 1
+    },
+    "CONTRADICTED": {
+      "SUPPORTED": 0,
+      "CONTRADICTED": 8,
+      "INSUFFICIENT_EVIDENCE": 3
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "SUPPORTED": 0,
+      "CONTRADICTED": 3,
+      "INSUFFICIENT_EVIDENCE": 5
+    }
+  },
+  "case_details": [
+    {
+      "id": "GT-001",
+      "specialty": "Cardiology",
+      "claim": "Hypertension is diagnosed when systolic blood pressure is at least 130 mmHg.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9932,
+      "numerical_verdict": "NUMERICALLY_CONSISTENT"
+    },
+    {
+      "id": "GT-002",
+      "specialty": "Cardiology",
+      "claim": "Aspirin increases mortality in patients suffering an acute myocardial infarction.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.999,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-003",
+      "specialty": "Cardiology",
+      "claim": "Beta-blockers improve survival in all patients with acute uncomplicated pericarditis.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": true,
+      "confidence": 0.9711,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-004",
+      "specialty": "Endocrinology",
+      "claim": "Type 2 diabetes is diagnosed with a fasting plasma glucose of 126 mg/dL or higher.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.8977,
+      "numerical_verdict": "INCONCLUSIVE"
+    },
+    {
+      "id": "GT-005",
+      "specialty": "Endocrinology",
+      "claim": "Metformin therapy causes marked hyperglycemia in diabetic patients.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": false,
+      "confidence": 0.0003,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-006",
+      "specialty": "Endocrinology",
+      "claim": "Continuous glucose monitoring prevents diabetic retinopathy progression by 95%.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": true,
+      "confidence": 0.997,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-007",
+      "specialty": "Pulmonology",
+      "claim": "Inhaled corticosteroids reduce the frequency of asthma exacerbations.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9615,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-008",
+      "specialty": "Pulmonology",
+      "claim": "Smoking tobacco protects against the development of chronic obstructive pulmonary disease.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.997,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-009",
+      "specialty": "Pulmonology",
+      "claim": "Albuterol inhalers cure underlying genetic cystic fibrosis mutations.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": true,
+      "confidence": 0.9997,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-010",
+      "specialty": "Infectious Disease",
+      "claim": "Fever is clinically defined as a core body temperature of 38.0\u00b0C or higher.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9978,
+      "numerical_verdict": "INCONCLUSIVE"
+    },
+    {
+      "id": "GT-011",
+      "specialty": "Infectious Disease",
+      "claim": "Antibiotics are an effective treatment for uncomplicated viral influenza.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.9993,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-012",
+      "specialty": "Infectious Disease",
+      "claim": "Vitamin C supplementation cures human immunodeficiency virus within two weeks.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": true,
+      "confidence": 0.7978,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-013",
+      "specialty": "Nephrology",
+      "claim": "ACE inhibitors reduce proteinuria in diabetic kidney disease.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9905,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-014",
+      "specialty": "Nephrology",
+      "claim": "Chronic kidney disease stage 5 requires no renal replacement therapy or dialysis.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.9993,
+      "numerical_verdict": "INCONCLUSIVE"
+    },
+    {
+      "id": "GT-015",
+      "specialty": "Nephrology",
+      "claim": "Eating blueberries reverses end-stage renal disease within forty-eight hours.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": true,
+      "confidence": 0.1579,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-016",
+      "specialty": "Neurology",
+      "claim": "Intravenous thrombolysis is beneficial when administered within 4.5 hours of ischemic stroke onset.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9859,
+      "numerical_verdict": "NUMERICALLY_CONSISTENT"
+    },
+    {
+      "id": "GT-017",
+      "specialty": "Neurology",
+      "claim": "Thrombolytic therapy should be routinely administered to patients with acute hemorrhagic stroke.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.9995,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-018",
+      "specialty": "Neurology",
+      "claim": "Acupuncture resolves all neurological deficits in severe Parkinson disease.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": false,
+      "confidence": 0.9955,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-019",
+      "specialty": "Pharmacology",
+      "claim": "Statins lower low-density lipoprotein cholesterol by inhibiting HMG-CoA reductase.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.981,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-020",
+      "specialty": "Pharmacology",
+      "claim": "Warfarin anticoagulation decreases the international normalized ratio below 1.0.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": false,
+      "confidence": 0.2446,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-021",
+      "specialty": "Oncology",
+      "claim": "Screening colonoscopy reduces incidence and mortality from colorectal cancer.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9977,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-022",
+      "specialty": "Oncology",
+      "claim": "Early detection of breast cancer via mammography increases overall disease-specific mortality.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.9994,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-023",
+      "specialty": "Oncology",
+      "claim": "Coffee consumption completely eliminates the need for surgical resection in pancreatic adenocarcinoma.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": false,
+      "confidence": 0.9997,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-024",
+      "specialty": "Cardiology",
+      "claim": "SGLT2 inhibitors reduce hospitalizations for heart failure in patients with reduced ejection fraction.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": false,
+      "confidence": 0.9948,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-025",
+      "specialty": "Endocrinology",
+      "claim": "An HbA1c level of 5.2% indicates severe uncontrolled diabetes mellitus.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+      "is_correct": false,
+      "confidence": 0.9569,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-026",
+      "specialty": "Gastroenterology",
+      "claim": "Proton pump inhibitors reduce gastric acid secretion by inhibiting the H+/K+ ATPase enzyme.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9762,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-027",
+      "specialty": "Gastroenterology",
+      "claim": "Helicobacter pylori infection is entirely harmless and never causes peptic ulcers.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.9999,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-028",
+      "specialty": "Rheumatology",
+      "claim": "Methotrexate is a disease-modifying antirheumatic drug used as first-line therapy in rheumatoid arthritis.",
+      "gold_verdict": "SUPPORTED",
+      "predicted_verdict": "SUPPORTED",
+      "is_correct": true,
+      "confidence": 0.9916,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    },
+    {
+      "id": "GT-029",
+      "specialty": "Rheumatology",
+      "claim": "Uric acid levels below 6.0 mg/dL trigger acute gout attacks in asymptomatic individuals.",
+      "gold_verdict": "CONTRADICTED",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": true,
+      "confidence": 0.8298,
+      "numerical_verdict": "INCONCLUSIVE"
+    },
+    {
+      "id": "GT-030",
+      "specialty": "Pediatrics",
+      "claim": "A single dose of oral amoxicillin cures infantile hypertrophic pyloric stenosis.",
+      "gold_verdict": "INSUFFICIENT_EVIDENCE",
+      "predicted_verdict": "CONTRADICTED",
+      "is_correct": false,
+      "confidence": 0.9979,
+      "numerical_verdict": "NO_NUMERICAL_EVIDENCE"
+    }
+  ]
+}
